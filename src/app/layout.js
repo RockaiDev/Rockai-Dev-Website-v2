@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${inter.className} relative min-h-screen`}>
         <StarsBackgroundDemo />
-        <div className="relative z-10 mx-16">
+        <div className="relative z-10  mx-4 sm:mx-6 lg:mx-16 ">
           <Navbar />
           {children}
         </div>

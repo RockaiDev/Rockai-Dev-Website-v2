@@ -1,9 +1,28 @@
+
+import book from "@/Assets/Icons/book.svg";
+import shuttle from "@/Assets/Images/Astronaut.svg";
+import HeroSection from "@/components/PagesHero/PagesHero";
+
+
+
+
 export default function JoinUsPage() {
   return (
-    <main className="min-h-[60vh] container mx-auto px-4 py-12 text-white">
-      <h1 className="text-3xl font-bold mb-4">Join Us</h1>
-      <p className="text-white/80">This is the Join Us page.</p>
-    </main>
+    <main className="min-h-[60vh] container mx-auto  py-12 text-white">
+              <HeroSection 
+              buttonText="Blog & Insights"
+                buttonIcon ={book}
+                title="Tech Insights & Innovation"
+                description="Stay ahead of the curve with our latest insights on AI, software development, and the future of technology in the Middle East."
+                imageSrc  ={shuttle}
+                imageAlt="Hero Image"
+                imageAnimationClass="animate-[astro_5s_ease-in-out_infinite]"
+                containerClass="overflow-hidden "
+                imageStyle="scale-100"
+                buttonClass="w-fit "
+                titleClass=""
+                descClass="" />
+            </main>
   );
 }
 

@@ -23,12 +23,12 @@ export default function Navbar() {
       {/* Logo */}
       <div className="flex items-center gap-2">
         <Link href="/" aria-label="Go to home">
-          <Image src={logo} alt="Logo" width={80} height={80} />
+          <Image src={logo} alt="Logo" width={80} height={80} className="lg:w-[80px] lg:h-[80px] w-[50px] h-[50px] " />
         </Link>
       </div>
 
       {/* Links - Tablet/Desktop */}
-      <ul className="hidden md:flex items-center md:gap-6 lg:gap-8 text-white md:text-[18px] lg:text-[20px] leading-[30px] font-medium">
+      <ul className="hidden md:flex items-center md:gap-6 lg:gap-8 text-white md:text-[14px] lg:text-[18px] leading-[30px] font-medium">
         {navItems.map((item) => (
           <li
             key={item.href}

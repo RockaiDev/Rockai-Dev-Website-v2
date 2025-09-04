@@ -69,6 +69,18 @@
       transform: translateZ(0) rotate(360deg);
     }
   }
+
+  --animate-background-position-spin: background-position-spin 3000ms infinite alternate;
+
+  @keyframes background-position-spin {
+    0% {
+      background-position: top center;
+    }
+
+    100% {
+      background-position: bottom center;
+    }
+  }
 }
 
 :root {
@@ -147,14 +159,13 @@
 
   body {
     @apply bg-background text-foreground;
+
   }
 }
 
 .mainLinear {
   background: radial-gradient(70.71% 70.71% at 50% 50%, rgba(255, 255, 255, 0.12) 0%, rgba(0, 0, 0, 0.00) 100%), linear-gradient(180deg, #10DBDB 0%, #0047A5 100%);
 }
-
-
 
 .gradient-hero-text {
   background: linear-gradient(0deg,
@@ -176,15 +187,112 @@
   color: transparent;
 }
 
-
 .glow-bottom {
   transition: all 0.3s ease;
 }
 
 .glow-bottom:hover {
-  box-shadow: 
+  box-shadow:
     0 10px 25px #0047A5,
     0 20px 50px rgba(6, 182, 212, 0.2),
     0 0 0 1px rgba(6, 182, 212, 0.1);
   transform: scale(1.05) translateY(-2px);
+}
+
+@keyframes rocking {
+
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-10deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-rocking {
+  animation: rocking 4s ease-in-out infinite;
+}
+
+@keyframes blog {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  20% {
+    transform: rotate(15deg);
+  }
+
+  40% {
+    transform: translateY(25px);
+  }
+
+  60% {
+    transform: rotate(-15deg);
+  }
+
+  80% {
+    transform: translateY(-25px);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-blog {
+  animation: blog 4s ease-in-out infinite;
+}
+
+@keyframes astro {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-30px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+
+}
+
+.animate-astro {
+  animation: astro 4s ease-in-out infinite;
+}
+
+
+.ourExpertise {
+  background: linear-gradient(180deg, rgba(16, 219, 219, 0.05) 0%, rgba(0, 71, 165, 0.05) 100%);
+
+}
+
+.shoAa {
+  background-image: linear-gradient(
+    270deg,
+    rgba(234, 234, 234, 0.50) 21.33%,
+    rgba(234, 234, 234, 0.00) 100%
+  );
+}
+
+
+
+
+.feature_hover {
+  background:  linear-gradient(180deg, #10DBDB 0%, #0047A5 100%);
 }
