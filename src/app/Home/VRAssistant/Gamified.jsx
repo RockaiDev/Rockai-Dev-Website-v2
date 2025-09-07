@@ -1,7 +1,8 @@
 import React from 'react';
-import Image from 'next/image'; // تأكد من استيراد Image من 'next/image'
+import Image from 'next/image'; 
+ 
 
-// استيراد الأيقونات الخاصة بك
+
 import earthWhite from "@/Assets/Icons/earthWhite.svg";
 import refresh from "@/Assets/Icons/refresh.svg";
 import message from "@/Assets/Icons/message.svg";
@@ -78,4 +79,3 @@ const Gamified = () => {
 
 export default Gamified;
 
-// sfsd;kjsg

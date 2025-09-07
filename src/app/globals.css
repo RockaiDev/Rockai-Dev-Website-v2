@@ -296,3 +296,36 @@
 .feature_hover {
   background:  linear-gradient(180deg, #10DBDB 0%, #0047A5 100%);
 }
+
+
+.form-gradient {
+  background: linear-gradient(90deg, #10dbdb13 0%, #00327423 0%);
+  border-radius: 1rem; 
+  padding:2px; 
+}
+.form-btn {
+  background: linear-gradient(180deg,  #10DBDB 0%, #0047A5  100%);
+  border-radius: 1rem; /* نفس الـ rounded-2xl */
+  padding: 14px; /* علشان يبان البوردر */
+}
+
+
+
+.card-gradient {
+  background: linear-gradient(180deg, #10dbdb1e 0%, #03397f3b 0%);
+
+}
+
+
+
+
+.news-gradient {
+  background: linear-gradient(90deg, #0e8a8a13 0%, #2361b114 0%);
+  
+}
+
+
+
+
+
+

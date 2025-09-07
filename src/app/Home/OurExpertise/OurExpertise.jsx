@@ -61,7 +61,7 @@ export default function OurExpertise() {
         {expertiseData.map((item, index) => (
           <CardWithAnimatedBorder
             key={index}
-            className="rounded-[35px] ourExpertise hover:border-cyan-500 hover: glow-bottom  border border-white/10 bg-[#0f022996] p-6 w-full lg:max-w-md lg:h-[350px]"
+            className="rounded-[35px]  ourExpertise hover:border-cyan-500 hover: glow-bottom  border border-white/10 bg-[#0f022996] p-6 w-full lg:max-w-md lg:h-[350px]"
           >
             {/* Icon Container */}
             <div className="relative w-24 h-24 mx-auto mb-6">
