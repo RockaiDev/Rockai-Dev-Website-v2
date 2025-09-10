@@ -14,8 +14,8 @@ export default function OurPortfolio() {
                   Our Portfolio
                 </button>
 
-                <h2 className="mt-4 text-[62px] font-bold gradient-hero-text">Real Results, Real Projects</h2>
-                <p className="mt-2 text-xl text-gray-400/80 max-w-2xl mx-auto">
+                <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl lg:text-[62px] font-bold gradient-hero-text leading-tight md:leading-tight">Real Results, Real Projects</h2>
+                <p className="mt-2 text-base sm:text-lg md:text-xl text-gray-400/80 max-w-2xl mx-auto px-1 sm:px-2">
                   See how we transform challenges into real-world innovations for our clients.
                 </p>
 
@@ -26,7 +26,9 @@ export default function OurPortfolio() {
 
             </div>
 
-            <ThreeDimensionCards/>
+            <div className="px-0 sm:px-4 lg:px-24">
+                <ThreeDimensionCards/>
+            </div>
 
         </section>
 

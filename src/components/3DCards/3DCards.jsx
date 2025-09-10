@@ -9,8 +9,8 @@ export default function ThreeDimensionCards() {
   const cards = [1, 2, 3];
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center lg:gap-6 px-4">
-      <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 mt-10">
+    <div className="min-h-screen flex flex-col items-center justify-center lg:gap-6 lg:px-4">
+      <div className="grid lg:grid-cols-3 sm:grid-cols-1 grid-cols-1 gap-8 mt-10">
         {cards.map((card, i) => (
           <div key={i} className="relative flex justify-center group lg:my-10 sm:my-16 my-12">
             {/* الصورة برا الكارد عشان متتقصش */}
@@ -25,7 +25,7 @@ export default function ThreeDimensionCards() {
             {/* الكارد نفسه */}
             <CardWithAnimatedBorder className="relative rounded-2xl card-gradient p-6 text-[#E0E0E0] w-[460px] border border-[#00c6ff]/20 flex flex-col justify-between transition-all duration-500 hover:shadow-[0_0_25px_5px_rgba(0,198,255,0.6)]">
               {/* المحتوى */}
-              <div className="lg:mt-48 sm:mt-36 mt-36 text-start">
+              <div className="lg:mt-24 sm:mt-32 mt-10 text-start">
                             <div className="flex justify-start items-center">
                                   <button
                                   className={`flex items-center gap-2 px-4 py-2 rounded-full bg-blue-900/30  font-bold text-cyan-700   text-md  `}
@@ -72,7 +72,7 @@ export default function ThreeDimensionCards() {
       </div>
 
       {/* زرار تحت الكروت */}
-      <button className="px-6 py-2 border border-[#00c6ff]/50 rounded-full  text-cyan-700 hover:bg-[#00c6ff]/10 transition-all">
+      <button className="px-6 py-2 cursor-pointer border border-[#00c6ff]/50 rounded-full  text-cyan-700 hover:bg-[#00c6ff]/10 transition-all">
         View All Projects
       </button>
     </div>

@@ -9,33 +9,50 @@ import two from "@/Assets/Images/Newframe3.png";
 import three from "@/Assets/Images/Newframe4.png";
 
 const steps = [
-  { img: zero, text: "Step One: We started with a simple vision in Alexandria." },
-  { img: one, text: "Step Two: First success with a major local client." },
-  { img: two, text: "Step Three: Expansion into the Middle East region." },
-  { img: three, text: "Step Four: Leading in AI and digital transformation." },
+  {
+    img: zero,
+    title: "Step One",
+    description: "We started with a simple vision in Alexandria.",
+  },
+  {
+    img: one,
+    title: "Step Two",
+    description: "First success with a major local client.",
+  },
+  {
+    img: two,
+    title: "Step Three",
+    description: "Expansion into the Middle East region.",
+  },
+  {
+    img: three,
+    title: "Step Four",
+    description: "Leading in AI and digital transformation.",
+  },
 ];
 
-function StepText({ text }) {
+function StepText({ title, description }) {
   return (
-    <motion.p
-      initial={{ x: 50, opacity: 0 }}   // ↓ بدل 300 خليتها 50 بس
+    <motion.div
+      initial={{ x: 50, opacity: 0 }}   
       whileInView={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.5 }}
-      className="text-lg font-semibold text-gray-200 max-w-sm text-center md:text-start"
+      className="max-w-sm text-center md:text-start"
     >
-      {text}
-    </motion.p>
+      <h3 className="text-xl md:text-2xl font-bold text-white">{title}</h3>
+      <p className="mt-2 text-base md:text-lg text-gray-300">{description}</p>
+    </motion.div>
   );
 }
 
 export default function Animate() {
   return (
-    <div className="flex flex-col justify-center items-center w-full lg:max-w-3xl sm:max-w-md lg:ms-[150px] px-4">
+    <div className="flex flex-col justify-center items-center w-full lg:max-w-3xl sm:max-w-md px-4 translate-x-2 sm:translate-x-4 md:translate-x-8 lg:translate-x-12">
       {steps.map((step, i) => (
         <div
           key={i}
-          className="flex flex-col md:flex-row items-center md:items-start justify-start w-full mb-12"
+          className="flex flex-col md:flex-row items-center md:items-center justify-start w-full "
         >
           {/* الصورة */}
           <motion.div
@@ -55,8 +72,8 @@ export default function Animate() {
           </motion.div>
 
           {/* التكست */}
-          <div className="mt-4 md:mt-0 md:ms-6 w-full md:w-auto">
-            <StepText text={step.text} />
+          <div className="mt-4 md:mt-0 md:ms-6 w-full md:max-w-sm self-center">
+            <StepText title={step.title} description={step.description} />
           </div>
         </div>
       ))}

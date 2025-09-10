@@ -48,16 +48,16 @@ const LogosCarousel = () => {
         {logos.map((logo, index) => (
           <div
             key={index}
-            className="flex justify-center items-center px-4 h-[70px] "
+            className="flex justify-center items-center  lg:px-4 h-[70px] "
           >
             {/* كونتينر ثابت الحجم + Responsive */}
-            <div className=" w-[100px] mt-10 h-[80px] md:w-[180px] md:h-[180px] sm:w-[100px] sm:h-[100px] flex justify-center items-center">
+            <div className=" w-[100px] lg:mt-10 h-[80px] md:w-[180px] md:h-[180px] sm:w-[100px] sm:h-[100px] flex justify-center items-center">
               <Image
                 src={logo}
                 alt={`logo-${index}`}
                 width={120}
                 height={80}
-                className="object-contain"
+                className="object-contain w-[50px] h-[50px] "
               />
             </div>
           </div>

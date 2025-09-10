@@ -52,16 +52,18 @@ export default function OurExpertise() {
                          Our Expertise
                      </button>
 
-        <h2 className="mt-4 text-[62px] font-bold gradient-hero-text">Comprehensive Tech Solutions</h2>
-        <p className="mt-2 text-xl text-gray-400/80 max-w-3xl mx-auto">
+        <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl lg:text-[62px] font-bold gradient-hero-text leading-tight md:leading-tight">
+          Comprehensive Tech Solutions
+        </h2>
+        <p className="mt-2 text-base sm:text-lg md:text-xl text-gray-400/80 max-w-3xl mx-auto px-1 sm:px-2">
           From AI-powered applications to enterprise software, we deliver cutting-edge solutions that drive business growth and innovation.
         </p>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 lg:px-24">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12 px-0 sm:px-4 lg:px-24">
         {expertiseData.map((item, index) => (
           <CardWithAnimatedBorder
             key={index}
-            className="rounded-[35px]  ourExpertise hover:border-cyan-500 hover: glow-bottom  border border-white/10 bg-[#0f022996] p-6 w-full lg:max-w-md lg:h-[350px]"
+            className="rounded-[35px] ourExpertise hover:border-cyan-500 hover: glow-bottom border border-white/10 bg-[#0f022996] p-6 w-full sm:max-w-full md:max-w-md lg:max-w-md md:h-[340px] lg:h-[350px]"
           >
             {/* Icon Container */}
             <div className="relative w-24 h-24 mx-auto mb-6">
@@ -85,8 +87,8 @@ export default function OurExpertise() {
 
             {/* Text Section */}
             <div className="flex flex-col items-center text-center space-y-4">
-              <h3 className="text-2xl font-semibold gradient-hero-text ">{item.title}</h3>
-              <p className="text-md text-gray-400/80 h-16 items-center pt-4 w-[250px] ">{item.description}</p>
+              <h3 className="text-xl sm:text-2xl font-semibold gradient-hero-text ">{item.title}</h3>
+              <p className="text-sm sm:text-md text-gray-400/80 min-h-0 sm:h-16 items-center pt-2 sm:pt-4 w-full sm:w-[250px] ">{item.description}</p>
 
               <Link
                 href="#"

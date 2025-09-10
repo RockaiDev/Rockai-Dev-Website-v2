@@ -1,8 +1,9 @@
 "use client"
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import star from "@/Assets/Icons/star.svg"
 import bot from "@/Assets/Icons/bot.svg"
+import ChatbotModal from "../ChatbotModal/ChatbotModal";
 export default function HeroSection({
     buttonText = "Our Story",
     buttonIcon,
@@ -16,7 +17,12 @@ export default function HeroSection({
     titleClass = "",
     descClass = "",
     imageStyle = ""
-}) {
+}) 
+
+
+
+{
+    const [isChatOpen, setIsChatOpen] = useState(false);
     return (
         <section
             className={`relative flex flex-col md:flex-row items-center  justify-between    h-vh  text-white ${containerClass}`}
@@ -55,11 +61,17 @@ export default function HeroSection({
                 )}
 
             </div>
-            {/* Chat icon floating button */}
-            <div className="fixed bottom-4 right-4 md:bottom-6 md:right-6 lg:bottom-8 lg:right-8 z-20">
-                <Image src={star} alt="Chatbot" width={60} height={60} className="animate-float relative md:w-[70px] md:h-[70px] lg:w-[80px] lg:h-[80px]" />
-                <Image src={bot} alt="Chatbot" width={52} height={52} className="animate-float absolute top-[18%] left-[7%] md:w-[60px] md:h-[60px] lg:w-[70px] lg:h-[70px]" />
-            </div>
+      
+                  {/* Chat icon floating button */}
+                  <button onClick={() => setIsChatOpen(true)} className="fixed bottom-4 right-4 md:bottom-6 md:right-6 lg:bottom-8 lg:right-8 z-20">
+                      <Image src={star} alt="Chatbot" width={60} height={60} className="animate-float relative md:w-[70px] md:h-[70px] lg:w-[80px] lg:h-[80px]" />
+                      <Image src={bot} alt="Chatbot" width={52} height={52} className="animate-float absolute top-[18%] left-[7%] md:w-[60px] md:h-[60px] lg:w-[70px] lg:h-[70px]" />
+                  </button>
+      
+                  {isChatOpen && (
+                      <ChatbotModal onClose={() => setIsChatOpen(false)} />
+                  )}
+      
         </section>
     );
 }
