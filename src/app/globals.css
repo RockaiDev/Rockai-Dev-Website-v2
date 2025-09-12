@@ -333,4 +333,8 @@
   background: linear-gradient(180deg, #01161692 0%, #010c19c8 0%);
 
 }
+.contact-gradient {
+background: var(--Colors-Background, linear-gradient(180deg, rgba(16, 219, 219, 0.05) 0%, rgba(0, 71, 165, 0.05) 0%));
+/* from-cyan-500/50 via-blue-500/50 to-purple-500/50 */
+}
 

@@ -43,7 +43,9 @@ export default function Navbar() {
 
       {/* Contact Button - hide on mobile, show from md */}
       <div className="hidden md:block">
-        <ShimmerButton className="hover:[--bg:radial-gradient(70.71%_70.71%_at_50%_50%,rgba(255,255,255,0.12)_0%,rgba(0,0,0,0)_100%),_linear-gradient(180deg,#10DBDB_0%,#0047A5_100%)] [--spark-bg:conic-gradient(from_192deg_at_48.42%_61.76%,rgba(0,0,0,0)_56.773470640182495deg,rgba(0,71,165,0)_260.5844807624817deg,#10DBDB_319.36835289001465deg),_rgba(255,255,255,0.10)] [--spread:160deg] glow-bottom">Contact Us</ShimmerButton>
+        <Link href={"/Contactus"} className="">
+          <ShimmerButton className="hover:[--bg:radial-gradient(70.71%_70.71%_at_50%_50%,rgba(255,255,255,0.12)_0%,rgba(0,0,0,0)_100%),_linear-gradient(180deg,#10DBDB_0%,#0047A5_100%)] [--spark-bg:conic-gradient(from_192deg_at_48.42%_61.76%,rgba(0,0,0,0)_56.773470640182495deg,rgba(0,71,165,0)_260.5844807624817deg,#10DBDB_319.36835289001465deg),_rgba(255,255,255,0.10)] [--spread:160deg] glow-bottom">Contact Us</ShimmerButton>
+        </Link>
       </div>
 
       {/* Hamburger - Mobile Only */}
@@ -84,9 +86,9 @@ export default function Navbar() {
                 </Link>
               </li>
             ))}
-            <li className="pt-2">
+            <Link href={"/Contactus"} className="pt-2">
               <ShimmerButton className="w-full justify-center hover:[--bg:radial-gradient(70.71%_70.71%_at_50%_50%,rgba(255,255,255,0.12)_0%,rgba(0,0,0,0)_100%),_linear-gradient(180deg,#10DBDB_0%,#0047A5_100%)] [--spark-bg:conic-gradient(from_192deg_at_48.42%_61.76%,rgba(0,0,0,0)_56.773470640182495deg,rgba(0,71,165,0)_260.5844807624817deg,#10DBDB_319.36835289001465deg),_rgba(255,255,255,0.10)] [--spread:160deg] glow-bottom">Contact Us</ShimmerButton>
-            </li>
+            </Link>
           </ul>
         </div>
       )}
