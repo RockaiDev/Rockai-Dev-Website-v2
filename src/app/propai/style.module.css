@@ -1,0 +1,11 @@
+body{
+   margin: 0;
+   padding: 0;
+}
+.background{
+    background-image: url("../../Assets/gifs/Hero\ section\ .gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}

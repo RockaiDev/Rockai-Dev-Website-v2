@@ -17,7 +17,7 @@ export default function PartnersForm() {
                         className={`flex items-center gap-2 px-4 py-2 rounded-full bg-blue-900/30  font-bold text-cyan-700   text-md `}
                     >
                         <Image src={people} alt="send plane Icon" width={20} height={20} />
-                    Become a Rockai Dev Partner 
+                    Become a Rockai  Partner 
                     </button>
            <div className="content">
                      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px]  font-bold gradient-hero-text  text-white mb-3 sm:mb-4 leading-tight md:leading-tight">
@@ -92,13 +92,12 @@ export default function PartnersForm() {
             </div>
             <div className="flex flex-col">
               <label className="mb-2 text-sm text-gray-300">Industry</label>
-              <select className="w-full py-4 px-3 rounded-[18px] bg-transparent border border-gray-700 
+              <input
+                type="text"
+                placeholder="Enter your industry"
+                className="w-full py-4 px-3 rounded-[18px] bg-transparent border border-gray-700 
               text-gray-400 focus:outline-none focus:border-cyan-400">
-                <option value="">Select Availability</option>
-                <option value="fulltime">technology</option>
-                <option value="parttime">education</option>
-                <option value="freelance">Freelance</option>
-              </select>
+              </input>
             </div>
           </div>
                 {/* Skills */}

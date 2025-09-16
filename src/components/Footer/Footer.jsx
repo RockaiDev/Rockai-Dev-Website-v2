@@ -13,9 +13,9 @@ import Image from "next/image";
 import Link from 'next/link'
 import Newsletter from '@/app/Home/Newsletter/Newsletter'
 
-export default function Footer() {
+export default function Footer({isPropaiPage}) {
   return (
-<>
+<div className={`${isPropaiPage && "px-10"}`}>
 <Newsletter/>
     <footer className=" lg:block  hidden text-white py-12 px-4 md:px-8">
       <div className="max-w- mx-auto">
@@ -150,7 +150,7 @@ export default function Footer() {
         <div className="border-t border-gray-700 mt-12 pt-8">
           <p className="text-gray-400/80 text-sm text-center md:text-left">
             Copyright©2025{' '}
-            <span className="text-cyan-700 font-medium">Rockai Dev</span>
+            <span className="text-cyan-700 font-medium">Rockai </span>
             {' '}| All Rights Reserved.
           </p>
         </div>
@@ -233,14 +233,14 @@ export default function Footer() {
     <div className="border-t border-gray-700 mt-10 pt-6 text-center md:text-left">
       <p className="text-gray-400/80 text-sm">
         Copyright ©2025{' '}
-        <span className="text-cyan-600 font-medium">Rockai Dev</span>
+        <span className="text-cyan-600 font-medium">Rockai </span>
         {' '}| All Rights Reserved.
       </p>
     </div>
   </div>
 </footer>
 
-</>
+</div>
   )
 }
 

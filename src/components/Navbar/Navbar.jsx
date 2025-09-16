@@ -6,7 +6,7 @@ import { useState } from "react";
 import Link from "next/link";
 
 
-export default function Navbar() {
+export default function Navbar({isPropaiPage}) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navItems = [
     { label: "Home", href: "/" },
@@ -19,7 +19,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="w-full py-4 flex items-center justify-between ">
+    <nav className={`${isPropaiPage && "px-10"} w-full py-4 flex items-center justify-between `}>
       {/* Logo */}
       <div className="flex items-center gap-2">
         <Link href="/" aria-label="Go to home">

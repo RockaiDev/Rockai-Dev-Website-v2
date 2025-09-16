@@ -5,10 +5,10 @@ import star from "@/Assets/Icons/star.svg"
 import bot from "@/Assets/Icons/bot.svg"
 import ChatbotModal from "../ChatbotModal/ChatbotModal";
 export default function HeroSection({
-    buttonText = "Our Story",
+    buttonText = "",
     buttonIcon,
-    title = "From Vision to Revolution",
-    description = "The story of how a small team in Alexandria became Egypt's leading force in AI and software innovation, transforming businesses across the Middle East and beyond.",
+    title = "",
+    description = "",
     imageSrc,
     imageAlt = "Hero Image",
     imageAnimationClass = "",
@@ -16,7 +16,14 @@ export default function HeroSection({
     buttonClass = "",
     titleClass = "",
     descClass = "",
-    imageStyle = ""
+    imageStyle = "",
+    requestBtn= "",
+    requestBtnIcon,
+    talkToSalesBtn="",
+    talkToSalesBtnIcon,
+    btnMsg1="",
+    btnMsg2=""
+    
 }) 
 
 
@@ -31,6 +38,8 @@ export default function HeroSection({
             <div className="flex flex-col  gap-3     ">
                 {/* زرار */}
                 <button
+      
+
                     className={`flex items-center gap-2 px-4 py-2 rounded-full bg-blue-900/30  font-bold text-cyan-700   text-sm ${buttonClass}`}
                 >
                     {buttonIcon && <Image src={buttonIcon} alt="icon" width={16} height={16} />}
@@ -46,6 +55,36 @@ export default function HeroSection({
                 <p className={`text-gray-400/80  text-base md:text-lg lg:text-xl leading-7 md:leading-[31px] w-full md:max-w-[600px] lg:max-w-[690px] self-start ${descClass}`}>
                     {description}
                 </p>
+{
+    requestBtn &&  talkToSalesBtn &&    (
+        <div className="flex gap-4 mt-4">
+            <button             onClick={() =>
+    window.open(
+      `https://wa.me/201555867970?text=${encodeURIComponent(
+        btnMsg1
+      )}`,
+      "_blank"
+    )
+  } className={`flex cursor-pointer items-center gap-2 px-4 py-4 rounded-full font-semibold   text-white text-sm bg-gradient-to-r from-cyan-500 to-blue-600  ${buttonClass}`}>
+                {requestBtnIcon && <Image src={requestBtnIcon} alt="icon" width={16} height={16} />}
+                {requestBtn}
+            </button>
+            <button             onClick={() =>
+    window.open(
+      `https://wa.me/201555867970?text=${encodeURIComponent(
+        btnMsg2
+      )}`,
+      "_blank"
+    )
+  } className={`cursor-pointer flex items-center gap-2 px-4 py-4 rounded-full font-semibold bg-blue-900/30   text-cyan-700/80   text-sm ${buttonClass}`}>
+                {talkToSalesBtnIcon && <Image src={talkToSalesBtnIcon} alt="icon" width={16} height={16} />}
+                {talkToSalesBtn}
+            </button>
+        </div>
+    ) 
+}
+
+
             </div>
 
             {/* صورة الهيرو */}

@@ -84,7 +84,6 @@ export default function ProductsPage() {
         titleClass=""
         descClass="" />
 
-
       <div className="secHeader mb-1 mx-auto text-center pt-10 px-6">
         <button
           className={`flex items-center gap-2 px-4 py-2 rounded-full bg-blue-900/30 font-bold text-cyan-700 text-md m-auto`}

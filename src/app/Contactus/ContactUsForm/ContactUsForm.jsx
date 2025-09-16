@@ -20,32 +20,32 @@ const ContactFormWithOptions = () => {
   });
   
   // Array of options with placeholder icons
-  const helpOptions = [
-    {
-      id: 'general',
-      title: 'General Inquiry',
-      icon: Mail,
-      description: 'General questions and inquiries'
-    },
-    {
-      id: 'sales',
-      title: 'Sales & Partnerships',
-      icon: Users,
-      description: 'Business partnerships and sales'
-    },
-    {
-      id: 'technical',
-      title: 'Technical Support',
-      icon: Wrench,
-      description: 'Technical help and support'
-    },
-    {
-      id: 'careers',
-      title: 'Careers',
-      icon: Briefcase,
-      description: 'Job opportunities and careers'
-    }
-  ];
+  // const helpOptions = [
+  //   {
+  //     id: 'general',
+  //     title: 'General Inquiry',
+  //     icon: Mail,
+  //     description: 'General questions and inquiries'
+  //   },
+  //   {
+  //     id: 'sales',
+  //     title: 'Sales & Partnerships',
+  //     icon: Users,
+  //     description: 'Business partnerships and sales'
+  //   },
+  //   {
+  //     id: 'technical',
+  //     title: 'Technical Support',
+  //     icon: Wrench,
+  //     description: 'Technical help and support'
+  //   },
+  //   {
+  //     id: 'careers',
+  //     title: 'Careers',
+  //     icon: Briefcase,
+  //     description: 'Job opportunities and careers'
+  //   }
+  // ];
 
   const handleInputChange = (field, value) => {
     setFormData(prev => ({
@@ -66,7 +66,7 @@ const ContactFormWithOptions = () => {
         <div className="flex flex-col items-start justify-center gap-6 md:gap-6 max-w-2xl">
           <button className="flex items-center gap-2 px-4 py-2 rounded-full bg-blue-900/30 font-bold text-cyan-700 text-md">
             <User size={20} />
-           Connect with Rockai Dev
+           Connect with Rockai 
           </button>
           <div className="content">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px] font-bold gradient-hero-text mb-6">
@@ -114,7 +114,7 @@ const ContactFormWithOptions = () => {
         <div className="relative rounded-2xl p-[1px] w-full md:w-auto bg-gradient-to-r ">
           <div className="form-gradient rounded-2xl p-4 sm:p-6 md:p-8 shadow-lg w-full backdrop-blur-sm">
             <div className="space-y-6 p-4 sm:p-6 md:p-10">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-xl">
+                {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-xl">
             {helpOptions.map((option) => {
               const IconComponent = option.icon;
               const isSelected = selectedOption === option.id;
@@ -160,7 +160,7 @@ const ContactFormWithOptions = () => {
                 </div>
               );
             })}
-          </div>
+          </div> */}
               {/* Row 1: Contact Name & Email */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="flex flex-col">

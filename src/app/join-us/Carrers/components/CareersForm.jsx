@@ -17,11 +17,11 @@ export default function careersForm() {
                         className={`flex items-center gap-2 px-4 py-2 rounded-full bg-blue-900/30  font-bold text-cyan-700   text-md `}
                     >
                         <Image src={people} alt="send plane Icon" width={20} height={20} />
-                    Become a Rockai Dev Member
+                    Become a Rockai  Member
                     </button>
            <div className="content">
                      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px]  font-bold gradient-hero-text  text-white mb-3 sm:mb-4 leading-tight md:leading-tight">
-                      Interested in Rockai Dev?
+                      Interested in Rockai ?
                     </h1>
                     <p className="text-gray-400/80 text-base sm:text-lg max-w-lg ">
                     Join Egypt's leading tech innovation company and be part of our mission to revolutionize technology.
