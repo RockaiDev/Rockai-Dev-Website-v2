@@ -9,16 +9,17 @@ import { usePathname } from "next/navigation";
 
 const inter = Inter({ subsets: ["latin"] });
 
+
 export default function RootLayout({ children }) {
 const pathname = usePathname();
 
  
-  const isPropaiPage = pathname.startsWith("/propai");
+  const isPropaiPage = pathname.includes("/propai");
   return (
     <html lang="en">
       <body className={`${inter.className} relative min-h-screen`}>
         <StarsBackgroundDemo />
-        <div className={` ${isPropaiPage ? "relative z-10" : "relative z-10  mx-4 sm:mx-6 lg:mx-16"} `}>
+        <div className={` ${isPropaiPage ? "relative z-10 " : "relative z-10  mx-4 sm:mx-6 lg:mx-16"} `}>
           <Navbar isPropaiPage={isPropaiPage} />
           {children}
           <Footer isPropaiPage={isPropaiPage}/>

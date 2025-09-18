@@ -42,7 +42,7 @@ export default function HeroSection({
 
                     className={`flex items-center gap-2 px-4 py-2 rounded-full bg-blue-900/30  font-bold text-cyan-700   text-sm ${buttonClass}`}
                 >
-                    {buttonIcon && <Image src={buttonIcon} alt="icon" width={16} height={16} />}
+                    {buttonIcon && <Image src={buttonIcon} alt="icon" width={24} height={24} />}
                     {buttonText}
                 </button>
 
@@ -57,7 +57,7 @@ export default function HeroSection({
                 </p>
 {
     requestBtn &&  talkToSalesBtn &&    (
-        <div className="flex gap-4 mt-4">
+        <div className="flex justify-center lg:justify-start gap-4 mt-4">
             <button             onClick={() =>
     window.open(
       `https://wa.me/201555867970?text=${encodeURIComponent(
@@ -88,7 +88,7 @@ export default function HeroSection({
             </div>
 
             {/* صورة الهيرو */}
-            <div className={` flex justify-start  w-4/5 ${imageAnimationClass}`}>
+            <div className={` flex justify-start  mt-10 sm:mt-5 lg:mt-0  w-4/5 ${imageAnimationClass}`}>
                 {imageSrc && (
                     <Image
                         src={imageSrc}

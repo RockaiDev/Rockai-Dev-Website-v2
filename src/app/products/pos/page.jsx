@@ -36,6 +36,7 @@ import BuildFeatures from "./buildWith/BuildWith";
 
 
 const features = [
+  
   {
     icon: <Image src={energy} alt="Innovation First" width={48} height={48} />,
     title: "Data Encryption",
@@ -139,10 +140,10 @@ export default function POSPage() {
   return (
     <main className="min-h-[60vh] container mx-auto  py-12 text-white">
       <HeroSection
-        buttonText="Unified Sales Management"
+        buttonText="Smart Unified Food Retail Assistant"
         buttonIcon={shopping}
-        title="POS System"
-        description="Seamlessly manage both in-store and online sales with our intelligent point-of-sale solution that unifies your entire business operations."
+        title="SUFRA POS System"
+        description="SUFRA is not just a recipe manager. It is the Smart Unified Food Retail Assistant that unifies recipes, inventory, accounting, and AI insights to help restaurants reduce waste, cut costs, and increase profitability in one intelligent platform."
         imageSrc={pos}
         imageAlt="Hero Image"
         imageAnimationClass=""

@@ -1,83 +1,90 @@
 "use client"
 
 import { CardWithAnimatedBorder } from "@/components/CardWithAnimatedBorder/CardWithAnimatedBorder";
-import bulbFill from "@/Assets/Icons/bulb_fill.svg"
-import settings from "@/Assets/Icons/settings.svg"
-import storyRocket from "@/Assets/Icons/storyRocket.svg"
-import brain from "@/Assets/Icons/brain.svg"
-import mindMap from "@/Assets/Icons/mindMap.svg"
-import certificate from "@/Assets/Icons/certificate.svg"
-import chart from "@/Assets/Icons/chart.svg"
-import graduate from "@/Assets/Icons/graduate.svg"
+// import bulbFill from "@/Assets/Icons/bulb_fill.svg"
+// import settings from "@/Assets/Icons/settings.svg"
+// import storyRocket from "@/Assets/Icons/storyRocket.svg"
+// import brain from "@/Assets/Icons/brain.svg"
+// import mindMap from "@/Assets/Icons/mindMap.svg"
+// import certificate from "@/Assets/Icons/certificate.svg"
+// import chart from "@/Assets/Icons/chart.svg"
+// import graduate from "@/Assets/Icons/graduate.svg"
 import arrowRight from "@/Assets/Icons/arrowRight.svg"
-
+import {servicesData} from "../data/data"
 import Image from "next/image"
-
-const servicesData = [
-  {
-    category: "Development",
-    title: "Custom Software Development",
-    description: "Tailored enterprise solutions built with cutting-edge technologies",
-    techStack: ["Next.js", "OpenAI GPT-4", "React", "Node.js"],
-    features: ["Scalable Architecture", "AI Integration", "Payment Integration", "Security First"],
-    timeline: "3–6 months",
-    icon: bulbFill,
-  },
-  {
-    category: "Development",
-    title: "SaaS Product Engineering",
-    description: "End-to-End SaaS platform development from concept to scale",
-    techStack: ["Next.js", "OpenAI GPT-4", "React", "Node.js"],
-    features: ["Scalable Architecture", "AI Integration", "Payment Integration", "Security First"],
-    timeline: "3–6 months",
-    icon: settings,
-  },
-  {
-    category: "AI/ML",
-    title: "AI & LLM Solutions",
-    description: "Advanced AI integration and custom Language Model implementations",
-    techStack: ["Next.js", "OpenAI GPT-4", "React", "Node.js"],
-    features: ["Scalable Architecture", "AI Integration", "Payment Integration", "Security First"],
-    timeline: "3–6 months",
-    icon: brain,
-  },
-  {
-    category: "Integration",
-    title: "Automation & Integrations",
-    description: "Streamlined workflows and system integrations to boost efficiency",
-    techStack: ["Next.js", "OpenAI GPT-4", "React", "Node.js"],
-    features: ["Scalable Architecture", "AI Integration", "Payment Integration", "Security First"],
-    timeline: "3–6 months",
-    icon: mindMap,
-  },
-  {
-    category: "Quality Assurance",
-    title: "Testing & QA Services",
-    description: "Comprehensive testing solutions ensuring bulletproof software quality",
-    techStack: ["Next.js", "OpenAI GPT-4", "React", "Node.js"],
-    features: ["Scalable Architecture", "AI Integration", "Payment Integration", "Security First"],
-    timeline: "3–6 months",
-    icon: certificate,
-  },
-  {
-    category: "Marketing",
-    title: "SEO Services",
-    description: "Data-driven SEO strategies that drive organic growth and visibility",
-    techStack: ["Next.js", "OpenAI GPT-4", "React", "Node.js"],
-    features: ["Scalable Architecture", "AI Integration", "Payment Integration", "Security First"],
-    timeline: "3–6 months",
-    icon: chart,
-  },
-  {
-    category: "Development",
-    title: "Technical Training for Dev Teams",
-    description: "Upskill your development team with expert-led training programs",
-    techStack: ["Next.js", "OpenAI GPT-4", "React", "Node.js"],
-    features: ["Scalable Architecture", "AI Integration", "Payment Integration", "Security First"],
-    timeline: "3–6 months",
-    icon: graduate,
-  },
-];
+import Link from "next/link";
+// const servicesData = [
+//   {
+//     slug: "custom-software-development",
+//     category: "Development",
+//     title: "Custom Software Development",
+//     description: "Tailored enterprise solutions built with cutting-edge technologies",
+//     techStack: ["Next.js", "OpenAI GPT-4", "React", "Node.js"],
+//     features: ["Scalable Architecture", "AI Integration", "Payment Integration", "Security First"],
+//     timeline: "3–6 months",
+//     icon: bulbFill,
+//   },
+//   {
+//     slug: "saas-product-engineering",
+//     category: "Development",
+//     title: "SaaS Product Engineering",
+//     description: "End-to-End SaaS platform development from concept to scale",
+//     techStack: ["Next.js", "OpenAI GPT-4", "React", "Node.js"],
+//     features: ["Scalable Architecture", "AI Integration", "Payment Integration", "Security First"],
+//     timeline: "3–6 months",
+//     icon: settings,
+//   },
+//   {
+//     slug: "ai-llm-solutions",
+//     category: "AI/ML",
+//     title: "AI & LLM Solutions",
+//     description: "Advanced AI integration and custom Language Model implementations",
+//     techStack: ["Next.js", "OpenAI GPT-4", "React", "Node.js"],
+//     features: ["Scalable Architecture", "AI Integration", "Payment Integration", "Security First"],
+//     timeline: "3–6 months",
+//     icon: brain,
+//   },
+//   {
+//     slug: "automation-integrations",
+//     category: "Integration",
+//     title: "Automation & Integrations",
+//     description: "Streamlined workflows and system integrations to boost efficiency",
+//     techStack: ["Next.js", "OpenAI GPT-4", "React", "Node.js"],
+//     features: ["Scalable Architecture", "AI Integration", "Payment Integration", "Security First"],
+//     timeline: "3–6 months",
+//     icon: mindMap,
+//   },
+//   {
+//     slug: "testing-qa-services",
+//     category: "Quality Assurance",
+//     title: "Testing & QA Services",
+//     description: "Comprehensive testing solutions ensuring bulletproof software quality",
+//     techStack: ["Next.js", "OpenAI GPT-4", "React", "Node.js"],
+//     features: ["Scalable Architecture", "AI Integration", "Payment Integration", "Security First"],
+//     timeline: "3–6 months",
+//     icon: certificate,
+//   },
+//   {
+//     slug: "seo-services",
+//     category: "Marketing",
+//     title: "SEO Services",
+//     description: "Data-driven SEO strategies that drive organic growth and visibility",
+//     techStack: ["Next.js", "OpenAI GPT-4", "React", "Node.js"],
+//     features: ["Scalable Architecture", "AI Integration", "Payment Integration", "Security First"],
+//     timeline: "3–6 months",
+//     icon: chart,
+//   },
+//   {
+//     slug: "technical-training",
+//     category: "Development",
+//     title: "Technical Training for Dev Teams",
+//     description: "Upskill your development team with expert-led training programs",
+//     techStack: ["Next.js", "OpenAI GPT-4", "React", "Node.js"],
+//     features: ["Scalable Architecture", "AI Integration", "Payment Integration", "Security First"],
+//     timeline: "3–6 months",
+//     icon: graduate,
+//   },
+// ];
 
 export default function ServiceCards() {
   return (
@@ -117,7 +124,7 @@ export default function ServiceCards() {
           <div className="mt-4 border-b-1 border-gray-400/20 pb-4 ps-3">
             <h4  className=" text-xs uppercase mb-4 text-start text-sky-400/80">Key Features</h4>
             <div className="flex flex-wrap gap-8 mt-1">
-              {service.features.map((feature, i) => (
+              {service.KeyFeatures.map((feature, i) => (
                 <li
                   key={i}
                   className=" text-xs text-gray-400/80 "
@@ -131,10 +138,12 @@ export default function ServiceCards() {
           {/* Footer */}
           <div className="mt-4 flex items-center justify-between">
             <span className="text-xs text-gray-400/80">Timeline: <span className="text-sky-400/80 font-medium ">{service.timeline}</span></span>
-            <button className="px-6 py-4 flex rounded-full bg-sky-500 text-white text-md items-center  hover:bg-sky-600 transition cursor-pointer">
-              Learn more 
-              <Image src={arrowRight} alt="arrow" className="w-5 h-5 ml-2" />
-            </button>
+       <button className="px-6 py-4 flex rounded-full bg-sky-500 text-white text-md items-center hover:bg-sky-600 transition cursor-pointer">
+  <Link href={`/services/${service.slug}`} className="flex items-center">
+    Learn more
+    <Image src={arrowRight} alt="arrow" className="w-5 h-5 ml-2" />
+  </Link>
+</button>
           </div>
         </CardWithAnimatedBorder>
       ))}

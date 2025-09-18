@@ -13,28 +13,28 @@ const Gamified = () => {
     const features = [
         {
             icon: bulb,
-            title: "Instant Answers",
-            description: "Get smart, relevant info about any service or product.",
+            title: "Instant Intelligence",
+            description: " Lightning-fast answers save time and effort always.",
         },
         {
             icon: target,
-            title: "Personalized Recommendations",
-            description: "AI suggests solutions tailored to your challenges.",
+            title: "Smart Recommendations",
+            description: " Personalized suggestions match preferences, challenges, and needs.",
         },
         {
             icon: message,
-            title: "Live Project Assistance",
-            description: "Help with forms, estimations, or support in real time.",
+            title: "Real-Time Project Support",
+            description: "Guided assistance ensures smooth actions across platform.",
         },
         {
             icon: refresh,
-            title: "Seamless Handover",
-            description: "Connect with a real expert when needed.",
+            title: "Seamless Human Handoff",
+            description: "Smooth shift from AI speed to experts.",
         },
         {
             icon: earthWhite,
-            title: "Multilingual Support",
-            description: "Talk in English or Arabic—AI understands both!",
+            title: "Multilingual Conversations",
+            description: "Effortless communication supported in English and Arabic.",
         },
     ];
 

@@ -18,12 +18,11 @@ export default function Tellus() {
                       Need a custom solution ?
                     </button>
            <div className="content">
-                     <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[55px]  font-bold gradient-hero-text  text-white mb-3 sm:mb-4 leading-tight md:leading-tight">
-                        Tell Us Your Challenge
+                     <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[50px]  font-bold gradient-hero-text  text-white mb-3 sm:mb-4 leading-tight md:leading-tight">
+                     Share Your Vision with Us
                     </h1>
                     <p className="text-gray-400/80 text-base sm:text-lg max-w-lg ">
-                        Every business is unique. Share your specific problem and let our
-                        experts design a tailored solution for you.
+                        Your goals drive innovation. Tell us what you’re aiming for, and our AI-powered experts will craft a future-ready solution.
                     </p>
            </div>
                 </div>
@@ -59,7 +58,7 @@ export default function Tellus() {
                             </div>
 
                             <textarea
-                                placeholder="Tell us about the challenge you're facing, your current situation..."
+                                placeholder="Tell us about your vision and your current situation..."
                                 rows={4}
                                 className="w-full py-4 px-3 rounded-[18px] bg-transparent border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400"
                             ></textarea>
@@ -69,7 +68,7 @@ export default function Tellus() {
                                 className="w-full py-3 rounded-lg form-btn  text-white font-semibold shadow-lg hover:opacity-90 transition"
                             >
                                 <Image src={sendplaneWhite} alt="send plane Icon" width={20} height={20} className="inline-block mr-2" />
-                                 Submit your problem
+                               Start Building My Solution
                             </button>
                         </form>
                     </div>

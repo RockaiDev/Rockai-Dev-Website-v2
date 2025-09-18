@@ -1,3 +1,5 @@
+
+"use client"
 import tool from "@/Assets/Icons/tool.svg"
 import spaceShip from "@/Assets/Images/spaceShip.svg"
 import HeroSection from "@/components/PagesHero/PagesHero";

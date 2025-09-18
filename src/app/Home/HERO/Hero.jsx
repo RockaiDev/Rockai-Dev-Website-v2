@@ -57,9 +57,7 @@ export default function Hero() {
                         </div>
 
                         <p className="text-gray-400/80  text-base md:text-lg lg:text-xl max-w-none md:max-w-xl lg:max-w-lg leading-7 md:leading-[31px]">
-                            Cutting-edge AI solutions, innovative SaaS platforms,
-                            and custom software development that transforms
-                            businesses across the Middle East and beyond.
+                            Pioneering the next wave of technology through breakthrough SaaS platforms and transformative software that redefine how businesses innovate and grow across the Middle East and beyond
                         </p>
 
                         {/* Action buttons */}

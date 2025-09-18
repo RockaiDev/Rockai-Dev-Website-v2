@@ -16,7 +16,7 @@ export default function Powered() {
                Trusted Partners
                 </button>
 
-                <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl lg:text-[62px] font-bold gradient-hero-text leading-tight md:leading-tight">Powering Egypt's Leading Companies</h2>
+                <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl lg:text-[65px] font-bold gradient-hero-text leading-tight md:leading-tight">Powering Egypt’s Most Ambitious Businesses</h2>
                 <p className="mt-2 text-base sm:text-lg md:text-xl text-gray-400/80 max-w-2xl mx-auto px-1 sm:px-2">
                   Turning client visions into reality
                 </p>

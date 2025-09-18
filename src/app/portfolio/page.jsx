@@ -57,12 +57,12 @@ export default function PortfolioPage() {
   ];
 
 
-    const [industry, setIndustry] = useState("All Industries");
+  const [industry, setIndustry] = useState("All Industries");
   const [tech, setTech] = useState("All Technologies");
   const industries = ["All Industries", ...new Set(cards.map((c) => c.industry))];
   const technologies = ["All Technologies", ...new Set(cards.flatMap((c) => c.technologies))];
 
- 
+
   const filteredCards = cards.filter((card) => {
     const matchIndustry =
       industry === "All Industries" || card.industry === industry;
@@ -73,34 +73,35 @@ export default function PortfolioPage() {
 
 
   return (
-   <main className="min-h-[60vh] container mx-auto  py-12 text-white">
-          <HeroSection 
-          buttonText="Our portfolio"
-            buttonIcon ={folder}
-            title="Our Success Stories"
-            description="Explore our portfolio of innovative solutions and fictional use cases that demonstrate our expertise across industries and technologies."
-            imageSrc  ={earth}
-            imageAlt="Hero Image"
-            imageAnimationClass="animate-[spin_180s_linear_infinite]"
-            containerClass="overflow-hidden "
-            imageStyle="scale-115"
-            buttonClass="w-fit "
-            titleClass=""
-            descClass="" />
+    <main className="min-h-[60vh] container mx-auto  py-12 text-white">
+      <HeroSection
+        buttonText="Our portfolio"
+        buttonIcon={folder}
+        title="Fueling Businesses with Interstellar Success"
+        description="Witness how we transform complex challenges into real-world, innovative solutions
+tailored to the unique needs of our esteemed clients"
+        imageSrc={earth}
+        imageAlt="Hero Image"
+        imageAnimationClass="animate-[spin_180s_linear_infinite]"
+        containerClass="overflow-hidden "
+        imageStyle="scale-115"
+        buttonClass="w-fit "
+        titleClass=""
+        descClass="" />
 
 
-   <div className="secHeader mb-1 mx-auto text-center pt-10 px-6">
+      <div className="secHeader mb-1 mx-auto text-center pt-10 px-6">
         <button
           className={`flex items-center gap-2 px-4 py-2 rounded-full bg-blue-900/30 font-bold text-cyan-700 text-md m-auto`}
         >
           <Image src={diary} alt="directions icon " width={20} height={20} />
-Innovative Scenarios        </button>
+          Innovative Scenarios        </button>
 
         <h2 className="mt-4 text-[62px] font-bold gradient-hero-text">
-      Shaping Tomorrow’s Possibilities
+          Shaping Tomorrow’s Possibilities
         </h2>
         <p className="mt-2 text-xl text-gray-400/80 max-w-4xl lg:mb-12 mb-8 mx-auto">
-         Dive into visionary projects and creative use cases—imagined, designed, and built to spark inspiration and showcase what’s possible with next-gen technology.
+          Dive into visionary projects and creative use cases—imagined, designed, and built to spark inspiration and showcase what’s possible with next-gen technology.
         </p>
       </div>
 
@@ -195,8 +196,8 @@ Innovative Scenarios        </button>
 
 
 
-            
-        </main>
+
+    </main>
   );
 }
 

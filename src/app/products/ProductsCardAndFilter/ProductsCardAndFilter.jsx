@@ -9,15 +9,17 @@ import eye from "@/Assets/Icons/eye.svg";
 import arrowRight from "@/Assets/Icons/arrowRight.svg"
 
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
+import Link from "next/link";
 
 const productsData = [
   {
     id: 1,
-    category: "CRM",
-    title: "Propai CRM",
-    description: "Advanced real estate CRM with role-based security, inventory management.",
+    category: "POS",
+    title: "SUFRA CRM",
+    description: "SUFRA is not just a recipe manager. It is the Smart Unified Food Retail Assistant that transforms your POS into a complete restaurant intelligence platform",
     image: crm1,
     technologies: ["Next.js", "OpenAI GPT-4", "React"],
+    link:"/pos"
   },
   {
     id: 2,
@@ -26,6 +28,7 @@ const productsData = [
     description: "Smart tutoring platform with automated attendance tracking.",
     image: crm2,
     technologies: ["Next.js", "OpenAI GPT-4", "React"],
+     link:"/propai"
   },
   {
     id: 3,
@@ -57,28 +60,28 @@ export default function ProductsCardAndFilter() {
   return (
     <div className="text-white p-6 space-y-8">
       {/* Filters */}
-    <div className="flex flex-col md:flex-row gap-4 justify-between items-center w-full">
-  <select
-    className="bg-[#0F0229] border  border-gray-600 rounded-lg px-4 py-3 w-full md:w-1/2"
-    value={industry}
-    onChange={(e) => setIndustry(e.target.value)}
-  >
-    <option>All Industries</option>
-    <option>CRM</option>
-    <option>rock</option>
-  </select>
+      <div className="flex flex-col md:flex-row gap-4 justify-between items-center w-full">
+        <select
+          className="bg-[#0F0229] border  border-gray-600 rounded-lg px-4 py-3 w-full md:w-1/2"
+          value={industry}
+          onChange={(e) => setIndustry(e.target.value)}
+        >
+          <option>All Industries</option>
+          <option>CRM</option>
+          <option>rock</option>
+        </select>
 
-  <select
-    className="bg-[#0F0229] border border-gray-600 rounded-lg px-4 py-3 w-full md:w-1/2"
-    value={tech}
-    onChange={(e) => setTech(e.target.value)}
-  >
-    <option>All Technologies</option>
-    <option>Next.js</option>
-    <option>OpenAI GPT-4</option>
-    <option>React</option>
-  </select>
-</div>
+        <select
+          className="bg-[#0F0229] border border-gray-600 rounded-lg px-4 py-3 w-full md:w-1/2"
+          value={tech}
+          onChange={(e) => setTech(e.target.value)}
+        >
+          <option>All Technologies</option>
+          <option>Next.js</option>
+          <option>OpenAI GPT-4</option>
+          <option>React</option>
+        </select>
+      </div>
 
       {/* Products */}
       <div className="grid md:grid-cols-2 gap-8">
@@ -113,15 +116,15 @@ export default function ProductsCardAndFilter() {
               </div>
 
               <div className="flex items-center justify-between gap-6 pt-4 lg:w-full ">
-               <button className="px-6 lg:py-4  py-3 flex rounded-full justify-center lg:w-1/2 bg-sky-500 text-white text-md items-center  hover:bg-sky-600 transition cursor-pointer">
-View Details                           <Image src={arrowRight} alt="arrow" className="w-5 h-5 ml-2" />
-                         </button>
-              <HoverBorderGradient>
-            <div className="flex gap-3 py-2 lg:px-6 lg:w-[250px] justify-center items-center">
-                    <Image src={eye} alt="eye" width={20} height={20}/>
-               <span>View Demo</span>
-            </div>
-              </HoverBorderGradient>
+                <Link  href={product.link ? `/products/${product.link}` : "#"} className="px-6 lg:py-4  py-3 flex rounded-full justify-center lg:w-1/2 bg-sky-500 text-white text-md items-center  hover:bg-sky-600 transition cursor-pointer">
+                  View Details                           <Image src={arrowRight} alt="arrow" className="w-5 h-5 ml-2" />
+                </Link>
+                <HoverBorderGradient>
+                  <div className="flex gap-3 py-2 lg:px-6 lg:w-[250px] justify-center items-center">
+                    <Image src={eye} alt="eye" width={20} height={20} />
+                    <span>View Demo</span>
+                  </div>
+                </HoverBorderGradient>
               </div>
             </div>
           </CardWithAnimatedBorder>
@@ -130,7 +133,7 @@ View Details                           <Image src={arrowRight} alt="arrow" class
 
 
 
-      
+
     </div>
   );
 }

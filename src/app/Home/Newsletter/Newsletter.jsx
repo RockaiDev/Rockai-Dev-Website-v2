@@ -1,6 +1,6 @@
 export default function Newsletter() {
   return (
-    <section className="w-full  py-10 px-6 flex justify-between border-b border-t border-gray-900">
+    <section className="w-full  py-10 lg:px-6  flex justify-between border-b border-t border-gray-900">
       <div className="w-full flex flex-col md:flex-row items-center justify-between gap-6 ">
         {/* Text Content */}
         <div className="text-left ">
@@ -13,13 +13,13 @@ export default function Newsletter() {
         </div>
 
         {/* Input + Button Side by Side */}
-        <div className="flex w-full md:w-auto items-center gap-3">
+        <div className="flex flex-col sm:flex-row justify-center  w-full md:w-auto items-center gap-3">
           <input
             type="email"
             placeholder="Enter your email"
             className="flex-1 md:w-72 rounded-full  border border-gray-700 px-4 py-3 text-sm text-white placeholder-gray-400 focus:outline-none"
           />
-          <button className="px-6 py-3 text-sm font-medium text-white rounded-full bg-gradient-to-r from-[#10DBDB] to-[#0047A5] shadow-lg shadow-cyan-500/30 hover:scale-105 transition">
+          <button className="sm:px-6 px-12 py-3 text-sm font-medium text-white rounded-full bg-gradient-to-r from-[#10DBDB] to-[#0047A5] shadow-lg shadow-cyan-500/30 hover:scale-105 transition">
             Subscribe
           </button>
         </div>

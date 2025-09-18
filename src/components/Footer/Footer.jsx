@@ -29,7 +29,7 @@ export default function Footer({isPropaiPage}) {
             </div>
 
             <p className="text-gray-400/80 text-sm leading-relaxed mb-8 max-w-sm">
-              We embark on an audacious journey to enrich the digital realm, weaving simplicity and delight for every user, while leaving an indelible Egyptian mark in the realm of artificial intelligence.
+            Rockai Dev ventures beyond boundaries, designing seamless digital journeys that inspire, empower, and carry Egypt’s spirit into the world of AI. 
             </p>
 
             {/* Social Media Icons */}
@@ -157,29 +157,15 @@ export default function Footer({isPropaiPage}) {
       </div>
     </footer>
     
- <footer className="block lg:hidden text-white py-12 ">
+ <footer className="block lg:hidden text-white py-12  border-t-1 border-gray-400/20 ">
+  
   <div className=" ">
     
     {/* Main Grid */}
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6 ">
+    <div className="grid grid-cols-1 text-center md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6  justify-content-center ">
       
       {/* Company Info */}
-      <div>
-        <div className="flex items-center gap-3 mb-6">
-          <Image src={logo} alt="Logo" width={100} height={100} />
-        </div>
-        <p className="text-gray-400/80 text-sm leading-relaxed mb-6">
-          We embark on an audacious journey to enrich the digital realm, weaving simplicity and delight for every user, while leaving an indelible Egyptian mark in the realm of artificial intelligence.
-        </p>
-        {/* Social Media */}
-        <div className="flex gap-4 justify-start md:justify-start">
-          <Image src={fb} alt="Facebook" width={32} height={32} className="cursor-pointer hover:opacity-80" />
-          <Image src={insta} alt="Instagram" width={32} height={32} className="cursor-pointer hover:opacity-80" />
-          <Image src={X} alt="Twitter" width={32} height={32} className="cursor-pointer hover:opacity-80" />
-          <Image src={tiktok} alt="TikTok" width={32} height={32} className="cursor-pointer hover:opacity-80" />
-        </div>
-      </div>
-
+    
       {/* Quick Links */}
       <div className='sm:ms-24'>
         <h3 className="text-lg font-semibold mb-4 ">Quick Links</h3>
@@ -197,24 +183,24 @@ export default function Footer({isPropaiPage}) {
       {/* Contact Info */}
       <div>
         <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
-        <div className="space-y-3">
-          <div className="flex items-center gap-3">
-            <Image src={phone} alt="Phone" width={20} height={20} />
-            <span className="text-gray-400/80 text-sm">+201097122246</span>
+        <div className="space-y-3 ">
+          <div className="flex  items-center justify-center gap-3">
+            <Image src={phone} alt="Phone" width={20} height={20}  />
+            <span className="text-gray-400/80 text-sm w-[120px]">+201097122246</span>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center justify-center gap-3">
             <Image src={msg} alt="Email" width={20} height={20} />
-            <span className="text-gray-400/80 text-sm">info@rockaidev.com</span>
+            <span className="text-gray-400/80 text-sm w-[120px]">info@rockaidev.com</span>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center justify-center gap-3">
             <Image src={location} alt="Location" width={20} height={20} />
-            <span className="text-gray-400/80 text-sm">Alex, Egypt</span>
+            <span className="text-gray-400/80 text-sm w-[120px]">Alex, Egypt</span>
           </div>
         </div>
       </div>
 
       {/* Legal */}
-      <div className='sm:ms-24'>
+      <div className='sm:ms-24 '>
         <h3 className="text-lg font-semibold mb-4 ">Legal</h3>
         <ul className="space-y-2">
           {["Terms of Service","Privacy Policy","Cookies Policy","Data Processing"].map((item, i) => (
@@ -228,6 +214,22 @@ export default function Footer({isPropaiPage}) {
       </div>
 
     </div>
+
+  <div>
+        <div className="flex items-center justify-center gap-3 mb-6 mt-6">
+          <Image src={logo} alt="Logo" width={100} height={100} />
+        </div>
+        <p className="text-gray-400/80 text-sm text-center leading-relaxed mb-6">
+        Rockai Dev ventures beyond boundaries, designing seamless digital journeys that inspire, empower, and carry Egypt’s spirit into the world of AI. 
+        </p>
+        {/* Social Media */}
+        <div className="flex gap-4 mt-12 justify-center md:justify-start">
+          <Image src={fb} alt="Facebook" width={32} height={32} className="cursor-pointer hover:opacity-80" />
+          <Image src={insta} alt="Instagram" width={32} height={32} className="cursor-pointer hover:opacity-80" />
+          <Image src={X} alt="Twitter" width={32} height={32} className="cursor-pointer hover:opacity-80" />
+          <Image src={tiktok} alt="TikTok" width={32} height={32} className="cursor-pointer hover:opacity-80" />
+        </div>
+      </div>
 
     {/* Copyright */}
     <div className="border-t border-gray-700 mt-10 pt-6 text-center md:text-left">
