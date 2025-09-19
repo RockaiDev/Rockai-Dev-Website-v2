@@ -89,7 +89,8 @@ export default function ProductsPage() {
           className={`flex items-center gap-2 px-4 py-2 rounded-full bg-blue-900/30 font-bold text-cyan-700 text-md m-auto`}
         >
           <Image src={bulb_fill} alt="bulb_fill icon " width={20} height={20} />
-          Our Competitive Edge        </button>
+          Our Competitive Edge
+        </button>
 
         <h2 className="mt-4 text-[62px] font-bold gradient-hero-text">
           Why Choose Rockai Products?
@@ -140,7 +141,7 @@ export default function ProductsPage() {
 
       <div className="flex items-center justify-center gap-6 pt-4 lg:w-full ">
         <button className="px-8 lg:py-4  py-3 flex rounded-full justify-center  bg-sky-500 text-white text-md items-center  hover:bg-sky-600 transition cursor-pointer">
-       <Image src={msgFill} alt="arrow" className="w-5 h-5 me-2" />
+          <Image src={msgFill} alt="arrow" className="w-5 h-5 me-2" />
           Start Your Journey
         </button>
         <HoverBorderGradient>

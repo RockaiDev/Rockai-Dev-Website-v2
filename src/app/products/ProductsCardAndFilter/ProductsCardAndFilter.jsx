@@ -15,7 +15,7 @@ const productsData = [
   {
     id: 1,
     category: "POS",
-    title: "SUFRA CRM",
+    title: "SUFRA POS",
     description: "SUFRA is not just a recipe manager. It is the Smart Unified Food Retail Assistant that transforms your POS into a complete restaurant intelligence platform",
     image: crm1,
     technologies: ["Next.js", "OpenAI GPT-4", "React"],
@@ -24,7 +24,7 @@ const productsData = [
   {
     id: 2,
     category: "CRM",
-    title: "Attendai",
+    title: "Propai CRM",
     description: "Smart tutoring platform with automated attendance tracking.",
     image: crm2,
     technologies: ["Next.js", "OpenAI GPT-4", "React"],
@@ -32,12 +32,12 @@ const productsData = [
   },
   {
     id: 3,
-    category: "rock",
-    title: "Attendai",
+    category: "System",
+    title: "Hodurai System",
     description: "Smart tutoring platform with automated attendance tracking.",
     image: crm3,
     technologies: ["Next.js", "OpenAI GPT-4", "React"],
-  },
+  },  
 ];
 
 export default function ProductsCardAndFilter() {

@@ -1,6 +1,7 @@
 // Features.jsx
 
 import { CardWithAnimatedBorder } from "@/components/CardWithAnimatedBorder/CardWithAnimatedBorder";
+import { motion } from "framer-motion";
 import storyRocket from "@/Assets/Icons/storyRocket.svg"
 import storymagic from "@/Assets/Icons/storymagic.svg"
 import storyUser from "@/Assets/Icons/storyUser.svg"
@@ -46,19 +47,120 @@ const features = [
 ];
 
 export default function Features() {
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1
+      }
+    }
+  };
+
+  const cardVariants = {
+    hidden: { 
+      opacity: 0, 
+      y: 50,
+      scale: 0.9
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const iconVariants = {
+    hidden: { 
+      opacity: 0, 
+      scale: 0.5,
+      rotate: -180
+    },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      rotate: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const textVariants = {
+    hidden: { 
+      opacity: 0, 
+      y: 20
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut"
+      }
+    }
+  };
+
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto py-12 px-4">
+    <motion.div 
+      className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-7xl mx-auto py-8 sm:py-12 px-4 sm:px-6"
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+    >
       {features.map((item, index) => (
-        <CardWithAnimatedBorder
-          key={index}
-          className="pb-10 pt-8 px-4 rounded-4xl border border-[#00c6ff]/20 card-gradient text-white text-start"
-        >
-          {item.icon}
-          <h3 className="text-xl font-semibold mb-2 mt-3 gradient-hero-text">{item.title}</h3>
-          <p className="text-base text-gray-400/80 mt-3">{item.description}</p>
-        </CardWithAnimatedBorder>
+        <motion.div key={index} variants={cardVariants}>
+          <CardWithAnimatedBorder>
+            <motion.div 
+              className="pb-6 sm:pb-8 lg:pb-10 pt-6 sm:pt-8 px-3 sm:px-4 rounded-3xl sm:rounded-4xl border border-[#00c6ff]/20 card-gradient text-white text-start h-full"
+              whileHover={{ 
+                scale: 1.02,
+                transition: { duration: 0.2 }
+              }}
+            >
+              <motion.div
+                variants={iconVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+              >
+                {item.icon}
+              </motion.div>
+              
+              <motion.h3 
+                className="text-lg sm:text-xl font-semibold mb-2 mt-3 sm:mt-4 gradient-hero-text"
+                variants={textVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 + 0.2 }}
+              >
+                {item.title}
+              </motion.h3>
+              
+              <motion.p 
+                className="text-sm sm:text-base text-gray-400/80 mt-3 leading-relaxed"
+                variants={textVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 + 0.3 }}
+              >
+                {item.description}
+              </motion.p>
+            </motion.div>
+          </CardWithAnimatedBorder>
+        </motion.div>
       ))}
-    </div>
-    
+    </motion.div>
   );
 }

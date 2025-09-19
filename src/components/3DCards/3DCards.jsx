@@ -4,6 +4,7 @@ import Image from "next/image";
 import mockup from "@/Assets/Images/mockup.svg";
 import rightArrow from "@/Assets/Icons/rightArrow.svg";
 import { CardWithAnimatedBorder } from "../CardWithAnimatedBorder/CardWithAnimatedBorder";
+import Link from "next/link";
 
 export default function ThreeDimensionCards() {
   const cards = [1, 2, 3];
@@ -44,7 +45,7 @@ export default function ThreeDimensionCards() {
 
                 {/* Technologies */}
                 <div className="mt-4">
-                  <p className="text-sm  text-cyan-700 mb-3 font-semibold">Technologies:</p>
+                  <p className="text-sm  text-cyan-500 mb-3 font-semibold">Technologies:</p>
                   <div className="flex gap-2 flex-wrap">
                     <span className="px-4 py-2   text-xs rounded-xl border border-[#00c6ff]/50  text-white">
                       Next.js
@@ -72,9 +73,9 @@ export default function ThreeDimensionCards() {
       </div>
 
       {/* زرار تحت الكروت */}
-      <button className="px-6 py-2 cursor-pointer border border-[#00c6ff]/50 rounded-full  text-cyan-700 hover:bg-[#00c6ff]/10 transition-all">
+      <Link href="/portfolio" className="px-6 py-2 cursor-pointer border border-[#00c6ff]/50 rounded-full text-cyan-700 hover:bg-[#00c6ff]/10 transition-all">
         View All Projects
-      </button>
+      </Link>
     </div>
   );
 }

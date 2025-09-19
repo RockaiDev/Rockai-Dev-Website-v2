@@ -290,13 +290,9 @@
   );
 }
 
-
-
-
 .feature_hover {
   background:  linear-gradient(180deg, #10DBDB 0%, #0047A5 100%);
 }
-
 
 .form-gradient {
   background: linear-gradient(90deg, #10dbdb13 0%, #00327423 0%);
@@ -316,18 +312,10 @@
 
 }
 
-
-
-
 .news-gradient {
   background: linear-gradient(90deg, #0e8a8a13 0%, #2361b114 0%);
   
 }
-
-
-
-
-
 
 .chatBot-gradient {
   background: linear-gradient(180deg, #01161692 0%, #010c19c8 0%);
@@ -338,3 +326,39 @@ background: var(--Colors-Background, linear-gradient(180deg, rgba(16, 219, 219, 
 /* from-cyan-500/50 via-blue-500/50 to-purple-500/50 */
 }
 
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background: #0f0229; /* Dark blue background */
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: #0f0229; /* Slightly lighter blue for track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #10DBDB 0%, #0047A5 100%);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #0cc7c7 0%, #003b8a 100%);
+}
+
+
+html {
+  scroll-behavior: smooth;
+  background: #0f0229;
+  overflow-x: hidden;
+}
+
+body {
+  color: #ffffff;
+  background: #0f0229;
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

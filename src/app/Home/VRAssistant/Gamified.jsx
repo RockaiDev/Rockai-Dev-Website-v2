@@ -54,7 +54,7 @@ const Gamified = () => {
                                 w-full md:w-1/2 lg:w-1/3
                                 border-b   border-[#eaeaea93]
                                 bg-transparent
-                                backdrop-filter backdrop-blur-sm   hover:bg-[linear-gradient(180deg,rgba(16,219,219,0.01)_0%,rgba(0,71,165,0.1)_100%)] transition-all duration-300
+                                hover:bg-[linear-gradient(180deg,rgba(16,219,219,0.01)_0%,rgba(0,71,165,0.1)_100%)] transition-all duration-300
     
                                 ${index === 0 || index === 1  ? 'lg:border-r' : ''}
                                 ${index === 0 || index === 3 ? 'md:border-r' : ''}
@@ -65,7 +65,7 @@ const Gamified = () => {
                             style={{ minHeight: '200px' }} 
                         >
                             <div className="mb-4 pt-8 h-[100px]">
-                                <Image src={feature.icon} alt={feature.title} width={60} height={60} className=''  />
+                                <Image src={feature.icon} alt={feature.title} width={100} height={100} className='w-12 h-12'  />
                             </div>
                             <h3 className="text-[22px] font-semibold mb-2 h-[40px] gradient-hero-text">{feature.title}</h3>
                             <p className="mb-4 text-gray-400/80 text-[18px]" >{feature.description}</p>
