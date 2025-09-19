@@ -5,20 +5,23 @@ import contactLocation from "@/Assets/Icons/contactLocation.svg";
 import msgIcon from "@/Assets/Icons/msgIcon.svg";
 import mobile from "@/Assets/Icons/mobile.svg";
 import Image from 'next/image';
+import Link from 'next/link';
 
 
 const ContactFormWithOptions = () => {
   const [selectedOption, setSelectedOption] = useState('');
   const [formData, setFormData] = useState({
     contactName: '',
+    phone: '',
     email: '',
     organization: '',
-    website: '',
-    partnershipType: '',
-    industry: '',
+    subject: '',
+    jobTitle: '',
     proposal: ''
   });
-  
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState('');
+
   // Array of options with placeholder icons
   // const helpOptions = [
   //   {
@@ -54,9 +57,56 @@ const ContactFormWithOptions = () => {
     }));
   };
 
-  const handleSubmit = () => {
-    console.log('Form Data:', formData);
-    console.log('Selected Option:', selectedOption);
+  const handleSubmit = async () => {
+    // Validate required fields
+    if (!formData.contactName.trim()) {
+      setSubmitMessage('Please enter your full name.');
+      return;
+    }
+    if (!formData.phone.trim()) {
+      setSubmitMessage('Please enter your phone number.');
+      return;
+    }
+    if (!formData.proposal.trim()) {
+      setSubmitMessage('Please enter your message.');
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitMessage('');
+
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitMessage('Thank you! Your message has been sent successfully.');
+        // Reset form
+        setFormData({
+          contactName: '',
+          phone: '',
+          email: '',
+          organization: '',
+          subject: '',
+          jobTitle: '',
+          proposal: ''
+        });
+      } else {
+        setSubmitMessage('Failed to send message. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      setSubmitMessage('An error occurred. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -66,40 +116,40 @@ const ContactFormWithOptions = () => {
         <div className="flex flex-col items-start justify-center gap-6 md:gap-6 max-w-2xl">
           <button className="flex items-center gap-2 px-4 py-2 rounded-full bg-blue-900/30 font-bold text-cyan-700 text-md">
             <User size={20} />
-           Connect with Rockai 
+            Connect with Rockai
           </button>
           <div className="content">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px] font-bold gradient-hero-text mb-6">
-        Get in Touch
+              Get in Touch
             </h1>
             <p className="text-gray-400/80 text-base sm:text-lg max-w-xl ">
-            We’re eager to hear from organizations interested in collaboration. Share your vision and let’s explore how we can create success together.
+              We’re eager to hear from organizations interested in collaboration. Share your vision and let’s explore how we can create success together.
             </p>
           </div>
 
           <div className="flex flex-col items-start justify-center gap-8 ">
 
-        <div className="flex justify-center ">
-            <Image src={contactLocation} alt="send plane Icon" width={56} height={56} className='me-4' />
-            <div className='flex flex-col '>
+            <Link href="https://maps.google.com/?q=Smouha,+Alex+Governorate+Egypt" target="_blank" className="flex justify-center hover:opacity-80 transition-opacity">
+              <Image src={contactLocation} alt="send plane Icon" width={56} height={56} className='me-4' />
+              <div className='flex flex-col '>
                 <p className='text-gray-400 mb-2 text-[12px]'>Location</p>
-                <p className='text-cyan-400'>Smouha, Alex Governorate Egypt, 11835</p>
-            </div>
-        </div>
-        <div className="flex justify-center ">
-            <Image src={msgIcon} alt="send plane Icon" width={56} height={56} className='me-4' />
-            <div className='flex flex-col '>
+                <p className='text-cyan-400'>Smouha, Alexandria Governorate, Egypt</p>
+              </div>
+            </Link>
+            <Link href="mailto:info@rockaidev.com" className="flex justify-center hover:opacity-80 transition-opacity">
+              <Image src={msgIcon} alt="send plane Icon" width={56} height={56} className='me-4' />
+              <div className='flex flex-col '>
                 <p className='text-gray-400 mb-2 text-[12px]'>Email Address</p>
                 <p className='text-cyan-400'>info@rockaidev.com</p>
-            </div>
-        </div>
-        <div className="flex justify-center ">
-            <Image src={mobile} alt="send plane Icon" width={56} height={56} className='me-4' />
-            <div className='flex flex-col '>
+              </div>
+            </Link>
+            <Link href="tel:+201555867970" className="flex justify-center hover:opacity-80 transition-opacity">
+              <Image src={mobile} alt="send plane Icon" width={56} height={56} className='me-4' />
+              <div className='flex flex-col '>
                 <p className='text-gray-400 mb-2 text-[12px]'>Phone Number</p>
-                <p className='text-cyan-400'>+201097122246</p>
-            </div>
-        </div>
+                <p className='text-cyan-400'>+201555867970</p>
+              </div>
+            </Link>
 
 
 
@@ -107,14 +157,14 @@ const ContactFormWithOptions = () => {
           </div>
 
           {/* Options Grid */}
-          
+
         </div>
 
         {/* Right Section (Form) */}
         <div className="relative rounded-2xl p-[1px] w-full md:w-auto bg-gradient-to-r ">
           <div className="form-gradient rounded-2xl p-4 sm:p-6 md:p-8 shadow-lg w-full backdrop-blur-sm">
             <div className="space-y-6 p-4 sm:p-6 md:p-10">
-                {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-xl">
+              {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-xl">
             {helpOptions.map((option) => {
               const IconComponent = option.icon;
               const isSelected = selectedOption === option.id;
@@ -161,8 +211,8 @@ const ContactFormWithOptions = () => {
               );
             })}
           </div> */}
-              {/* Row 1: Contact Name & Email */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {/* Row 1: Contact Name & Phone */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
                 <div className="flex flex-col">
                   <label className="mb-2 text-sm text-gray-300">Full Name *</label>
                   <input
@@ -170,23 +220,33 @@ const ContactFormWithOptions = () => {
                     value={formData.contactName}
                     onChange={(e) => handleInputChange('contactName', e.target.value)}
                     placeholder="Enter your full name"
-                    className="w-full py-4 px-3 rounded-[18px] bg-transparent border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400"
+                    className="w-full py-4 px-6 rounded-[18px] text-sm bg-transparent border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400"
                   />
                 </div>
                 <div className="flex flex-col">
-                  <label className="mb-2 text-sm text-gray-300">Email *</label>
+                  <label className="mb-2 text-sm text-gray-300">Phone Number *</label>
+                  <input
+                    type="tel"
+                    value={formData.phone}
+                    onChange={(e) => handleInputChange('phone', e.target.value)}
+                    placeholder="Enter your phone number"
+                    className="w-full py-4 px-6 rounded-[18px] text-sm bg-transparent border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400"
+                  />
+                </div>
+              </div>
+
+              {/* Row 2: Email & Company/Organization */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="flex flex-col">
+                  <label className="mb-2 text-sm text-gray-300">Email</label>
                   <input
                     type="email"
                     value={formData.email}
                     onChange={(e) => handleInputChange('email', e.target.value)}
                     placeholder="your@email.com"
-                    className="w-full py-4 px-3 rounded-[18px] bg-transparent border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400"
+                    className="w-full py-4 px-6 rounded-[18px] text-sm bg-transparent border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400"
                   />
                 </div>
-              </div>
-
-              {/* Row 2: Organization & Website */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="flex flex-col">
                   <label className="mb-2 text-sm text-gray-300">Company/Organization</label>
                   <input
@@ -194,17 +254,31 @@ const ContactFormWithOptions = () => {
                     value={formData.organization}
                     onChange={(e) => handleInputChange('organization', e.target.value)}
                     placeholder="Enter your organization name"
-                    className="w-full py-4 px-3 rounded-[18px] bg-transparent border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400"
+                    className="w-full py-4 px-6 rounded-[18px] text-sm bg-transparent border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400"
                   />
                 </div>
+              </div>
+
+              {/* Row 3: Subject & Job Title */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="flex flex-col">
                   <label className="mb-2 text-sm text-gray-300">Subject *</label>
                   <input
                     type="text"
-                    value={formData.website}
-                    onChange={(e) => handleInputChange('website', e.target.value)}
+                    value={formData.subject}
+                    onChange={(e) => handleInputChange('subject', e.target.value)}
                     placeholder="Brief subject line"
-                    className="w-full py-4 px-3 rounded-[18px] bg-transparent border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400"
+                    className="w-full py-4 px-6 rounded-[18px] text-sm bg-transparent border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400"
+                  />
+                </div>
+                <div className="flex flex-col">
+                  <label className="mb-2 text-sm text-gray-300">Job Title</label>
+                  <input
+                    type="text"
+                    value={formData.jobTitle}
+                    onChange={(e) => handleInputChange('jobTitle', e.target.value)}
+                    placeholder="Enter your job title"
+                    className="w-full py-4 px-6 rounded-[18px] text-sm bg-transparent border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400"
                   />
                 </div>
               </div>
@@ -217,17 +291,31 @@ const ContactFormWithOptions = () => {
                   value={formData.proposal}
                   onChange={(e) => handleInputChange('proposal', e.target.value)}
                   placeholder="Tell us about your project, goals and any specific requirements..."
-                  className="w-full py-4 px-3 rounded-[18px] bg-transparent border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 resize-none"
+                  className="w-full py-4 px-6 rounded-[18px] text-sm bg-transparent border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 resize-none"
                 />
               </div>
+
+              {/* Submit Message */}
+              {submitMessage && (
+                <div className={`p-4 rounded-lg text-center ${submitMessage.includes('successfully')
+                    ? 'bg-green-500/20 text-green-400 border border-green-500/30'
+                    : 'bg-red-500/20 text-red-400 border border-red-500/30'
+                  }`}>
+                  {submitMessage}
+                </div>
+              )}
 
               {/* Submit Button */}
               <button
                 onClick={handleSubmit}
-                className="w-full py-3 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold shadow-lg hover:opacity-90 transition flex items-center justify-center space-x-2"
+                disabled={isSubmitting}
+                className={`w-full py-3 rounded-lg font-semibold shadow-lg transition flex items-center justify-center space-x-2 ${isSubmitting
+                    ? 'bg-gray-600 text-gray-400 cursor-not-allowed'
+                    : 'bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white hover:opacity-90'
+                  }`}
               >
                 <Send size={20} />
-                <span>Submit Application</span>
+                <span>{isSubmitting ? 'Sending...' : 'Submit Application'}</span>
               </button>
             </div>
           </div>

@@ -8,47 +8,53 @@ import Rocket from "@/Assets/Icons/Rocket.svg";
 import calender from "@/Assets/Icons/calender.svg";
 
 import Image from "next/image";
-import Link from "next/link";import ContactUsForm from "./ContactUsForm/ContactUsForm";
+import Link from "next/link"; import ContactUsForm from "./ContactUsForm/ContactUsForm";
 export default function Contactus() {
   const expertiseData = [
     {
       icon: calender,
       title: "Project Consultation",
       description: "Schedule a free consultation to discuss your project requirements",
+      href: "https://wa.me/201555867970?text=I'd%20like%20to%20book%20a%20meeting%20considering%20a%20project%20consultation",
+      buttonText: "Book a Meeting",
     },
     {
       icon: screen,
       title: "Technical Demo",
       description: "See our solutions in action with a personalized demo",
+      href: "/products",
+      buttonText: "Request Demo",
     },
     {
       icon: roFill,
       title: "Partnership Inquiry",
       description: "Explore strategic partnership opportunities with Rockai",
+      buttonText: "Learn More",
+      href: "/join-us",
     },
-  
+
   ];
   return (
- <>
-  <div className="secHeader mb-1 mx-auto text-center pt-10 px-6">
+    <>
+      <div className="secHeader mb-1 mx-auto text-center pt-28 px-6">
         <button
           className={`flex items-center gap-2 px-4 py-2 rounded-full bg-blue-900/30 font-bold text-cyan-700 text-md m-auto`}
         >
-          <Image src={Rocket} alt="directions icon " width={20} height={20} />
-Contact Mission Control      
-  </button>
+          <Image src={Rocket} alt="directions icon" width={20} height={20} />
+          Contact Mission Control
+        </button>
 
         <h2 className="mt-4 text-[62px] font-bold gradient-hero-text">
-    Launch Your Project
+          Launch Your Project
         </h2>
         <p className="mt-2 text-xl text-gray-400/80 max-w-4xl lg:mb-12 mb-8 mx-auto">
-        Ready to embark on your digital transformation journey? Connect with our stellar team and let's build something extraordinary together in the vast universe of possibilities.
+          Ready to embark on your digital transformation journey? Connect with our stellar team and let's build something extraordinary together in the vast universe of possibilities.
         </p>
       </div>
 
 
 
-   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12 px-0 sm:px-4 lg:px-24 mb-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12 px-0 sm:px-4 lg:px-24 mb-10">
         {expertiseData.map((item, index) => (
           <CardWithAnimatedBorder
             key={index}
@@ -80,21 +86,21 @@ Contact Mission Control
               <p className="text-sm sm:text-md text-gray-400/80 min-h-0 sm:h-16 items-center pt-2 sm:pt-4 w-full sm:w-[250px] ">{item.description}</p>
 
               <Link
-                href="#"
+                href={item.href}
                 className="flex items-center mt-6 gap-2 text-cyan-700 hover:text-cyan-300 transition text-[20px]"
               >
-                Request Demo <ArrowRight size={16} />
+                {item.buttonText} <ArrowRight size={16} />
               </Link>
             </div>
           </CardWithAnimatedBorder>
         ))}
       </div>
- 
 
- <ContactUsForm/>
- 
- 
- 
- </>
+
+      <ContactUsForm />
+
+
+
+    </>
   )
 }

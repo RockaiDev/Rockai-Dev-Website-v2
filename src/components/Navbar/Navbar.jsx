@@ -17,7 +17,7 @@ export default function Navbar({isPropaiPage}) {
     { label: "Services", href: "/services" },
     { label: "Products", href: "/products" },
     { label: "Portfolio", href: "/portfolio" },
-    { label: "Blog", href: "/blog" },
+    // { label: "Blog", href: "/blog" },
     { label: "Join Us", href: "/join-us" },
   ];
 

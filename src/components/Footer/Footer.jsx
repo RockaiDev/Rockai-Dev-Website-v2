@@ -5,7 +5,7 @@ import msg from "@/Assets/Icons/msg.svg"
 import location from "@/Assets/Icons/location.svg"
 import fb from "@/Assets/Icons/fb.svg"
 import insta from "@/Assets/Icons/insta.svg"
-import X from "@/Assets/Icons/X.svg"
+import linkedin from "@/Assets/Icons/linkedin.svg"
 import tiktok from "@/Assets/Icons/tiktok.svg"
 import logo from "@/Assets/Images/Logo.png";
 import Image from "next/image";
@@ -85,9 +85,10 @@ export default function Footer({ isPropaiPage }) {
                                 {[
                                     { src: fb, alt: "Facebook", href: "https://facebook.com/rockaidev" },
                                     { src: insta, alt: "Instagram", href: "https://instagram.com/rockaidev" }, 
-                                    { src: tiktok, alt: "TikTok", href: "https://tiktok.com/@rockaidev" }
+                                    { src: tiktok, alt: "TikTok", href: "https://tiktok.com/@rockaidev" },
+                                    { src: linkedin, alt: "LinkedIn", href: "https://www.linkedin.com/company/rockai-dev" }
                                 ].map((social, index) => (
-                                    <Link href={social.href} key={social.alt}>
+                                    <Link href={social.href} key={social.alt} target="_blank">
                                         <motion.div
                                             className="w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center cursor-pointer transition-colors duration-300"
                                             variants={socialVariants}
@@ -122,6 +123,7 @@ export default function Footer({ isPropaiPage }) {
                                         >
                                             <Link 
                                                 href={link.href} 
+                                                target="_blank"
                                                 className="text-gray-400/80 hover:text-cyan-500 transition-colors text-sm sm:text-base block"
                                             >
                                                 {link.text}
@@ -149,6 +151,7 @@ export default function Footer({ isPropaiPage }) {
                                             <Image src={contact.icon} alt={contact.text} className="w-5 h-5 sm:w-6 sm:h-6" />
                                             <Link 
                                                 href={contact.href} 
+                                                target="_blank"
                                                 className="text-gray-400/80 text-sm sm:text-base hover:text-cyan-500 transition-colors"
                                             >
                                                 {contact.text}
@@ -168,7 +171,7 @@ export default function Footer({ isPropaiPage }) {
                     >
                         <p className="text-gray-400/80 text-sm sm:text-base text-center md:text-left flex items-center justify-center md:justify-start gap-2">
                             <span>©{new Date().getFullYear()}</span>
-                            <Link href="/" className="text-cyan-500 font-medium hover:text-cyan-400 transition-all duration-300 hover:scale-105">
+                            <Link href="/" target="_blank" className="text-cyan-500 font-medium hover:text-cyan-400 transition-all duration-300 hover:scale-105">
                                 Rockai Dev
                             </Link>
                             <span className="text-gray-600">|</span>
@@ -199,9 +202,10 @@ export default function Footer({ isPropaiPage }) {
                         {/* Social Media */}
                         <div className="flex gap-4 mt-8 sm:mt-12 justify-center">
                             {[
-                                { src: fb, alt: "Facebook" },
-                                { src: insta, alt: "Instagram" },
-                                { src: tiktok, alt: "TikTok" }
+                                { src: fb, alt: "Facebook" , href: "https://facebook.com/rockaidev" },
+                                { src: insta, alt: "Instagram" , href: "https://instagram.com/rockaidev" },
+                                { src: tiktok, alt: "TikTok" , href: "https://tiktok.com/@rockaidev" },
+                                { src: linkedin, alt: "LinkedIn" , href: "https://www.linkedin.com/company/rockai-dev" }
                             ].map((social, index) => (
                                 <motion.div
                                     key={social.alt}
@@ -209,7 +213,7 @@ export default function Footer({ isPropaiPage }) {
                                     whileHover={{ scale: 1.2, rotate: 10 }}
                                     whileTap={{ scale: 0.9 }}
                                 >
-                                    <Link href="#">
+                                    <Link href={social.href} target="_blank">
                                         <Image 
                                             src={social.src} 
                                             alt={social.alt} 

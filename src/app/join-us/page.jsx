@@ -17,10 +17,10 @@ export default function JoinUsPage() {
   return (
     <main className="min-h-[60vh] container mx-auto  py-12 text-white">
       <HeroSection
-        buttonText="Blog & Insights"
+        buttonText="Join Rockai Dev"
         buttonIcon={book}
-        title="Tech Insights & Innovation"
-        description="Stay ahead of the curve with our latest insights on AI, software development, and the future of technology in the Middle East."
+        title="Join Our Mission"
+        description="Whether you're looking to build your career with Egypt's most innovative tech company or partner with us to create groundbreaking solutions, we're here to explore how we can work together."
         imageSrc={shuttle}
         imageAlt="Hero Image"
         imageAnimationClass="animate-[astro_5s_ease-in-out_infinite]"

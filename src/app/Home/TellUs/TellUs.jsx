@@ -4,9 +4,87 @@ import sendplaneWhite from "@/Assets/Icons/sendPlaneWhite.svg";
 import { CardWithAnimatedBorder } from "@/components/CardWithAnimatedBorder/CardWithAnimatedBorder";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useState } from "react";
+import { Send } from "lucide-react";
 
 
 export default function Tellus() {
+    // Form state
+    const [formData, setFormData] = useState({
+        contactName: '',
+        phone: '',
+        email: '',
+        organization: '',
+        subject: '',
+        jobTitle: '',
+        proposal: ''
+    });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitMessage, setSubmitMessage] = useState('');
+
+    // Handle input changes
+    const handleInputChange = (field, value) => {
+        setFormData(prev => ({
+            ...prev,
+            [field]: value
+        }));
+    };
+
+    // Handle form submission
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        
+        // Validate required fields
+        if (!formData.contactName.trim()) {
+            setSubmitMessage('Please enter your full name.');
+            return;
+        }
+        if (!formData.phone.trim()) {
+            setSubmitMessage('Please enter your phone number.');
+            return;
+        }
+        if (!formData.proposal.trim()) {
+            setSubmitMessage('Please enter your message.');
+            return;
+        }
+
+        setIsSubmitting(true);
+        setSubmitMessage('');
+
+        try {
+            const response = await fetch('/api/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                setSubmitMessage('Thank you! Your message has been sent successfully.');
+                // Reset form
+                setFormData({
+                    contactName: '',
+                    phone: '',
+                    email: '',
+                    organization: '',
+                    subject: '',
+                    jobTitle: '',
+                    proposal: ''
+                });
+            } else {
+                setSubmitMessage('Failed to send message. Please try again.');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            setSubmitMessage('An error occurred. Please try again.');
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
+
     // Animation variants
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -61,7 +139,7 @@ export default function Tellus() {
             <div className="flex flex-col lg:flex-row items-center gap-8 sm:gap-10 lg:gap-16 xl:gap-20 w-full justify-between mb-10 max-w-7xl">
                 {/* Left Section */}
                 <motion.div 
-                    className="flex flex-col items-center lg:items-start text-center lg:text-start justify-center gap-6 lg:gap-8 max-w-2xl w-full lg:w-auto"
+                    className="flex flex-col items-center lg:items-start text-center lg:text-start justify-center gap-6 lg:gap-8 max-w-3xl w-full lg:w-auto"
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
@@ -103,67 +181,142 @@ export default function Tellus() {
                                 initial="hidden"
                                 whileInView="visible"
                                 viewport={{ once: true, margin: "-50px" }}
+                                onSubmit={handleSubmit}
                             >
+                                {/* Row 1: Contact Name & Phone */}
                                 <motion.div 
                                     className="grid grid-cols-1 sm:grid-cols-2 gap-4"
                                     variants={containerVariants}
                                 >
-                                    <motion.input
-                                        type="text"
-                                        placeholder="Enter your full name"
-                                        className="w-full py-3 sm:py-4 px-3 sm:px-4 rounded-[18px] bg-transparent border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors duration-300 text-sm sm:text-base"
-                                        variants={inputVariants}
-                                        whileFocus={{ scale: 1.02 }}
-                                    />
-                                    <motion.input
-                                        type="email"
-                                        placeholder="your@email.com"
-                                        className="w-full py-3 sm:py-4 px-3 sm:px-4 rounded-[18px] bg-transparent border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors duration-300 text-sm sm:text-base"
-                                        variants={inputVariants}
-                                        whileFocus={{ scale: 1.02 }}
-                                    />
+                                    <motion.div className="flex flex-col" variants={inputVariants}>
+                                        <label className="mb-2 text-sm text-gray-300">Full Name *</label>
+                                        <input
+                                            type="text"
+                                            value={formData.contactName}
+                                            onChange={(e) => handleInputChange('contactName', e.target.value)}
+                                            placeholder="Enter your full name"
+                                            className="w-full py-3 sm:py-4 px-3 sm:px-4 rounded-[18px] bg-transparent border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors duration-300 text-sm sm:text-base"
+                                            whileFocus={{ scale: 1.02 }}
+                                        />
+                                    </motion.div>
+                                    <motion.div className="flex flex-col" variants={inputVariants}>
+                                        <label className="mb-2 text-sm text-gray-300">Phone Number *</label>
+                                        <input
+                                            type="tel"
+                                            value={formData.phone}
+                                            onChange={(e) => handleInputChange('phone', e.target.value)}
+                                            placeholder="Enter your phone number"
+                                            className="w-full py-3 sm:py-4 px-3 sm:px-4 rounded-[18px] bg-transparent border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors duration-300 text-sm sm:text-base"
+                                            whileFocus={{ scale: 1.02 }}
+                                        />
+                                    </motion.div>
                                 </motion.div>
 
+                                {/* Row 2: Email & Company/Organization */}
                                 <motion.div 
                                     className="grid grid-cols-1 sm:grid-cols-2 gap-4"
                                     variants={containerVariants}
                                 >
-                                    <motion.input
-                                        type="text"
-                                        placeholder="Enter your company name"
-                                        className="w-full py-3 sm:py-4 px-3 sm:px-4 rounded-[18px] bg-transparent border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors duration-300 text-sm sm:text-base"
-                                        variants={inputVariants}
-                                        whileFocus={{ scale: 1.02 }}
-                                    />
-                                    <motion.input
-                                        type="text"
-                                        placeholder="Enter your company industry"
-                                        className="w-full py-3 sm:py-4 px-3 sm:px-4 rounded-[18px] bg-transparent border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors duration-300 text-sm sm:text-base"
-                                        variants={inputVariants}
+                                    <motion.div className="flex flex-col" variants={inputVariants}>
+                                        <label className="mb-2 text-sm text-gray-300">Email</label>
+                                        <input
+                                            type="email"
+                                            value={formData.email}
+                                            onChange={(e) => handleInputChange('email', e.target.value)}
+                                            placeholder="your@email.com"
+                                            className="w-full py-3 sm:py-4 px-3 sm:px-4 rounded-[18px] bg-transparent border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors duration-300 text-sm sm:text-base"
+                                            whileFocus={{ scale: 1.02 }}
+                                        />
+                                    </motion.div>
+                                    <motion.div className="flex flex-col" variants={inputVariants}>
+                                        <label className="mb-2 text-sm text-gray-300">Company/Organization</label>
+                                        <input
+                                            type="text"
+                                            value={formData.organization}
+                                            onChange={(e) => handleInputChange('organization', e.target.value)}
+                                            placeholder="Enter your organization name"
+                                            className="w-full py-3 sm:py-4 px-3 sm:px-4 rounded-[18px] bg-transparent border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors duration-300 text-sm sm:text-base"
+                                            whileFocus={{ scale: 1.02 }}
+                                        />
+                                    </motion.div>
+                                </motion.div>
+
+                                {/* Row 3: Subject & Job Title */}
+                                <motion.div 
+                                    className="grid grid-cols-1 sm:grid-cols-2 gap-4"
+                                    variants={containerVariants}
+                                >
+                                    <motion.div className="flex flex-col" variants={inputVariants}>
+                                        <label className="mb-2 text-sm text-gray-300">Subject *</label>
+                                        <input
+                                            type="text"
+                                            value={formData.subject}
+                                            onChange={(e) => handleInputChange('subject', e.target.value)}
+                                            placeholder="Brief subject line"
+                                            className="w-full py-3 sm:py-4 px-3 sm:px-4 rounded-[18px] bg-transparent border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors duration-300 text-sm sm:text-base"
+                                            whileFocus={{ scale: 1.02 }}
+                                        />
+                                    </motion.div>
+                                    <motion.div className="flex flex-col" variants={inputVariants}>
+                                        <label className="mb-2 text-sm text-gray-300">Job Title</label>
+                                        <input
+                                            type="text"
+                                            value={formData.jobTitle}
+                                            onChange={(e) => handleInputChange('jobTitle', e.target.value)}
+                                            placeholder="Enter your job title"
+                                            className="w-full py-3 sm:py-4 px-3 sm:px-4 rounded-[18px] bg-transparent border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors duration-300 text-sm sm:text-base"
+                                            whileFocus={{ scale: 1.02 }}
+                                        />
+                                    </motion.div>
+                                </motion.div>
+
+                                {/* Message */}
+                                <motion.div className="flex flex-col" variants={inputVariants}>
+                                    <label className="mb-2 text-sm text-gray-300">Message *</label>
+                                    <textarea
+                                        value={formData.proposal}
+                                        onChange={(e) => handleInputChange('proposal', e.target.value)}
+                                        placeholder="Tell us about your vision and your current situation..."
+                                        rows={4}
+                                        className="w-full py-3 sm:py-4 px-3 sm:px-4 rounded-[18px] bg-transparent border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors duration-300 resize-none text-sm sm:text-base"
                                         whileFocus={{ scale: 1.02 }}
                                     />
                                 </motion.div>
 
-                                <motion.textarea
-                                    placeholder="Tell us about your vision and your current situation..."
-                                    rows={4}
-                                    className="w-full py-3 sm:py-4 px-3 sm:px-4 rounded-[18px] bg-transparent border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors duration-300 resize-none text-sm sm:text-base"
-                                    variants={inputVariants}
-                                    whileFocus={{ scale: 1.02 }}
-                                ></motion.textarea>
+                                {/* Submit Message */}
+                                {submitMessage && (
+                                    <motion.div 
+                                        className={`p-4 rounded-lg text-center ${
+                                            submitMessage.includes('successfully') 
+                                                ? 'bg-green-500/20 text-green-400 border border-green-500/30' 
+                                                : 'bg-red-500/20 text-red-400 border border-red-500/30'
+                                        }`}
+                                        variants={inputVariants}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                    >
+                                        {submitMessage}
+                                    </motion.div>
+                                )}
 
+                                {/* Submit Button */}
                                 <motion.button
                                     type="submit"
-                                    className="w-full py-3 sm:py-4 rounded-lg form-btn text-white font-semibold shadow-lg transition-all duration-300 text-sm sm:text-base"
+                                    disabled={isSubmitting}
+                                    className={`w-full cursor-pointer py-3 sm:py-4 rounded-lg font-semibold shadow-lg transition-all duration-300 text-sm sm:text-base flex items-center justify-center space-x-2 ${
+                                        isSubmitting 
+                                            ? 'bg-gray-600 text-gray-400 cursor-not-allowed' 
+                                            : 'form-btn text-white hover:opacity-90'
+                                    }`}
                                     variants={inputVariants}
-                                    whileHover={{ 
+                                    whileHover={!isSubmitting ? { 
                                         scale: 1.02,
                                         boxShadow: "0 10px 25px rgba(0, 0, 0, 0.3)"
-                                    }}
-                                    whileTap={{ scale: 0.98 }}
+                                    } : {}}
+                                    whileTap={!isSubmitting ? { scale: 0.98 } : {}}
                                 >
-                                    <Image src={sendplaneWhite} alt="send plane Icon" width={20} height={20} className="inline-block mr-2" />
-                                    Start Building My Solution
+                                    <Send size={20} />
+                                    <span>{isSubmitting ? 'Sending...' : 'Start Building My Solution'}</span>
                                 </motion.button>
                             </motion.form>
                         </div>
