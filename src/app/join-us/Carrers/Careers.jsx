@@ -8,9 +8,9 @@ import CareersOppotunity from './components/CareersOppotunity';
 export default function Careers() {
   return (
     <div>
-<CareersOppotunity/>
- <CareersFeatures/>
-<CareersForm/>
+      <CareersOppotunity />
+      <CareersFeatures />
+      <CareersForm />
 
     </div>
   )

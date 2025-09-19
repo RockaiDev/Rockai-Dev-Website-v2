@@ -19,7 +19,8 @@ const productsData = [
     description: "SUFRA is not just a recipe manager. It is the Smart Unified Food Retail Assistant that transforms your POS into a complete restaurant intelligence platform",
     image: crm1,
     technologies: ["Next.js", "OpenAI GPT-4", "React"],
-    link:"/pos"
+    link:"/pos",
+    demo: `https://wa.me/201555867970?text=${encodeURIComponent("Hi, I'd like to request a demo for SUFRA POS.")}`
   },
   {
     id: 2,
@@ -28,7 +29,8 @@ const productsData = [
     description: "Smart tutoring platform with automated attendance tracking.",
     image: crm2,
     technologies: ["Next.js", "OpenAI GPT-4", "React"],
-     link:"/propai"
+     link:"/propai",
+     demo: `https://wa.me/201555867970?text=${encodeURIComponent("Hi, I'd like to request a demo for Propai CRM.")}`
   },
   {
     id: 3,
@@ -37,6 +39,8 @@ const productsData = [
     description: "Smart tutoring platform with automated attendance tracking.",
     image: crm3,
     technologies: ["Next.js", "OpenAI GPT-4", "React"],
+    link:"/hodurai",
+    demo: `https://wa.me/201555867970?text=${encodeURIComponent("Hi, I'd like to request a demo for Hodurai System.")}`
   },  
 ];
 
@@ -119,8 +123,8 @@ export default function ProductsCardAndFilter() {
                 <Link  href={product.link ? `/products/${product.link}` : "#"} className="px-6 lg:py-4  py-3 flex rounded-full justify-center lg:w-1/2 bg-sky-500 text-white text-md items-center  hover:bg-sky-600 transition cursor-pointer">
                   View Details                           <Image src={arrowRight} alt="arrow" className="w-5 h-5 ml-2" />
                 </Link>
-                <HoverBorderGradient>
-                  <div className="flex gap-3 py-2 lg:px-6 lg:w-[250px] justify-center items-center">
+                <HoverBorderGradient onClick={() => window.open(product.demo, "_blank")}>
+                  <div className="flex gap-3 py-2 lg:px-6 lg:w-[250px] justify-center items-center cursor-pointer">
                     <Image src={eye} alt="eye" width={20} height={20} />
                     <span>View Demo</span>
                   </div>

@@ -11,6 +11,7 @@ import Fire from "@/Assets/Icons/Fire.svg"
 import React, { useEffect, useState, useRef } from 'react'
 import { ShimmerButton } from '@/components/magicui/shimmer-button';
 import ChatbotModal from '@/components/ChatbotModal/ChatbotModal';
+import Link from 'next/link'
 
 export default function Hero() {
     const [stars, setStars] = useState([]);
@@ -119,19 +120,21 @@ export default function Hero() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 1.4, ease: "easeOut" }}
                         >
-                            <motion.button
-                                className="flex items-center justify-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full transition-all duration-300 shadow-lg cursor-pointer hover:scale-105 w-full sm:w-auto"
-                                whileHover={{ scale: 1.05, y: -2 }}
-                                whileTap={{ scale: 0.95 }}
-                                initial={{ opacity: 0, x: -20 }}
-                                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-                                transition={{ duration: 0.6, delay: 1.6 }}
-                            >
-                                <motion.span>
-                                    <Image src={Fire} alt="Fire" width={20} height={20} />
-                                </motion.span>
-                                Discover Our Impact
-                            </motion.button>
+                            <Link href="/our-story">
+                                <motion.button
+                                    className="flex items-center justify-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full transition-all duration-300 shadow-lg cursor-pointer hover:scale-105 w-full sm:w-auto"
+                                    whileHover={{ scale: 1.05, y: -2 }}
+                                    whileTap={{ scale: 0.95 }}
+                                    initial={{ opacity: 0, x: -20 }}
+                                    animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+                                    transition={{ duration: 0.6, delay: 1.6 }}
+                                >
+                                    <motion.span>
+                                        <Image src={Fire} alt="Fire" width={20} height={20} />
+                                    </motion.span>
+                                    Discover Our Impact
+                                </motion.button>
+                            </Link>
 
                             <motion.div
                                 initial={{ opacity: 0, x: 20 }}

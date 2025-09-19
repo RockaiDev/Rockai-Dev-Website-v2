@@ -20,6 +20,7 @@ import msgFill from "@/Assets/Icons/msgFill.svg"
 import Image from "next/image";
 import ProductsCardAndFilter from "./ProductsCardAndFilter/ProductsCardAndFilter";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
+import Link from "next/link";
 
 
 
@@ -140,16 +141,18 @@ export default function ProductsPage() {
 
 
       <div className="flex items-center justify-center gap-6 pt-4 lg:w-full ">
-        <button className="px-8 lg:py-4  py-3 flex rounded-full justify-center  bg-sky-500 text-white text-md items-center  hover:bg-sky-600 transition cursor-pointer">
+        <Link href={`https://wa.me/201555867970?text=${encodeURIComponent("Hi, I'm interested in learning more about Rockai Dev's products.")}`} target="_blank" className="px-8 lg:py-4  py-3 flex rounded-full justify-center  bg-sky-500 text-white text-md items-center  hover:bg-sky-600 transition cursor-pointer">
           <Image src={msgFill} alt="arrow" className="w-5 h-5 me-2" />
           Start Your Journey
-        </button>
-        <HoverBorderGradient>
-          <div className="flex gap-3 py-2 lg:px-6 lg:w-[250px] justify-center items-center">
-            <Image src={arrowRightFill} alt="eye" width={20} height={20} />
-            <span className="text-cyan-600">Explore Services</span>
-          </div>
-        </HoverBorderGradient>
+        </Link>
+        <Link href="/services">
+          <HoverBorderGradient>
+            <div className="flex gap-3 py-2 lg:px-6 lg:w-[250px] justify-center items-center cursor-pointer">
+              <Image src={arrowRightFill} alt="eye" width={20} height={20} />
+              <span className="text-cyan-600">Explore Services</span>
+            </div>
+          </HoverBorderGradient>
+        </Link>
       </div>
     </main>
   );

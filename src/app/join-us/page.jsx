@@ -9,10 +9,8 @@ import Careers from "./Carrers/Careers";
 import Partnerships from "./Partnerships/Partnerships";
 
 
-
-
 export default function JoinUsPage() {
-  const [isCareers, setIsCareers] = useState("careers")
+  const [isCareers, setIsCareers] = useState(false)
   const [isActive, setIsActive] = useState(true)
   return (
     <main className="min-h-[60vh] container mx-auto  py-12 text-white">
@@ -46,50 +44,26 @@ export default function JoinUsPage() {
         </p>
       </div>
 
+      <div className="flex justify-center gap-2 mt-10 ">
+        <button onClick={() => {
+          setIsCareers(true);
+          setIsActive(true);
+        }} className={`${isActive && isCareers ? "bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white" : "card-gradient text-gray-400 font-semibold"}     w-[200px] py-2 rounded-[5px]  `}>
+          Careers
+        </button>
 
-<div className="flex justify-center gap-2 mt-10 ">
-  <button onClick={() => {
-    setIsCareers("careers");
-    setIsActive(true);
-  }} className={`${isActive&&isCareers ?"bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white":"card-gradient text-gray-400 font-semibold"}     w-[200px] py-2 rounded-[5px]  `}>
-    Careers
-  </button>
+        <button className={`${isActive && !isCareers ? "bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white" : "card-gradient text-gray-400 font-semibold"}     w-[200px] py-2 rounded-[5px]  `}
+          onClick={() => {
+            setIsCareers(false);
+            setIsActive(true);
+          }} >
+          Partnerships  
+          </button>
+      </div>
 
-
-
-
-  <button className={`${isActive&&!isCareers ?"bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white":"card-gradient text-gray-400 font-semibold"}     w-[200px] py-2 rounded-[5px]  `}
-   onClick={() => {
-    setIsCareers(false);
-    setIsActive(true);
-  }} >
-Partnerships  </button>
-</div>
-
-
-
-{isCareers? <Careers/> : <Partnerships/>}
-
-
-
-
-
-
-
-
-
+      {isCareers ? <Careers /> : <Partnerships />}
 
     </main>
-
-
-
-
-
-
-
-
-
-
 
   );
 }

@@ -63,17 +63,18 @@ export default function OurPortfolio() {
                 </motion.button>
 
                 <motion.h2 
-                    className="mt-4 sm:mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[62px] font-bold gradient-hero-text leading-tight"
+                    className="mt-4 sm:mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[50px] font-bold gradient-hero-text leading-tight"
                     variants={itemVariants}
                 >
-                    Real Results, Real Projects
+                    Fueling Businesses with Interstellar Success
                 </motion.h2>
                 
                 <motion.p 
                     className="mt-3 sm:mt-4 text-base sm:text-lg md:text-xl lg:text-2xl text-gray-400/80 max-w-2xl sm:max-w-3xl mx-auto px-2 sm:px-4 leading-relaxed"
                     variants={itemVariants}
                 >
-                    See how we transform challenges into real-world innovations for our clients.
+                    Witness how we transform complex challenges into real-world, innovative solutions. tailored to the unique needs of our esteemed clients
+
                 </motion.p>
             </motion.div>
 
