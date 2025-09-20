@@ -85,7 +85,7 @@ export default function Newsletter() {
           <button 
             type="submit"
             disabled={isSubmitting}
-            className={`sm:px-6 px-12 py-3 text-sm font-medium text-white rounded-full shadow-lg transition-all duration-300 flex items-center justify-center space-x-2 ${
+            className={`cursor-pointer sm:px-6 px-12 py-3 text-sm font-medium text-white rounded-full shadow-lg transition-all duration-300 flex items-center justify-center space-x-2 ${
               isSubmitting 
                 ? 'bg-gray-600 cursor-not-allowed' 
                 : 'bg-gradient-to-r from-[#10DBDB] to-[#0047A5] shadow-cyan-500/30 hover:scale-105 hover:shadow-cyan-500/50 cursor-pointer hover:-translate-y-1'

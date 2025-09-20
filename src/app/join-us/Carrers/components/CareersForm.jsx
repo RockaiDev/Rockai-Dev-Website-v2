@@ -106,7 +106,7 @@ export default function careersForm() {
     <div className=" flex items-center justify-center  px-4">
       <div className="flex flex-col md:flex-row items-center gap-8 sm:gap-10 md:gap-20   w-full justify-between mb-10">
         {/* Left Section */}
-        <div className="flex flex-col items-start justify-center gap-6 md:gap-6 max-w-2xl">
+        <div className="flex flex-col items-start justify-center gap-6 md:gap-6 max-w-2xl cursor-pointer">
           <button
             className={`flex items-center gap-2 px-4 py-2 rounded-full bg-blue-900/30  font-bold text-cyan-700   text-md `}
           >
@@ -315,7 +315,7 @@ export default function careersForm() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-3 rounded-lg form-btn text-white font-semibold shadow-lg hover:opacity-90 transition disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full py-3 cursor-pointer rounded-lg form-btn text-white font-semibold shadow-lg hover:opacity-90 transition disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? (
                   <div className="flex items-center justify-center gap-2">

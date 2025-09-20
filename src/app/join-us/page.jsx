@@ -30,13 +30,13 @@ export default function JoinUsPage() {
 
       <div className="secHeader mb-1 mx-auto text-center pt-10 px-6">
         <button
-          className={`flex items-center gap-2 px-4 py-2 rounded-full bg-blue-900/30 font-bold text-cyan-700 text-md m-auto`}
+          className={`flex items-center cursor-pointer gap-2 px-4 py-2 rounded-full bg-blue-900/30 font-bold text-cyan-700 text-md m-auto`}
         >
           <Image src={handandheart} alt="handandheart icon " width={20} height={20} />
           Career & Partnership
         </button>
 
-        <h2 className="mt-4 text-[62px] font-bold gradient-hero-text">
+        <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[62px]font-bold gradient-hero-text">
           Join the Rockai Revolution
         </h2>
         <p className="mt-2 text-xl text-gray-400/80 max-w-2xl mx-auto">
@@ -48,11 +48,11 @@ export default function JoinUsPage() {
         <button onClick={() => {
           setIsCareers(true);
           setIsActive(true);
-        }} className={`${isActive && isCareers ? "bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white" : "card-gradient text-gray-400 font-semibold"}     w-[200px] py-2 rounded-[5px]  `}>
+        }} className={`cursor-pointer ${isActive && isCareers ? "bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white" : "card-gradient text-gray-400 font-semibold"}     w-[200px] py-2 rounded-[5px]  `}>
           Careers
         </button>
 
-        <button className={`${isActive && !isCareers ? "bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white" : "card-gradient text-gray-400 font-semibold"}     w-[200px] py-2 rounded-[5px]  `}
+        <button className={` cursor-pointer ${isActive && !isCareers ? "bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white" : "card-gradient text-gray-400 font-semibold"}     w-[200px] py-2 rounded-[5px]  `}
           onClick={() => {
             setIsCareers(false);
             setIsActive(true);

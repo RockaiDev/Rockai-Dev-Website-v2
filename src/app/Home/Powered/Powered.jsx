@@ -45,7 +45,7 @@ export default function Powered() {
 
     return (
         <>
-            <section className="pt-10 sm:pt-16 lg:pt-20 px-4 sm:px-6 lg:px-8 mx-auto text-center max-w-7xl">
+            <section className="pt-10 sm:pt-16 lg:pt-20 px-4 sm:px-6 lg:px-8 mx-auto text-center max-w-7xl ">
                 <motion.div 
                     className="secHeader mb-8 sm:mb-12 lg:mb-16"
                     variants={containerVariants}
@@ -78,11 +78,11 @@ export default function Powered() {
                     </motion.p>
 
                     <motion.div 
-                        className="px-0 sm:px-4 lg:px-8 xl:px-16 mt-8 sm:mt-12 lg:mt-16"
+                        className="px-0 sm:px-4 lg:px-8 xl:px-16 mt-8 sm:mt-12 lg:mt-16 "
                         variants={carouselVariants}
                         initial="hidden"
                         whileInView="visible"
-                        viewport={{ once: true, margin: "-100px" }}
+                        viewport={{ once: true, margin: "-100px"  }}
                     >
                         <LogosCarousel />
                     </motion.div>

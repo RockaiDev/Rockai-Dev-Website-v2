@@ -87,13 +87,13 @@ export default function ProductsPage() {
 
       <div className="secHeader mb-1 mx-auto text-center pt-10 px-6">
         <button
-          className={`flex items-center gap-2 px-4 py-2 rounded-full bg-blue-900/30 font-bold text-cyan-700 text-md m-auto`}
+          className={`flex items-center cursor-pointer gap-2 px-4 py-2 rounded-full bg-blue-900/30 font-bold text-cyan-700 text-md m-auto`}
         >
           <Image src={bulb_fill} alt="bulb_fill icon " width={20} height={20} />
           Our Competitive Edge
         </button>
 
-        <h2 className="mt-4 text-[62px] font-bold gradient-hero-text">
+        <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[62px] font-bold gradient-hero-text">
           Why Choose Rockai Products?
         </h2>
         <p className="mt-2 text-xl text-gray-400/80 max-w-2xl mx-auto">
@@ -111,12 +111,12 @@ export default function ProductsPage() {
 
       <div className="secHeader mb-1 mx-auto text-center pt-10 px-6">
         <button
-          className={`flex items-center gap-2 px-4 py-2 rounded-full bg-blue-900/30 font-bold text-cyan-700 text-md m-auto`}
+          className={`flex items-center cursor-pointer gap-2 px-4 py-2 rounded-full bg-blue-900/30 font-bold text-cyan-700 text-md m-auto`}
         >
           <Image src={crystal} alt="crystal icon " width={20} height={20} />
           Visionary Solutions        </button>
 
-        <h2 className="mt-4 text-[62px] font-bold gradient-hero-text">
+        <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[62px] font-bold gradient-hero-text">
           Empowering the Future Today        </h2>
         <p className="mt-2 text-xl text-gray-400/80 max-w-3xl mx-auto">
           Explore groundbreaking products crafted to transform industries, fuel innovation, and unlock new opportunities with cutting-edge technology.        </p>
@@ -130,7 +130,7 @@ export default function ProductsPage() {
       <div className="secHeader mb-1 mx-auto text-center pt-10 px-6">
 
 
-        <h2 className="mt-4 text-[62px] font-bold gradient-hero-text">
+        <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[62px] font-bold gradient-hero-text">
           Ready to Transform Your Business?
         </h2>
         <p className="mt-2 text-xl text-gray-400/80 max-w-3xl mx-auto">
@@ -140,7 +140,7 @@ export default function ProductsPage() {
 
 
 
-      <div className="flex items-center justify-center gap-6 pt-4 lg:w-full ">
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-6 pt-4 lg:w-full ">
         <Link href={`https://wa.me/201555867970?text=${encodeURIComponent("Hi, I'm interested in learning more about Rockai Dev's products.")}`} target="_blank" className="px-8 lg:py-4  py-3 flex rounded-full justify-center  bg-sky-500 text-white text-md items-center  hover:bg-sky-600 transition cursor-pointer">
           <Image src={msgFill} alt="arrow" className="w-5 h-5 me-2" />
           Start Your Journey

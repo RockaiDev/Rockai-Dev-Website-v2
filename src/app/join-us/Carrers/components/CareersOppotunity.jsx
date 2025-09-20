@@ -174,7 +174,7 @@ export default function CareersOppotunity() {
     <>
       {/* Header */}
       <div className="secHeader mb-1 mx-auto text-center pt-6 sm:pt-10 px-4 sm:px-6">
-        <button className="flex items-center gap-2 px-4 py-2 rounded-full bg-blue-900/30 font-bold text-cyan-700 text-sm sm:text-md m-auto">
+        <button className="flex cursor-pointer items-center gap-2 px-4 py-2 rounded-full bg-blue-900/30 font-bold text-cyan-700 text-sm sm:text-md m-auto">
           <Image src={jobs} alt="jobs icon " width={20} height={20} />
           We're Hiring
         </button>
@@ -229,7 +229,7 @@ export default function CareersOppotunity() {
               {/* Button */}
               <button
                 onClick={() => openModal(job)}
-                className="px-4 sm:px-6 py-3 sm:py-4 flex rounded-full bg-sky-500 text-white text-sm sm:text-md items-center justify-center hover:bg-sky-600 transition cursor-pointer touch-manipulation"
+                className="px-4 sm:px-6 py-3 sm:py-4 cursor-pointer flex rounded-full bg-sky-500 text-white text-sm sm:text-md items-center justify-center hover:bg-sky-600 transition cursor-pointer touch-manipulation"
               >
                 Apply Now
                 <Image src={arrowRight} alt="arrow" className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
@@ -252,7 +252,7 @@ export default function CareersOppotunity() {
             </button>
 
             {/* Form */}
-            <h2 className="text-xl sm:text-2xl font-bold mb-4 pr-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[62px] font-bold mb-4 pr-8">
               {selectedJob?.title}
             </h2>
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -405,7 +405,7 @@ export default function CareersOppotunity() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-sky-500 hover:bg-sky-600 disabled:bg-gray-600 disabled:cursor-not-allowed text-white font-semibold py-3 sm:py-4 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:ring-offset-[#0e112d]"
+                className="w-full bg-sky-500 cursor-pointer hover:bg-sky-600 disabled:bg-gray-600 disabled:cursor-not-allowed text-white font-semibold py-3 sm:py-4 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:ring-offset-[#0e112d]"
               >
                 {isSubmitting ? (
                   <div className="flex items-center justify-center gap-2">

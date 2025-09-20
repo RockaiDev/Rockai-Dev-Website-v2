@@ -32,11 +32,11 @@ export default function HowAttendai() {
 
   return (
     <div className="w-full text-center pt-24 px-6">
-      <h2 className="mt-4 text-[62px] font-bold gradient-hero-text">
+      <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[62px] font-bold gradient-hero-text">
         How AttendAI Works
       </h2>
 
-      <div className="mt-16 flex flex-col md:flex-row md:justify-center md:items-start gap-12 md:gap-0 relative">
+      <div className="mt-16 flex flex-col xl:flex-row justify-center xl:items-start gap-12 md:gap-0 relative">
         {items.map((item, index) => (
           <div
             key={index}
@@ -56,7 +56,7 @@ export default function HowAttendai() {
 
               {/* الخط الأفقي */}
               {index !== items.length - 1 && (
-                <div className="hidden md:block absolute top-1/2 left-[140px] w-[200px] h-[3px] bg-gray-600/40 z-10"></div>
+                <div className="hidden xl:block absolute top-1/2 left-[140px] w-[200px] h-[3px] bg-gray-600/40 z-10"></div>
               )}
             </div>
 

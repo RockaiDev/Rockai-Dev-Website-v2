@@ -134,7 +134,7 @@ export default function VRAssistant() {
                 >
                     <button 
                         onClick={() => setIsChatOpen(true)}
-                        className="flex items-center justify-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-4 sm:px-5 md:px-6 py-3 sm:py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-cyan-500/20 hover:scale-105 active:scale-95 text-sm sm:text-base font-semibold cursor-pointer animate-pulse hover:animate-none"
+                        className="flex items-center justify-center  gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-4 sm:px-5 md:px-6 py-3 sm:py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-cyan-500/20 hover:scale-105 active:scale-95 text-sm sm:text-base font-semibold cursor-pointer animate-pulse hover:animate-none"
                     >
                         Try It Now
                     </button>

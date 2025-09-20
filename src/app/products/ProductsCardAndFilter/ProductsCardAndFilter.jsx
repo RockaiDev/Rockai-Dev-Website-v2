@@ -88,7 +88,7 @@ export default function ProductsCardAndFilter() {
       </div>
 
       {/* Products */}
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid md:grid-cols-1 xl:grid-cols-2 gap-8">
         {filteredProducts.map((product) => (
           <CardWithAnimatedBorder
             key={product.id}
@@ -119,7 +119,7 @@ export default function ProductsCardAndFilter() {
                 ))}
               </div>
 
-              <div className="flex items-center justify-between gap-6 pt-4 lg:w-full ">
+              <div className="flex sm:flex-row flex-col items-center justify-center lg:justify-between gap-6 pt-4 lg:w-full ">
                 <Link  href={product.link ? `/products/${product.link}` : "#"} className="px-6 lg:py-4  py-3 flex rounded-full justify-center lg:w-1/2 bg-sky-500 text-white text-md items-center  hover:bg-sky-600 transition cursor-pointer">
                   View Details                           <Image src={arrowRight} alt="arrow" className="w-5 h-5 ml-2" />
                 </Link>

@@ -318,11 +318,11 @@ export const servicesData = [
     our: "Testing & QA Services",
     ourDesc:
       "  We ensure your product works reliably and delivers user trust.",
-    lastTitle: "Ready to Dominate Search Results?",
-    lastDesc: "Transform your search visibility and drive sustainable organic growth with data-driven SEO strategies.",
-    lastBtn: "Get SEO Audit",
+    lastTitle: " Let’s Build What’s Next",
+    lastDesc: " Partner with Rockai to innovate, accelerate, and lead your industry forward. Subheadline: From first consultation to delivery, we commit to lasting value.",
+    lastBtn: "Contact Us",
     lastBtnIcon: chart,
-    requestBtn: "Request SEO Quote",
+    requestBtn: "Book A Meeting",
     requestBtnIcon: settings,
 
 
@@ -368,28 +368,33 @@ export const servicesData = [
     features: [
 
       {
-        title: "Data Encryption",
-        description: "End-to-end encryption for all transactions"
+        title: "Speed ",
+        description: " Faster launches with zero production bugs"
       },
       {
-        title: "PCI Compliance",
-        description: "Fully compliant with payment industry standards"
+
+        title: "Reliability",
+        description: "Protected brand through trusted quality assurance"
+      },
+
+      {
+        title: "Savings",
+        description: "Cost savings via reduced defect cycles"
+      },
+
+      {
+        title: "Trust",
+        description: "User trust that increases customer retention"
       },
       {
-        title: "Role-Based Access",
-        description: "Granular permissions for different user roles"
+
+        title: "Clarity",
+        description: "Clear reporting with actionable improvement insights"
       },
       {
-        title: "Real-Time Monitoring",
-        description: "24/7 system monitoring and threat detection"
-      },
-      {
-        title: "Real-Time Monitoring",
-        description: "24/7 system monitoring and threat detection"
-      },
-      {
-        title: "Real-Time Monitoring",
-        description: "24/7 system monitoring and threat detection"
+
+        title: "Stability",
+        description: "Stable systems ensuring performance under pressure"
       },
 
     ]
@@ -406,7 +411,7 @@ export const servicesData = [
 
       },
       {
-     
+
         title: " Trusted Assurance",
         one: "User Confidence",
         two: "Brand Safety",
@@ -414,44 +419,358 @@ export const servicesData = [
 
       },
       {
-   
+
         title: " Agile Speed ",
         one: "Faster Testing",
         two: "Rapid Iteration",
         three: " On-Time Launch",
       },
       {
-   
-
         title: "   Clear Insight",
         one: "Transparent Reports",
         two: "Actionable Data ",
         three: "Full Visibility",
       },
- 
+
 
     ],
     stepsTitle: "Our SEO Process",
     items: [
       {
         icon: one,
-        title: "SEO Audit",
-        desc: "Comprehensive site analysis and opportunity identification",
+        title: "Plan ",
+        desc: " Analyze requirements and define scope",
       },
       {
         icon: two,
-        title: "Strategy Development",
-        desc: "SEO strategy and implementation roadmap",
+        title: "Design",
+        desc: "Design tests and automation frameworks",
       },
       {
         icon: three,
-        title: "Implementation",
-        desc: "Technical fixes and content optimization",
+        title: "Execute ",
+        desc: " Run manual and automated tests",
       },
       {
         icon: four,
-        title: "Monitoring & Optimization",
-        desc: "Performance tracking and continuous improvement",
+        title: "Report ",
+        desc: "Deliver insights and recommended fixes",
+      },
+    ]
+
+
+  },
+
+  {
+    slug: "AI",
+    category: "Development",
+    title: " Intelligence that Drives BusinessServices",
+    description: " We transform data into smarter processes, decisions, and outcomes.",
+    timeline: "3–6 months",
+    icon: bulbFill,
+    service: " Intelligence that Drives Business",
+    our: " Intelligence that Drives Business Services",
+    ourDesc:
+      "  We transform data into smarter processes, decisions, and outcomes.",
+    lastTitle: " Let’s Build What’s Next",
+    lastDesc: " Partner with Rockai to innovate, accelerate, and lead your industry forward. Subheadline: From first consultation to delivery, we commit to lasting value."
+    , lastBtn: "Contact Us",
+    lastBtnIcon: chart,
+    requestBtn: "Book A Meeting",
+    requestBtnIcon: settings,
+
+
+    techStack: ["Next.js", "React", "Node.js"],
+    KeyFeatures: ["Scalable Architecture", "AI Integration"],
+
+    cards: [
+      {
+        icon: storyRocket,
+        title: "   Tailored AI Models",
+        description:
+          "Tailored AI models trained on your data deliver relevant business focused outputs.",
+        deliverables: [
+          "Smarter Customer Interactions",
+          " Automated Routine Decisions",
+          " Faster Insight Generation",
+
+        ],
+      },
+      {
+        icon: storyRocket,
+        title: "Secure & Compliant AI",
+        description:
+          "Secure data handling and validation ensure safe, compliant model behavior in production.",
+        deliverables: [
+          "Privacy Preserved Always",
+          "Bias Mitigation Built",
+          "Performance Validated Regularly",
+        ],
+      },
+
+      {
+        icon: storyRocket,
+        title: "Embedded Intelligence",
+        description:
+          "Integration across products and workflows embeds intelligence where decisions are made.",
+        deliverables: [
+          " Seamless System Integration",
+          "Actionable Automation Enabled",
+          "Continuous Model Improvement",
+        ],
+      },
+
+    ],
+    featuresTitle: "What You Gain",
+    features: [
+
+      {
+        title: "Insight ",
+        description: " Smarter decisions powered by predictive insights"
+      },
+      {
+
+        title: "Analytics",
+        description: "Real time analytics improving business performance"
+      },
+
+      {
+        title: "Automation",
+        description: " Intelligent automation reducing manual work pressure"
+      },
+
+      {
+        title: "Advantage",
+        description: "Competitive edge through advanced data utilization"
+      },
+      {
+
+        title: "Accuracy",
+        description: "Reliable models delivering consistent accurate results"
+      },
+      {
+
+        title: "Scalability",
+        description: " Scalable AI supporting sustainable business growth"
+      },
+
+    ]
+
+    , techTitle: "Core Strengths",
+    techs: [
+
+      {
+
+        title: "Smarter Decisions",
+        one: " Predictive Models ",
+        two: "Actionable Data ",
+        three: "Better Outcomes",
+
+
+      },
+      {
+
+        title: " Faster Insights",
+        one: "Real-Time Analytics ",
+        two: "Instant Processing ",
+        three: "Quick Wins",
+
+      },
+      {
+
+        title: " Deep Intelligence ",
+        one: "Hidden Patterns",
+        two: "Rich Context",
+        three: "  Complex Analysis",
+      },
+      {
+        title: " Reliable Accuracy",
+        one: "Trustworthy Models",
+        two: "Consistent Results  ",
+        three: " Honest Data",
+      },
+
+
+    ],
+    stepsTitle: "Our SEO Process",
+    items: [
+      {
+        icon: one,
+        title: "Discover ",
+        desc: " Identify opportunities and define goals",
+      },
+      {
+        icon: two,
+        title: "Prepare",
+        desc: "Collect, cleanse, and structure data",
+      },
+      {
+        icon: three,
+        title: "Train ",
+        desc: "  Train, validate, and test models",
+      },
+      {
+        icon: four,
+        title: "Scale ",
+        desc: " Deploy systems, monitor, and optimize",
+      },
+    ]
+
+
+  },
+  {
+    slug: "Automation",
+    category: "Development",
+    title: "  Efficiency Reimagined",
+    description: " We eliminate repetitive tasks and free your team for real growth.",
+    timeline: "3–6 months",
+    icon: bulbFill,
+    service: " Automation Services",
+    our: " Automation Services ",
+    ourDesc:
+      "  We transform data into smarter processes, decisions, and outcomes.",
+    lastTitle: " Let’s Build What’s Next",
+    lastDesc: " Partner with Rockai to innovate, accelerate, and lead your industry forward. Subheadline: From first consultation to delivery, we commit to lasting value."
+    , lastBtn: "Contact Us",
+    lastBtnIcon: chart,
+    requestBtn: "Book A Meeting",
+    requestBtnIcon: settings,
+
+
+    techStack: ["Next.js", "React", "Node.js"],
+    KeyFeatures: ["Scalable Architecture", "AI Integration"],
+
+    cards: [
+      {
+        icon: storyRocket,
+        title: " Workflow Automation",
+        description:
+          "Identify repetitive tasks and replace them with reliable automated workflows today.",
+        deliverables: [
+          " Reduced Manual Work",
+          " Consistent Process Outcomes",
+          "  Faster Cycle Times",
+
+        ],
+      },
+      {
+        icon: storyRocket,
+        title: "Seamless Integrations",
+        description:
+          "Integrations connect tools and systems to create end to end data flow.",
+        deliverables: [
+          "Seamless Tool Integration",
+          " Real Time Sync",
+          "Eliminate Manual Handoffs",
+        ],
+      },
+
+      {
+        icon: storyRocket,
+        title: "Intelligent Monitoring",
+        description:
+          "Monitoring and analytics reveal bottlenecks and guide continuous process optimization.",
+        deliverables: [
+          " Performance Dashboards Included",
+          " Actionable Performance Insights",
+          " Continuous Optimization Cycle",
+        ],
+      },
+
+    ],
+    featuresTitle: "What You Gain",
+    features: [
+
+      {
+        title: "Efficiency  ",
+        description: "Reduced costs by eliminating manual processes"
+      },
+      {
+
+        title: "Productivity ",
+        description: "Higher productivity with automated workflows daily"
+      },
+
+      {
+        title: "Reliability",
+        description: "Reliable operations ensuring business process continuity"
+      },
+
+      {
+        title: "Scalability ",
+        description: " Scalable automation adapting as companies grow"
+      },
+      {
+
+        title: "Accuracy",
+        description: " Consistent accuracy replacing manual human errors"
+      },
+      {
+
+        title: "Time ",
+        description: " Time savings enabling strategic business work"
+      },
+
+    ]
+
+    , techTitle: "Core Strengths",
+    techs: [
+
+      {
+
+        title: "Time Efficiency",
+        one: "  Faster Workflows  ",
+        two: "Saved Hours ",
+        three: "Streamlined Ops",
+
+
+      },
+      {
+        title: " Cost Savings",
+        one: "Resource Cut ",
+        two: "Lean Teams",
+        three: " Lower Spend",
+
+      },
+      {
+        title: " Smart Flows  ",
+        one: "AI Logic",
+        two: "Automated Steps ",
+        three: "Clever Routing",
+      },
+      {
+        title: " Process Stability ",
+        one: "Strong Links",
+        two: " Reliable Chains ",
+        three: "Consistent Output",
+      },
+
+
+    ],
+    stepsTitle: "Our SEO Process",
+    items: [
+      {
+
+        icon: one,
+        title: "Map ",
+        desc: "Map workflows and identify bottlenecks",
+      },
+      {
+
+        icon: two,
+        title: "Design",
+        desc: " Design automation flows with exceptions",
+      },
+      {
+
+        icon: three,
+        title: "Implement ",
+        desc: " Integrate automation across systems seamlessly",
+      },
+      {
+        icon: four,
+        title: "Optimize ",
+        desc: " Monitor performance and iterate improvements ",
       },
     ]
 
@@ -459,8 +778,327 @@ export const servicesData = [
   },
 
 
+  {
+    slug: "Training",
+    category: "Development",
+    title: "Training Services",
+    description: " We equip teams with the skills to excel and innovate.",
+    timeline: "3–6 months",
+    icon: bulbFill,
+    service: "  Training Services",
+    our: " Empowerment Through Knowledge",
+    ourDesc:
+      " We equip teams with the skills to excel and innovate.",
+    lastTitle: " Let’s Build What’s Next",
+    lastDesc: " Partner with Rockai to innovate, accelerate, and lead your industry forward. Subheadline: From first consultation to delivery, we commit to lasting value."
+    , lastBtn: "Contact Us",
+    lastBtnIcon: chart,
+    requestBtn: "Book A Meeting",
+    requestBtnIcon: settings,
 
 
+    techStack: ["Next.js", "React", "Node.js"],
+    KeyFeatures: ["Scalable Architecture", "AI Integration"],
+
+    cards: [
+      {
+        icon: storyRocket,
+        title: " Hands-On Skill Acceleration",
+        description:
+          "Practical hands on training accelerates skill adoption and reduces onboarding time.",
+        deliverables: [
+          " Real World Practice",
+          " Faster Team Ramp",
+          " Immediate Productivity Gains"
+        ],
+      },
+      {
+        icon: storyRocket,
+        title: "Customized Learning Paths ",
+        description:
+          "Custom curricula tailored to team goals ensure measurable skill improvements.",
+        deliverables: [
+          " Tailored Learning Paths",
+          " Skill Assessments Included ",
+          "Practical Outcome Focus",
+        ],
+      },
+      {
+        icon: storyRocket,
+        title: "Continuous Mentorship & Support",
+        description:
+          "Ongoing mentoring and post training support embed skills and ensure retention.",
+        deliverables: [
+          "Continuous Coach Support",
+          " Measured Learning Outcomes",
+          "Retention Focused Methods",
+        ],
+      },
+
+  
+
+    ],
+    featuresTitle: "What You Gain",
+    features: [
+
+      {
+        title: "real projects  ",
+        description: "Practical skills applied to real projects"
+      },
+      {
+
+        title: "knowledge ",
+        description: "Expert mentorship delivering industry standard knowledge"
+      },
+
+      {
+        title: " competitive advantage",
+        description: "Future focused training for competitive advantage"
+      },
+
+      {
+        title: "innovation and growth ",
+        description: "Empowered teams driving innovation and growth"
+      },
+      {
+
+        title: "Learning",
+        description: " Hands on learning with measurable gains"
+      },
+      {
+
+        title: "Upskilling ",
+        description: " Continuous upskilling to match market needs"
+      },
+
+    ]
+
+    , techTitle: "Core Strengths",
+    techs: [
+
+      {
+
+        title: "   Clear Learning ",
+        one: "  Structured Programs   ",
+        two: "Easy Steps  ",
+        three: "Focused Path",
+
+
+      },
+      {
+   
+        title: " Expert Guidance",
+        one: "Skilled Coaches",
+        two: "Proven Methods",
+        three: "Industry Insight",
+
+      },
+      {
+
+        title: " Future Skills   ",
+        one: "Modern Tools ",
+        two: " Trend Ready ",
+        three: "Competitive Edge",
+      },
+      {
+        title: "   Applied Knowledge ",
+        one: "Work Ready",
+        two: " Job Fit  ",
+        three: "Practical Use",
+      },
+
+
+    ],
+    stepsTitle: "Our Training Process",
+    items: [
+      {
+
+        icon: one,
+        title: "Assess  ",
+        desc: "Assess skills gaps and priorities",
+      },
+      {
+
+        icon: two,
+        title: "Design",
+        desc: " Design curriculum and practical projects",
+      },
+      {
+
+        icon: three,
+        title: " Deliver",
+        desc: "  Deliver sessions with practical exercises",
+      },
+      {
+        icon: four,
+        title: "Empower  ",
+        desc: "  Evaluate impact and reinforce learning",
+      },
+    ]
+
+
+  },
+  {
+    slug: "seo-marketing",
+    category: "Development",
+    title: " SEO & Marketing Services",
+    description: "  We build SEO into your code for speed, stability, and lasting visibility..",
+    timeline: "3–6 months",
+    icon: bulbFill,
+    service: "   SEO & Marketing Services",
+    our: " Visibility that Converts",
+    ourDesc:
+      "  We build SEO into your code for speed, stability, and lasting visibility..",
+    lastTitle: " Let’s Build What’s Next",
+    lastDesc: " Partner with Rockai to innovate, accelerate, and lead your industry forward. Subheadline: From first consultation to delivery, we commit to lasting value."
+    , lastBtn: "Contact Us",
+    lastBtnIcon: chart,
+    requestBtn: "Book A Meeting",
+    requestBtnIcon: settings,
+
+
+    techStack: ["Next.js", "React", "Node.js"],
+    KeyFeatures: ["Scalable Architecture", "AI Integration"],
+
+    cards: [
+      {
+        icon: storyRocket,
+        title: "Code-First SEO",
+        description:
+          " Websites engineered with clean code and technical compliance.",
+        deliverables: [
+          "Clean Code Base",
+          "Structured Markup Set",
+          "Optimized Frameworks"
+        ],
+      },
+      {
+        icon: storyRocket,
+        title: "Performance Ready",
+        description:
+          " Sites designed for speed, mobile, and smooth indexing.",
+        deliverables: [
+          "Mobile Friendly Build",
+          "Fast Loading Speed",
+          "Index-Friendly Flow",
+        ],
+      },
+      {
+        icon: storyRocket,
+        title: "Future-Proofed Design",
+        description:
+          " Architecture scalable with evolving algorithms and growth.",
+        deliverables: [
+          "Secure HTTPS Default",
+          "Schema Data Applied",
+          "Growth Aligned Build",
+        ],
+      },
+
+  
+
+    ],
+    featuresTitle: "What You Gain",
+    features: [
+
+      {
+        title: "Rankings ",
+        description: " Higher rankings through technical SEO design"
+      },
+      {
+          
+        title: "Speed ",
+        description: "Faster websites with measurable load improvements"
+      },
+      {
+        title: "Indexing ",
+        description: "Reliable indexing across all major search engines"
+      },
+      {
+        title: "Adaptability",
+        description: "Future-proof websites built for algorithm changes"
+      },
+      {
+        title: "security",
+        description: "Secure performance protecting user trust long-term"
+      },
+      {
+        title: "Visibility",
+        description: "Lasting visibility baked into digital foundations"
+      },
+    
+
+       
+
+    ]
+
+    , techTitle: "Core Strengths",
+    techs: [
+
+      {
+
+        title: "Efficient",
+        one: "Optimized for minimal load",
+        two: "Standards compliance strong",
+        three: "Stable tested structures",
+
+
+      },
+      {
+   
+        title: "Reliable",
+        one: "SEO baked in code",
+        two: "Standards compliance strong",
+        three: "Stable tested structures",
+
+      },
+      {
+   
+        title: "scalable",
+        one: "Growth-ready frameworks",
+        two: "Traffic surges handled",
+        three: "Flexible site builds",
+
+      },
+      {
+   
+        title: "secure",
+        one: "HTTPS-first standard",
+        two: "Safe coding practices",
+        three: "Durable site foundations",
+
+      },
+
+    ],
+    stepsTitle: "Our SEO Process",
+    items: [
+      {
+
+        icon: one,
+        title: "Foundation   ",
+        desc: "Build technical SEO structure",
+      },
+      {
+        icon: two,
+        title: "Discovery",
+        desc: " Analyze site performance needs",
+      },
+      {
+ 
+        icon: three,
+        title: " Optimize",
+        desc: " Refine code and framework layers",
+      },
+      {
+        icon: four,
+         
+        title: "Grow",
+        desc: "Scale visibility with strong architecture",
+      },
+    ]
+
+
+  },
 
 
 

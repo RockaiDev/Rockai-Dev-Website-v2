@@ -35,7 +35,7 @@ const LogosCarousel = () => {
       {
         breakpoint: 768, 
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1 ,
         },
       },
     ],
@@ -58,7 +58,7 @@ const LogosCarousel = () => {
   ];
 
   return (
-    <div className="w-full overflow-hidden pt-6 pb-16  ">
+    <div className="w-full overflow-hidden pt-6 pb-16 ">
       <Slider {...settings}>
         {logos.map((logo, index) => (
           <Link
@@ -69,13 +69,13 @@ const LogosCarousel = () => {
             rel="noopener noreferrer"
           >
             {/* كونتينر ثابت الحجم + Responsive */}
-            <div className=" w-[100px] lg:mt-10 h-[100px] md:w-[180px] md:h-[180px] sm:w-[100px] sm:h-[100px] flex justify-center items-center">
+            <div className=" w-[150px] lg:mt-10 h-[100px] md:w-[180px] md:h-[180px] sm:w-[100px] sm:h-[100px] flex justify-center items-center">
               <Image
                 src={logo.image}
                 alt={`logo-${index}`}
                 width={200}
                 height={200}
-                className="object-contain w-[100px] h-[100px]"
+                className="object-contain w-[80px] sm:w-[100px] h-[100px]"
               />
             </div>
           </Link>

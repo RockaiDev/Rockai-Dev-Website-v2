@@ -114,7 +114,7 @@ const ContactFormWithOptions = () => {
       <div className="flex flex-col md:flex-row items-center gap-8 sm:gap-10 md:gap-20 w-full justify-between mb-10">
         {/* Left Section */}
         <div className="flex flex-col items-start justify-center gap-6 md:gap-6 max-w-2xl">
-          <button className="flex items-center gap-2 px-4 py-2 rounded-full bg-blue-900/30 font-bold text-cyan-700 text-md">
+          <button className="flex cursor-pointer items-center gap-2 px-4 py-2 rounded-full bg-blue-900/30 font-bold text-cyan-700 text-md">
             <User size={20} />
             Connect with Rockai
           </button>
@@ -309,7 +309,7 @@ const ContactFormWithOptions = () => {
               <button
                 onClick={handleSubmit}
                 disabled={isSubmitting}
-                className={`w-full py-3 rounded-lg font-semibold shadow-lg transition flex items-center justify-center space-x-2 ${isSubmitting
+                className={`w-full py-3 rounded-lg cursor-pointer font-semibold shadow-lg transition flex items-center justify-center space-x-2 ${isSubmitting
                     ? 'bg-gray-600 text-gray-400 cursor-not-allowed'
                     : 'bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white hover:opacity-90'
                   }`}

@@ -1,118 +1,48 @@
 "use client"
 
 import { CardWithAnimatedBorder } from "@/components/CardWithAnimatedBorder/CardWithAnimatedBorder";
-// import bulbFill from "@/Assets/Icons/bulb_fill.svg"
-// import settings from "@/Assets/Icons/settings.svg"
-// import storyRocket from "@/Assets/Icons/storyRocket.svg"
-// import brain from "@/Assets/Icons/brain.svg"
-// import mindMap from "@/Assets/Icons/mindMap.svg"
-// import certificate from "@/Assets/Icons/certificate.svg"
-// import chart from "@/Assets/Icons/chart.svg"
-// import graduate from "@/Assets/Icons/graduate.svg"
 import arrowRight from "@/Assets/Icons/arrowRight.svg"
-import {servicesData} from "../data/data"
+import { servicesData } from "../data/data"
 import Image from "next/image"
 import Link from "next/link";
-// const servicesData = [
-//   {
-//     slug: "custom-software-development",
-//     category: "Development",
-//     title: "Custom Software Development",
-//     description: "Tailored enterprise solutions built with cutting-edge technologies",
-//     techStack: ["Next.js", "OpenAI GPT-4", "React", "Node.js"],
-//     features: ["Scalable Architecture", "AI Integration", "Payment Integration", "Security First"],
-//     timeline: "3–6 months",
-//     icon: bulbFill,
-//   },
-//   {
-//     slug: "saas-product-engineering",
-//     category: "Development",
-//     title: "SaaS Product Engineering",
-//     description: "End-to-End SaaS platform development from concept to scale",
-//     techStack: ["Next.js", "OpenAI GPT-4", "React", "Node.js"],
-//     features: ["Scalable Architecture", "AI Integration", "Payment Integration", "Security First"],
-//     timeline: "3–6 months",
-//     icon: settings,
-//   },
-//   {
-//     slug: "ai-llm-solutions",
-//     category: "AI/ML",
-//     title: "AI & LLM Solutions",
-//     description: "Advanced AI integration and custom Language Model implementations",
-//     techStack: ["Next.js", "OpenAI GPT-4", "React", "Node.js"],
-//     features: ["Scalable Architecture", "AI Integration", "Payment Integration", "Security First"],
-//     timeline: "3–6 months",
-//     icon: brain,
-//   },
-//   {
-//     slug: "automation-integrations",
-//     category: "Integration",
-//     title: "Automation & Integrations",
-//     description: "Streamlined workflows and system integrations to boost efficiency",
-//     techStack: ["Next.js", "OpenAI GPT-4", "React", "Node.js"],
-//     features: ["Scalable Architecture", "AI Integration", "Payment Integration", "Security First"],
-//     timeline: "3–6 months",
-//     icon: mindMap,
-//   },
-//   {
-//     slug: "testing-qa-services",
-//     category: "Quality Assurance",
-//     title: "Testing & QA Services",
-//     description: "Comprehensive testing solutions ensuring bulletproof software quality",
-//     techStack: ["Next.js", "OpenAI GPT-4", "React", "Node.js"],
-//     features: ["Scalable Architecture", "AI Integration", "Payment Integration", "Security First"],
-//     timeline: "3–6 months",
-//     icon: certificate,
-//   },
-//   {
-//     slug: "seo-services",
-//     category: "Marketing",
-//     title: "SEO Services",
-//     description: "Data-driven SEO strategies that drive organic growth and visibility",
-//     techStack: ["Next.js", "OpenAI GPT-4", "React", "Node.js"],
-//     features: ["Scalable Architecture", "AI Integration", "Payment Integration", "Security First"],
-//     timeline: "3–6 months",
-//     icon: chart,
-//   },
-//   {
-//     slug: "technical-training",
-//     category: "Development",
-//     title: "Technical Training for Dev Teams",
-//     description: "Upskill your development team with expert-led training programs",
-//     techStack: ["Next.js", "OpenAI GPT-4", "React", "Node.js"],
-//     features: ["Scalable Architecture", "AI Integration", "Payment Integration", "Security First"],
-//     timeline: "3–6 months",
-//     icon: graduate,
-//   },
-// ];
 
 export default function ServiceCards() {
   return (
-    <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-10 mt-16">
+    <div className="grid gap-6 sm:gap-4 md:gap-10 mt-10 
+                    grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
       {servicesData.map((service, index) => (
-        <CardWithAnimatedBorder key={index} className="p-4 rounded-2xl  card-gradient shadow-lg  ">
-       <div className="flex  justify-between items-start mb-8">
-           {/* Icon */}
-          <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-sky-500/10 ">
-            <Image src={service.icon} alt={service.title} className="w-6 h-6" />
-        
+        <CardWithAnimatedBorder 
+          key={index} 
+          className="p-4 sm:p-6 rounded-2xl card-gradient shadow-lg"
+        >
+          {/* Header */}
+          <div className="flex justify-between items-start mb-6 sm:mb-8">
+            {/* Icon */}
+            <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-lg bg-sky-500/10">
+              <Image src={service.icon} alt={service.title} className="w-6 h-6" />
+            </div>
 
+            <span className="text-xs sm:text-sm text-sky-400 font-medium mt-2 block bg-sky-500/10 px-2 py-1 rounded-full">
+              {service.category}
+            </span>
           </div>
-            <span className="text-sm text-sky-400 font-medium mt-3 block  bg-sky-500/10 px-2 py-1 rounded-full">{service.category}</span>
-       </div>
 
-          {/* Content */}
-          <h3 className="text-xl text-start font-bold text-white mt-1 gradient-hero-text ">{service.title}</h3>
-          <p className="text-gray-400/80  text-start text-sm mt-4">{service.description}</p>
+          {/* Title + Description */}
+          <h3 className="text-lg sm:text-xl font-bold text-white gradient-hero-text text-start">
+            {service.title}
+          </h3>
+          <p className="text-gray-400/80 text-sm sm:text-base mt-3 sm:mt-4 text-start">
+            {service.description}
+          </p>
 
           {/* Tech Stack */}
           <div className="mt-4">
-            <h4 className=" text-xs uppercase mb-4 text-start text-sky-400/80">Tech Stack</h4> 
-            <div className="flex flex-wrap gap-2 mt-1">
+            <h4 className="text-xs uppercase mb-3 text-sky-400/80 text-start">Tech Stack</h4>
+            <div className="flex flex-wrap gap-2">
               {service.techStack.map((tech, i) => (
                 <span
                   key={i}
-                  className="px-2 py-1 text-xs bg-[#1a2338] rounded-full text-sky-300  border border-sky-500/20 "
+                  className="px-2 py-1 text-xs sm:text-sm bg-[#1a2338] rounded-full text-sky-300 border border-sky-500/20"
                 >
                   {tech}
                 </span>
@@ -120,30 +50,31 @@ export default function ServiceCards() {
             </div>
           </div>
 
-          {/* Key Features inline */}
-          <div className="mt-4 border-b-1 border-gray-400/20 pb-4 ps-3">
-            <h4  className=" text-xs uppercase mb-4 text-start text-sky-400/80">Key Features</h4>
-            <div className="flex flex-wrap gap-8 mt-1">
+          {/* Features */}
+          <div className="mt-4 border-b border-gray-400/20 pb-4 ps-2 sm:ps-3">
+            <h4 className="text-xs uppercase mb-3 text-sky-400/80 text-start">Key Features</h4>
+            <ul className="flex flex-wrap gap-4 sm:gap-8">
               {service.KeyFeatures.map((feature, i) => (
-                <li
-                  key={i}
-                  className=" text-xs text-gray-400/80 "
-                >
+                <li key={i} className="text-xs sm:text-sm text-gray-400/80">
                   {feature}
                 </li>
               ))}
-            </div>
+            </ul>
           </div>
 
           {/* Footer */}
-          <div className="mt-4 flex items-center justify-between">
-            <span className="text-xs text-gray-400/80">Timeline: <span className="text-sky-400/80 font-medium ">{service.timeline}</span></span>
-       <button className="px-6 py-4 flex rounded-full bg-sky-500 text-white text-md items-center hover:bg-sky-600 transition cursor-pointer">
-  <Link href={`/services/${service.slug}`} className="flex items-center">
-    Learn more
-    <Image src={arrowRight} alt="arrow" className="w-5 h-5 ml-2" />
-  </Link>
-</button>
+          <div className="mt-4 flex items-center justify-between flex-col lg:flex-row ">
+            <span className="text-xs sm:text-sm text-gray-400/80 mb-4 lg:mb-0  ">
+              Timeline:{" "}
+              <span className="text-sky-400/80 font-medium">{service.timeline}</span>
+            </span>
+
+            <Link href={`/services/${service.slug}`}>
+              <button className="px-4 sm:px-4 cursor-pointer py-2 sm:py-3 flex rounded-full bg-sky-500 text-white text-sm sm:text-md items-center hover:bg-sky-600 transition cursor-pointer ">
+                Learn more
+                <Image src={arrowRight} alt="arrow" className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
+              </button>
+            </Link>
           </div>
         </CardWithAnimatedBorder>
       ))}

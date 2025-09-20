@@ -29,7 +29,7 @@ export default function ThreeDimensionCards() {
               <div className="lg:mt-24 sm:mt-32 mt-10 text-start">
                             <div className="flex justify-start items-center">
                                   <button
-                                  className={`flex items-center gap-2 px-4 py-2 rounded-full bg-blue-900/30  font-bold text-cyan-700   text-md  `}
+                                  className={`flex cursor-pointer items-center gap-2 px-4 py-2 rounded-full bg-blue-900/30  font-bold text-cyan-700   text-md  `}
                               >
                                   AI/ML
                               </button>
@@ -62,7 +62,7 @@ export default function ThreeDimensionCards() {
 
               {/* زرار */}
               <div className="mt-6">
-                <button className="w-full py-4   rounded-full form-btn  text-white font-medium flex items-center justify-center gap-2 transition-transform hover:scale-105">
+                <button className="w-full py-4 cursor-pointer  rounded-full form-btn  text-white font-medium flex items-center justify-center gap-2 transition-transform hover:scale-105">
                   Visit 
                   <Image src={rightArrow} alt="rightArrow" width={20} height={20} />
                 </button>

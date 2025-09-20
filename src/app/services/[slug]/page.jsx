@@ -13,16 +13,16 @@ export default function ServicePage({ params }) {
     }
 
     return (
-        <div className=" mx-auto py-12">
+        <div className=" mx-auto py-12  sm:mt-24">
             <div className="secHeader mb-1  mx-auto text-center pt-10 px-6">
                 <button
-                    className={`flex items-center gap-2 px-4 py-2 rounded-full bg-blue-900/30  font-bold text-cyan-700   text-md  m-auto`}
+                    className={`flex items-center gap-2 cursor-pointer px-4 py-2 rounded-full bg-blue-900/30  font-bold text-cyan-700   text-md  m-auto`}
                 >
                     <Image src={service.icon} alt="bulbFill icon " width={20} height={20} />
                     {service.service}
                 </button>
 
-                <h2 className="mt-4 text-[50px] font-bold gradient-hero-text">{service.our}</h2>
+                <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[62px] font-bold gradient-hero-text">{service.our}</h2>
                 <p className="mt-2 text-xl text-gray-400/80 max-w-2xl mx-auto">
                     {service.ourDesc}
                 </p>
@@ -75,7 +75,7 @@ export default function ServicePage({ params }) {
             </div>
 
             {/* title and desc section features  */}
-            <h2 className="mt-8 text-[50px] font-bold gradient-hero-text text-center">{service.featuresTitle}</h2>
+            <h2 className="mt-8 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[62px] font-bold gradient-hero-text text-center">{service.featuresTitle}</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-4xl mx-auto py-12 ">
                 {service.features.map((item, index) => (
                     <CardWithAnimatedBorder
@@ -91,7 +91,7 @@ export default function ServicePage({ params }) {
 
 
             {/* Technology Stack */}
-            <h2 className="mt-8 text-[50px] font-bold gradient-hero-text text-center">{service.techTitle}</h2>
+            <h2 className="mt-8 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[62px] font-bold gradient-hero-text text-center">{service.techTitle}</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-4  gap-4 mx-auto py-12 ">
 
@@ -112,7 +112,7 @@ export default function ServicePage({ params }) {
 
             {/* STEPS SECTION */}
             <div className="w-full text-center pt-24 px-6">
-                <h2 className="mt-4 text-[62px] font-bold gradient-hero-text">
+                <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[62px] font-bold gradient-hero-text">
                     {service.stepsTitle}
                 </h2>
 
@@ -136,7 +136,7 @@ export default function ServicePage({ params }) {
 
 
                                 {index !== service.items.length - 1 && (
-                                    <div className="hidden md:block absolute top-1/2 left-[140px] w-[200px] h-[3px] bg-gray-600/40 z-10"></div>
+                                    <div className="hidden xl:block absolute top-1/2 left-[140px] w-[200px] h-[3px] bg-gray-600/40 z-10"></div>
                                 )}
                             </div>
 
@@ -162,7 +162,7 @@ export default function ServicePage({ params }) {
                 <div className="secHeader mb-1 mx-auto text-center pt-10 px-6">
 
 
-                <h2 className="mt-4 text-[62px] font-bold gradient-hero-text">
+                <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[62px] font-bold gradient-hero-text">
                     {service.lastTitle}
                 </h2>
                 <p className="mt-2 text-xl text-gray-400/80 max-w-3xl mx-auto">

@@ -107,7 +107,7 @@ export default function PartnersForm() {
         {/* Left Section */}
         <div className="flex flex-col items-start justify-center gap-6 md:gap-6 max-w-2xl">
           <button
-            className={`flex items-center gap-2 px-4 py-2 rounded-full bg-blue-900/30  font-bold text-cyan-700   text-md `}
+            className={`flex cursor-pointer items-center gap-2 px-4 py-2 rounded-full bg-blue-900/30  font-bold text-cyan-700   text-md `}
           >
             <Image src={people} alt="send plane Icon" width={20} height={20} />
             Become a Rockai  Partner
@@ -309,7 +309,7 @@ export default function PartnersForm() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-3 rounded-lg form-btn text-white font-semibold shadow-lg hover:opacity-90 transition disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full py-3 rounded-lg cursor-pointer form-btn text-white font-semibold shadow-lg hover:opacity-90 transition disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? (
                   <div className="flex items-center justify-center gap-2">

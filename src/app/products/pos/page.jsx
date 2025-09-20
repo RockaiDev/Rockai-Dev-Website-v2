@@ -154,15 +154,15 @@ export default function POSPage() {
         requestBtnIcon={key}
         talkToSalesBtn="Talk To Sales"
         talkToSalesBtnIcon={phone}
-        btnMsg1="Hello, I would like to request access."
-        btnMsg2="Contact Sales"
+        btnMsg1="Hello, I would like to request access to SUFRA POS."
+        btnMsg2="Hello, I would like to talk to a sales representative about SUFRA POS."
 
 
       />
 
       {/* main section */}
       <div className="secHeader mb-1 mx-auto text-center pt-24 px-6">
-        <h2 className="mt-4 text-[62px] font-bold gradient-hero-text">
+        <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[62px] font-bold gradient-hero-text">
           Core Capabilities
         </h2>
         <p className="mt-2 text-xl text-gray-400/80 max-w-4xl lg:mb-12 mb-8 mx-auto">
@@ -226,9 +226,9 @@ export default function POSPage() {
       {/* grid section  */}
 
 
-      <div className="flex w-full mt-16 h-[600px] gap-8">
+      <div className="flex flex-col lg:flex-row items-center justify-between w-full mt-16 lg:h-[600px] gap-8">
 
-        <div className="flex w-1/4 items-center">
+        <div className="flex lg:w-1/4 flex-col items-center">
 
           <CardWithAnimatedBorder
 
@@ -243,7 +243,7 @@ export default function POSPage() {
 
 
 
-        <div className="flex flex-col w-1/2 justify-center gap-6 px-6 ">
+        <div className="flex flex-col lg:w-1/2 w-full justify-center gap-6 px-6 ">
           {/* Real-Time Sync */}
           <div className=" one flex flex-col  justify-center m-auto gap-4">
             <div className="flex items-start gap-4">
@@ -357,7 +357,7 @@ export default function POSPage() {
         </div>
 
 
-        <div className="flex w-1/4  justify-between">
+        <div className="flex lg:w-1/4 w-full  justify-between ">
 
           <div className="flex flex-col justify-between">
             <CardWithAnimatedBorder
@@ -370,7 +370,7 @@ export default function POSPage() {
             </CardWithAnimatedBorder>
             <CardWithAnimatedBorder
 
-              className="pb-10 pt-8 px-4 rounded-4xl border border-[#00c6ff]/20 card-gradient text-white text-start"
+              className="pb-10 pt-8 px-4 rounded-4xl border border-[#00c6ff]/20 card-gradient text-white text-start mt-8"
             >
               <Image src={phone} alt="Innovation First" width={24} height={24} />
               <h3 className="text-xl font-semibold mb-2 mt-3 gradient-hero-text">Competitive Salary</h3>
@@ -391,7 +391,7 @@ export default function POSPage() {
       {/* security and scalability */}
 
       <div className="secHeader mb-1 mx-auto text-center pt-24 px-6">
-        <h2 className="mt-4 text-[62px] font-bold gradient-hero-text">
+        <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[62px] font-bold gradient-hero-text">
           Security & Scalability
         </h2>
         <p className="mt-2 text-xl text-gray-400/80 max-w-4xl lg:mb-12 mb-8 mx-auto">
@@ -407,7 +407,7 @@ export default function POSPage() {
 
       {/* real-time analytics */}
           <div className="secHeader mb-1 mx-auto text-center pt-24 px-6">
-        <h2 className="mt-4 text-[62px] font-bold gradient-hero-text">
+        <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[62px] font-bold gradient-hero-text">
           See It In Action
         </h2>
         <p className="mt-2 text-xl text-gray-400/80 max-w-4xl lg:mb-12 mb-8 mx-auto">
@@ -421,7 +421,7 @@ export default function POSPage() {
 
 
       <div className="secHeader mb-1 mx-auto text-center pt-24 px-6">
-        <h2 className="mt-4 text-[62px] font-bold gradient-hero-text">
+        <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[62px] font-bold gradient-hero-text">
           Built With Modern Technology
         </h2>
         <p className="mt-2 text-xl text-gray-400/80 max-w-4xl lg:mb-12 mb-8 mx-auto">
@@ -436,7 +436,7 @@ export default function POSPage() {
 
       <div className="border border-gray-400/20 rounded-xl">
         <div className="secHeader mb-1 mx-auto text-center pt-10 px-6">
-          <h2 className="mt-4 text-[62px] font-bold gradient-hero-text">
+          <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[62px] font-bold gradient-hero-text">
          Ready to Transform Your Sales Operations?
           </h2>
           <p className="mt-2 text-xl text-gray-400/80 max-w-4xl lg:mb-12 mb-8 mx-auto">
@@ -444,14 +444,14 @@ export default function POSPage() {
           </p>
 
 
-          <div className="flex justify-center items-center gap-4 mb-12 ">
+          <div className="flex sm:flex-row flex-col justify-center items-center gap-4 mb-12 ">
 
 
            <button
   onClick={() =>
     window.open(
       `https://wa.me/201555867970?text=${encodeURIComponent(
-        "Hello, I would like to request access."
+        "Hello, I would like to request access to SUFRA POS."
       )}`,
       "_blank"
     )
@@ -466,12 +466,12 @@ export default function POSPage() {
   onClick={() =>
     window.open(
       `https://wa.me/201555867970?text=${encodeURIComponent(
-        "Hi, I would like to talk to the sales team."
+        "Hi, I would like to talk to the sales team about SUFRA POS."
       )}`,
       "_blank"
     )
   }
-  className={`flex items-center gap-2 px-4 py-4 rounded-full font-semibold bg-blue-900/30 text-cyan-700/80 text-sm`}
+  className={`flex items-center cursor-pointer gap-2 px-4 py-4 rounded-full font-semibold bg-blue-900/30 text-cyan-700/80 text-sm`}
 >
   <Image src={phone} alt="icon" width={16} height={16} />
   Talk to Sales

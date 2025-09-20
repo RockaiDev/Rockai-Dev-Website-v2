@@ -56,7 +56,7 @@ const features = [
 
 function Features() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-4 gap-16 max-w-10xl mx-auto py-12 ">
+    <div className="grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2 gap-16  max-w-10xl mx-auto py-12  ">
       {features.map((item, index) => (
         <CardWithAnimatedBorder
           key={index}
@@ -74,7 +74,8 @@ function Features() {
 
 
 
-export default function Attendai() {
+
+export default function Hodurai() {
 
 
   const partnerTypes = [
@@ -146,7 +147,7 @@ export default function Attendai() {
       <HeroSection
         buttonText="Smart Tutoring Platform "
         buttonIcon={shopping}
-        title="AttendAI"
+        title="Hodurai "
         description="Transform your private tutoring business with automated attendance tracking, smart scheduling, and real-time performance analytics. AttendAI eliminates administrative overhead so you can focus on teaching."
         imageSrc={pos}
         imageAlt="Hero Image"
@@ -158,16 +159,16 @@ export default function Attendai() {
         requestBtnIcon={key}
         talkToSalesBtn="Talk To Sales"
         talkToSalesBtnIcon={phone}
-        btnMsg1="I want to talk to the sales team."
-        btnMsg2="Contact Sales"
-      
+        btnMsg1="Hello, I would like to request access to hodurai."
+        btnMsg2="Hello, I would like to talk to a sales representative about hodurai."
+
 
 
       />
       {/* security and scalability */}
 
       <div className="secHeader mb-1 mx-auto text-center pt-24 px-6">
-        <h2 className="mt-4 text-[62px] font-bold gradient-hero-text">
+        <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[62px] font-bold gradient-hero-text">
           What Sets AttendAI Apart
         </h2>
 
@@ -176,16 +177,16 @@ export default function Attendai() {
       <Features />
 
 
-<div className="w-full">
-  
-<HowAttendai/>
+      <div className="w-full">
 
-</div>
+        <HowAttendai />
+
+      </div>
 
 
       {/* main section */}
       <div className="secHeader mb-1 mx-auto text-center pt-24 px-6">
-        <h2 className="mt-4 text-[62px] font-bold gradient-hero-text">
+        <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[62px] font-bold gradient-hero-text">
           Complete Feature Breakdown
         </h2>
         <p className="mt-2 text-xl text-gray-400/80 max-w-4xl lg:mb-12 mb-8 mx-auto">
@@ -199,10 +200,10 @@ export default function Attendai() {
 
       {/* core capabilities */}
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 p-6 w-fit m-auto mt-10 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 p-6 w-fit m-auto mt-10 ">
         {partnerTypes.map((partner, index) => (
           <CardWithAnimatedBorder key={index}>
-            <div className="p-6 w-fit m-auto space-y-4 bg-[#0F0229] border border-gray-400/20 rounded-2xl">
+            <div className="p-6 w-fit m-auto space-y-4 bg-[#0F0229] rounded-2xl">
               {/* Icon */}
               <div className="flex items-center justify-start mb-4">
                 <Image
@@ -245,10 +246,10 @@ export default function Attendai() {
 
 
 
-   
 
 
-    
+
+
 
 
 
@@ -256,12 +257,12 @@ export default function Attendai() {
 
       {/* real-time analytics */}
 
-         <div className="secHeader mb-1 mx-auto text-center pt-24 px-6">
-        <h2 className="mt-4 text-[62px] font-bold gradient-hero-text">
+      <div className="secHeader mb-1 mx-auto text-center pt-24 px-6">
+        <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[62px] font-bold gradient-hero-text">
           See It In Action
         </h2>
         <p className="mt-2 text-xl text-gray-400/80 max-w-4xl lg:mb-12 mb-8 mx-auto">
-       Experience the power of Propai CRM through interactive demos of our core features       </p>
+          Experience the power of Propai CRM through interactive demos of our core features       </p>
       </div>
       <div>
         <Iframe />
@@ -271,7 +272,7 @@ export default function Attendai() {
 
 
       <div className="secHeader mb-1 mx-auto text-center pt-24 px-6">
-        <h2 className="mt-4 text-[62px] font-bold gradient-hero-text">
+        <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[62px] font-bold gradient-hero-text">
           Built With Modern Technology
         </h2>
         <p className="mt-2 text-xl text-gray-400/80 max-w-4xl lg:mb-12 mb-8 mx-auto">
@@ -286,46 +287,46 @@ export default function Attendai() {
 
       <div className="border border-gray-400/20 rounded-xl">
         <div className="secHeader mb-1 mx-auto text-center pt-10 px-6">
-          <h2 className="mt-4 text-[62px] font-bold gradient-hero-text">
-        Ready to Simplify Your Tutoring Business?
+          <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[62px] font-bold gradient-hero-text">
+            Ready to Simplify Your Tutoring Business?
           </h2>
           <p className="mt-2 text-xl text-gray-400/80 max-w-4xl lg:mb-12 mb-8 mx-auto">
-   Join hundreds of tutors who have transformed their operations with AttendAI. Start your free trial today and experience the difference.  
+            Join hundreds of tutors who have transformed their operations with AttendAI. Start your free trial today and experience the difference.
           </p>
 
 
-          <div className="flex justify-center items-center gap-4 mb-12 ">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-12 ">
 
 
-                   <button
-          onClick={() =>
-            window.open(
-              `https://wa.me/201555867970?text=${encodeURIComponent(
-                "Hello, I would like to request access."
-              )}`,
-              "_blank"
-            )
-          }
-          className={`flex cursor-pointer items-center gap-2 px-4 py-4 rounded-full font-semibold text-white text-sm bg-gradient-to-r from-cyan-500 to-blue-600`}
-        >
-          <Image src={key} alt="icon" width={16} height={16} />
-          Request Access
-        </button>
-        
-        <button
-          onClick={() =>
-            window.open(
-              `https://wa.me/201555867970?text=${encodeURIComponent(
-                "Hi, I would like to talk to the sales team."
-              )}`,
-              "_blank"
-            )
-          }
-          className={`flex cursor-pointer items-center gap-2 px-4 py-4 rounded-full font-semibold bg-blue-900/30 text-cyan-700/80 text-sm`}
-        >
-          <Image src={phone} alt="icon" width={16} height={16} />
-          Talk to Sales
-        </button>
+            <button
+              onClick={() =>
+                window.open(
+                  `https://wa.me/201555867970?text=${encodeURIComponent(
+                    "Hello, I would like to request access to hodurai."
+                  )}`,
+                  "_blank"
+                )
+              }
+              className={`flex  cursor-pointer items-center gap-2 px-4 py-4 rounded-full font-semibold text-white text-sm bg-gradient-to-r from-cyan-500 to-blue-600`}
+            >
+              <Image src={key} alt="icon" width={16} height={16} />
+              Request Access
+            </button>
+
+            <button
+              onClick={() =>
+                window.open(
+                  `https://wa.me/201555867970?text=${encodeURIComponent(
+                    "Hi, I would like to talk to the sales team about hodurai."
+                  )}`,
+                  "_blank"
+                )
+              }
+              className={`flex cursor-pointer items-center gap-2 px-4 py-4 rounded-full font-semibold bg-blue-900/30 text-cyan-700/80 text-sm`}
+            >
+              <Image src={phone} alt="icon" width={16} height={16} />
+              Talk to Sales
+            </button>
           </div>
         </div>
 

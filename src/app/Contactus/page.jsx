@@ -38,13 +38,13 @@ export default function Contactus() {
     <>
       <div className="secHeader mb-1 mx-auto text-center pt-28 px-6">
         <button
-          className={`flex items-center gap-2 px-4 py-2 rounded-full bg-blue-900/30 font-bold text-cyan-700 text-md m-auto`}
+          className={`flex items-center gap-2 px-4 py-2 rounded-full bg-blue-900/30 font-bold text-cyan-700 cursor-pointer text-md m-auto`}
         >
           <Image src={Rocket} alt="directions icon" width={20} height={20} />
           Contact Mission Control
         </button>
 
-        <h2 className="mt-4 text-[62px] font-bold gradient-hero-text">
+        <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[62px]font-bold gradient-hero-text">
           Launch Your Project
         </h2>
         <p className="mt-2 text-xl text-gray-400/80 max-w-4xl lg:mb-12 mb-8 mx-auto">

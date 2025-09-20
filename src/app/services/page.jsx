@@ -36,15 +36,15 @@ export default function ServicesPage() {
         titleClass=""
         descClass="" />
 
-      <div className="secHeader mb-1  mx-auto text-center pt-10 px-6">
+      <div className="secHeader mb-1  mx-auto text-center lg:pt-10 px-6">
         <button
-          className={`flex items-center gap-2 px-4 py-2 rounded-full bg-blue-900/30  font-bold text-cyan-700   text-md  m-auto`}
+          className={`flex cursor-pointer items-center gap-2 px-4 py-2 rounded-full bg-blue-900/30  font-bold text-cyan-700   text-md  m-auto`}
         >
           <Image src={settings} alt="bulbFill icon " width={20} height={20} />
           What We Offer
         </button>
 
-        <h2 className="mt-4 text-[62px] font-bold gradient-hero-text">Future-Ready Services</h2>
+        <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[62px] font-bold gradient-hero-text">Future-Ready Services</h2>
         <p className="mt-2 text-xl text-gray-400/80 max-w-2xl mx-auto">
     Explore tailored AI, software, and digital services—from vision to launch, we build what moves you forward.
         </p>

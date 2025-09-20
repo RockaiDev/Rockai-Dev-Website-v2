@@ -106,8 +106,8 @@ export default function page() {
           requestBtnIcon={key}
           talkToSalesBtn="Talk To Sales"
           talkToSalesBtnIcon={phone}
-          btnMsg1="Hello, I would like to request access."
-          btnMsg2="Contact Sales"
+           btnMsg1="Hello, I would like to request access to propai CRM."
+        btnMsg2="Hello, I would like to talk to a sales representative about propai CRM "
         />
       </motion.div>
 
@@ -185,7 +185,7 @@ export default function page() {
               onClick={() =>
                 window.open(
                   `https://wa.me/201555867970?text=${encodeURIComponent(
-                    "Hello, I would like to request access."
+                    "Hello, I would like to request access to propai CRM."
                   )}`,
                   "_blank"
                 )
@@ -202,7 +202,7 @@ export default function page() {
               onClick={() =>
                 window.open(
                   `https://wa.me/201555867970?text=${encodeURIComponent(
-                    "Hi, I would like to talk to the sales team."
+                    "Hi, I would like to talk to the sales team about propai CRM ."
                   )}`,
                   "_blank"
                 )

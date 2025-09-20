@@ -92,12 +92,12 @@ tailored to the unique needs of our esteemed clients"
 
       <div className="secHeader mb-1 mx-auto text-center pt-10 px-6">
         <button
-          className={`flex items-center gap-2 px-4 py-2 rounded-full bg-blue-900/30 font-bold text-cyan-700 text-md m-auto`}
+          className={`flex cursor-pointer items-center gap-2 px-4 py-2 rounded-full bg-blue-900/30 font-bold text-cyan-700 text-md m-auto`}
         >
           <Image src={diary} alt="directions icon " width={20} height={20} />
           Innovative Scenarios        </button>
 
-        <h2 className="mt-4 text-[62px] font-bold gradient-hero-text">
+        <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[62px] font-bold gradient-hero-text">
           Shaping Tomorrow’s Possibilities
         </h2>
         <p className="mt-2 text-xl text-gray-400/80 max-w-4xl lg:mb-12 mb-8 mx-auto">
@@ -107,7 +107,7 @@ tailored to the unique needs of our esteemed clients"
 
 
       {/* 🔹 Filters */}
-      <div className="flex flex-col md:flex-row gap-4 justify-between w-fit  items-center mb-10">
+      <div className="flex flex-col sm:flex-row gap-4  w-full  m-auto sm:justify-center lg:justify-start   items-center mb-10">
         {/* Industry Filter */}
         <select
           value={industry}
@@ -149,9 +149,9 @@ tailored to the unique needs of our esteemed clients"
             </div>
 
             {/* الكارد */}
-            <CardWithAnimatedBorder className="relative rounded-2xl card-gradient p-6 text-[#E0E0E0] w-[440px] border border-[#00c6ff]/20 flex flex-col justify-between transition-all duration-500 hover:shadow-[0_0_25px_5px_rgba(0,198,255,0.6)]">
+            <CardWithAnimatedBorder className="relative rounded-2xl card-gradient p-6 text-[#E0E0E0]  sm:w-[440px] border border-[#00c6ff]/20 flex flex-col justify-between transition-all duration-500 hover:shadow-[0_0_25px_5px_rgba(0,198,255,0.6)]">
               <div className="mt-32">
-                <button className="px-4 py-1 rounded-full bg-blue-900/30 font-bold text-cyan-700 text-sm">
+                <button className="px-4 cursor-pointer py-1 rounded-full bg-blue-900/30 font-bold text-cyan-700 text-sm">
                   {card.industry}
                 </button>
                 <h3 className="text-lg font-bold mt-3 gradient-hero-text">
@@ -181,7 +181,7 @@ tailored to the unique needs of our esteemed clients"
 
               {/* زرار Visit */}
               <div className="mt-6">
-                <button className="w-full py-3 rounded-full form-btn text-white font-medium flex items-center justify-center gap-2 transition-transform hover:scale-105">
+                <button className="w-full py-3 rounded-full form-btn text-white cursor-pointer font-medium flex items-center justify-center gap-2 transition-transform hover:scale-105">
                   Visit
                   <Image src={rightArrow} alt="rightArrow" width={18} height={18} />
                 </button>

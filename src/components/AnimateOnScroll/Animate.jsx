@@ -11,23 +11,23 @@ import three from "@/Assets/Images/Newframe4.png";
 const steps = [
   {
     img: zero,
-    title: "Step One",
-    description: "We started with a simple vision in Alexandria.",
+    title: "The Spark",
+    description: " A group of visionary students in Alexandria challenged old ways, studied the market, and imagined how technology could redefine business.",
   },
   {
     img: one,
-    title: "Step Two",
-    description: "First success with a major local client.",
+    title: "Trust",
+    description: "   We built exceptional products, solved real problems, earned lasting confidence, and made meaningful impact that set the foundation for growth.",
   },
   {
     img: two,
-    title: "Step Three",
-    description: "Expansion into the Middle East region.",
+    title: "The Shift",
+    description: " We evolved from a fully remote initiative into a physical company, expanding our capabilities and creating greater impact across industries.",
   },
   {
     img: three,
-    title: "Step Four",
-    description: "Leading in AI and digital transformation.",
+    title: "Leading Egypt’s Tech Revolution",
+    description: " We are scaling to new industries, taking Egypt global, and shaping how businesses and communities thrive through technology.",
   },
 ];
 
@@ -40,7 +40,7 @@ function StepText({ title, description }) {
       viewport={{ once: true, amount: 0.5 }}
       className="max-w-sm text-center md:text-start"
     >
-      <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white">{title}</h3>
+      <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white">{title}</h3>
       <p className="mt-2 text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed">{description}</p>
     </motion.div>
   );
@@ -58,7 +58,7 @@ export default function Animate() {
           transition={{ duration: 0.6, ease: "easeOut", delay: i * 0.2 }}
           viewport={{ once: true, amount: 0.3 }}
         >
-          {/* الصورة */}
+      
           <motion.div
             initial={{ opacity: 0, y: 40, scale: 0.9 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -79,7 +79,7 @@ export default function Animate() {
             />
           </motion.div>
 
-          {/* التكست */}
+         
           <div className="mt-4 md:mt-0 md:ms-6 lg:ms-8 w-full md:max-w-sm self-center">
             <StepText title={step.title} description={step.description} />
           </div>
