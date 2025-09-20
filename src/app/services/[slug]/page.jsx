@@ -158,33 +158,33 @@ export default function ServicePage({ params }) {
             {/* last section */}
 
 
-    <div className="border border-gray-400/20 rounded-xl pb-16 mt-20">
+            <div className="border border-gray-400/20 rounded-xl pb-16 mt-20">
                 <div className="secHeader mb-1 mx-auto text-center pt-10 px-6">
 
 
-                <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[62px] font-bold gradient-hero-text">
-                    {service.lastTitle}
-                </h2>
-                <p className="mt-2 text-xl text-gray-400/80 max-w-3xl mx-auto">
-                    {service.lastDesc}
-                </p>
+                    <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[62px] font-bold gradient-hero-text">
+                        {service.lastTitle}
+                    </h2>
+                    <p className="mt-2 text-xl text-gray-400/80 max-w-3xl mx-auto">
+                        {service.lastDesc}
+                    </p>
+                </div>
+
+
+
+                <div className="flex items-center justify-center gap-6 pt-4 lg:w-full ">
+                    <button className="px-8 lg:py-4  py-3 flex rounded-full justify-center  bg-sky-500 text-white text-md items-center  hover:bg-sky-600 transition cursor-pointer">
+                        <Image src={service.lastBtnIcon} alt="arrow" className="w-5 h-5 me-2" />
+                        {service.lastBtn}
+                    </button>
+                    <HoverBorderGradient>
+                        <div className="flex gap-3 py-2 lg:px-6 lg:w-[250px] justify-center items-center">
+                            <Image src={service.requestBtnIcon} alt="eye" width={20} height={20} />
+                            <span className="text-cyan-600">{service.requestBtn}</span>
+                        </div>
+                    </HoverBorderGradient>
+                </div>
             </div>
-
-
-
-            <div className="flex items-center justify-center gap-6 pt-4 lg:w-full ">
-                <button className="px-8 lg:py-4  py-3 flex rounded-full justify-center  bg-sky-500 text-white text-md items-center  hover:bg-sky-600 transition cursor-pointer">
-                    <Image src={service.lastBtnIcon} alt="arrow" className="w-5 h-5 me-2" />
-                   {service.lastBtn}
-                </button>
-                <HoverBorderGradient>
-                    <div className="flex gap-3 py-2 lg:px-6 lg:w-[250px] justify-center items-center">
-                        <Image src={service.requestBtnIcon} alt="eye" width={20} height={20} />
-                        <span className="text-cyan-600">{service.requestBtn}</span>
-                    </div>
-                </HoverBorderGradient>
-            </div>
-    </div>
 
         </div>
     );

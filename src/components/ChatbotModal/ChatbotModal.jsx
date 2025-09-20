@@ -1,9 +1,11 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import ROKAIBOT from "@/Assets/Images/ROKAIBOT.svg";
 import { motion, AnimatePresence } from "framer-motion";
 import { chatStorage } from "@/lib/chatStorage";
+import { parseTextWithLinks } from "@/lib/linkUtils";
 
 export default function ChatbotModal({ onClose }) {
   const [messages, setMessages] = useState([
@@ -14,6 +16,30 @@ export default function ChatbotModal({ onClose }) {
   const [showSuggestions, setShowSuggestions] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
+  const messagesEndRef = useRef(null);
+
+  // Function to scroll to bottom
+  const scrollToBottom = () => {
+    setTimeout(() => {
+      messagesEndRef.current?.scrollIntoView({ 
+        behavior: "smooth",
+        block: "end",
+        inline: "nearest"
+      });
+    }, 100);
+  };
+
+  // Auto-scroll when messages change
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages, typing]);
+
+  // Auto-scroll when new messages are added
+  useEffect(() => {
+    if (messages.length > 1) {
+      scrollToBottom();
+    }
+  }, [messages.length]);
 
   // Animation variants
   const modalVariants = {
@@ -59,6 +85,39 @@ export default function ChatbotModal({ onClose }) {
         ease: "easeOut"
       }
     }
+  };
+
+  // Component to render message text with clickable links
+  const MessageText = ({ text, sender }) => {
+    const segments = parseTextWithLinks(text);
+    
+    return (
+      <p className="text-sm leading-relaxed">
+        {segments.map((segment, index) => {
+          if (segment.type === 'link') {
+            return (
+              <Link
+                key={index}
+                href={segment.content}
+                className="inline-flex items-center gap-1 text-cyan-400 hover:text-cyan-300 underline decoration-cyan-400/50 hover:decoration-cyan-300 transition-colors duration-200 font-medium"
+                onClick={() => {
+                  // Close the modal when a link is clicked
+                  if (onClose) {
+                    onClose();
+                  }
+                }}
+              >
+                {segment.displayText}
+                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </Link>
+            );
+          }
+          return segment.content;
+        })}
+      </p>
+    );
   };
 
   const handleSend = async () => {
@@ -129,6 +188,10 @@ export default function ChatbotModal({ onClose }) {
       setMessages(savedMessages);
       setShowSuggestions(false); // Hide suggestions if there's conversation history
     }
+    // Scroll to bottom when modal opens
+    setTimeout(() => {
+      scrollToBottom();
+    }, 300);
   }, []);
 
   // Prevent body scroll when modal is open
@@ -226,7 +289,11 @@ export default function ChatbotModal({ onClose }) {
                     }`}
                     whileHover={{ scale: 1.02 }}
                   >
-                    <p className="text-sm leading-relaxed">{msg.text}</p>
+                    {msg.sender === "bot" ? (
+                      <MessageText text={msg.text} sender={msg.sender} />
+                    ) : (
+                      <p className="text-sm leading-relaxed">{msg.text}</p>
+                    )}
                   </motion.div>
                 </motion.div>
               ))}
@@ -339,6 +406,9 @@ export default function ChatbotModal({ onClose }) {
                 </div>
               </motion.div>
             )}
+
+            {/* Auto-scroll anchor */}
+            <div ref={messagesEndRef} />
           </div>
 
           {/* Input */}
