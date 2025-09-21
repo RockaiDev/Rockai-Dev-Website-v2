@@ -10,18 +10,18 @@ export default function AnimatedTitles() {
     const features = [
         {
             icon: flash,
-            title: "Role-Based Experience",
-            description: "Secure data access and clear visibility with precise roles for every team member."
+            title: "AI-Powered Assistance",
+            description: " Smart lead scoring, task automation, and predictive insights."
         },
         {
             icon: rights,
-            title: "Inventory-Focused",
-            description: "Manage properties, projects, developers, and zones with streamlined, interactive tools."
+            title: "Automated Payment Plans",
+            description: "Flexible schedules, instant tracking, and hassle-free financial management."
         },
         {
             icon: brain,
-            title: "Real-Time KPIs",
-            description: "Instant insights on leads and team performance through advanced dashboards."
+            title: "Advanced Team Analytics",
+            description: "Comprehensive reporting with real-time KPIs and performance tracking."
         }
     ];
 
@@ -130,7 +130,7 @@ export default function AnimatedTitles() {
             <div className="relative flex flex-col lg:flex-row items-center justify-between px-4 sm:pl-6 lg:pl-8 xl:px-20 gap-8 lg:gap-12">
                 {/* Left Side - Feature Cards */}
                 <motion.div 
-                    className="flex-1 space-y-6 sm:space-y-8 max-w-2xl w-full"
+                    className="flex-1 space-y-6 sm:space-y-8 max-w-xl w-full"
                     variants={containerVariants}
                 >
                     {features.map((feature, index) => (

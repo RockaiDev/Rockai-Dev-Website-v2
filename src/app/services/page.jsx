@@ -1,5 +1,41 @@
 
-"use client"
+// SEO Metadata for Services Page
+export const metadata = {
+  title: "AI Development Services - Custom Software Solutions | RockAI Dev",
+  description: "Comprehensive AI development services including custom software, web development, mobile apps, automation, and technical training. Transform your business with our expert team.",
+  keywords: "AI development services, custom software development, web development, mobile app development, automation services, technical training, software consulting, Egypt",
+  authors: [{ name: "RockAI Dev Team" }],
+  robots: "index, follow",
+  openGraph: {
+    type: "website",
+    title: "AI Development Services - RockAI Dev",
+    description: "Comprehensive AI development services including custom software, web development, mobile apps, automation, and technical training.",
+    images: [
+      {
+        url: "/Assets/Images/spaceShip.svg",
+        width: 1200,
+        height: 630,
+        alt: "AI Development Services - RockAI Dev",
+      },
+    ],
+    url: "https://www.rockaidev.com/services",
+    siteName: "RockAI Dev",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Development Services - RockAI Dev",
+    description: "Comprehensive AI development services including custom software, web development, mobile apps, automation, and technical training.",
+    images: ["/Assets/Images/spaceShip.svg"],
+    site: "@rockaidev",
+    creator: "@rockaidev",
+  },
+  alternates: {
+    canonical: "https://www.rockaidev.com/services",
+  },
+};
+
+// "use client"
 import tool from "@/Assets/Icons/tool.svg"
 import spaceShip from "@/Assets/Images/spaceShip.svg"
 import HeroSection from "@/components/PagesHero/PagesHero";

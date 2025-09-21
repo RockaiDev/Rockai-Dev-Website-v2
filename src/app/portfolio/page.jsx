@@ -1,3 +1,39 @@
+// SEO Metadata for Portfolio Page
+// export const metadata = {
+//   title: "Portfolio - RockAI Dev's Success Stories & Client Projects",
+//   description: "Explore RockAI Dev's portfolio of successful projects including White Stone, Red Ocean, James Map, Pro Deal, Apex, AlexChem, and Hope Design. See our expertise in action.",
+//   keywords: "RockAI Dev portfolio, client projects, success stories, web development projects, software development portfolio, AI projects, Egypt software company",
+//   authors: [{ name: "RockAI Dev Team" }],
+//   robots: "index, follow",
+//   openGraph: {
+//     type: "website",
+//     title: "Portfolio - RockAI Dev's Success Stories & Client Projects",
+//     description: "Explore RockAI Dev's portfolio of successful projects including White Stone, Red Ocean, James Map, Pro Deal, Apex, AlexChem, and Hope Design.",
+//     images: [
+//       {
+//         url: "/Logo.png",
+//         width: 1200,
+//         height: 630,
+//         alt: "RockAI Dev Portfolio - Success Stories",
+//       },
+//     ],
+//     url: "https://www.rockaidev.com/portfolio",
+//     siteName: "RockAI Dev",
+//     locale: "en_US",
+//   },
+//   twitter: {
+//     card: "summary_large_image",
+//     title: "Portfolio - RockAI Dev's Success Stories & Client Projects",
+//     description: "Explore RockAI Dev's portfolio of successful projects including White Stone, Red Ocean, James Map, Pro Deal, Apex, AlexChem, and Hope Design.",
+//     images: ["/Logo.png"],
+//     site: "@rockaidev",
+//     creator: "@rockaidev",
+//   },
+//   alternates: {
+//     canonical: "https://www.rockaidev.com/portfolio",
+//   },
+// };
+
 "use client"
 import earth from "@/Assets/Images/earth.svg"
 import HeroSection from "@/components/PagesHero/PagesHero";

@@ -9,11 +9,11 @@ import Link from "next/link";
 export default function ServiceCards() {
   return (
     <div className="grid gap-6 sm:gap-4 md:gap-10 mt-10 
-                    grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+                    grid-cols-1 sm:grid-cols-2 xl:grid-cols-2">
       {servicesData.map((service, index) => (
         <CardWithAnimatedBorder 
           key={index} 
-          className="p-4 sm:p-6 rounded-2xl card-gradient shadow-lg"
+          className="p-4 sm:p-6 rounded-2xl  card-gradient border border-gray-400/20 shadow-lg "
         >
           {/* Header */}
           <div className="flex justify-between items-start mb-6 sm:mb-8">
@@ -31,18 +31,18 @@ export default function ServiceCards() {
           <h3 className="text-lg sm:text-xl font-bold text-white gradient-hero-text text-start">
             {service.title}
           </h3>
-          <p className="text-gray-400/80 text-sm sm:text-base mt-3 sm:mt-4 text-start">
+          <p className="text-gray-400/80 text-sm sm:text-base mt-3 w-sm sm:mt-4 text-start">
             {service.description}
           </p>
 
           {/* Tech Stack */}
-          <div className="mt-4">
-            <h4 className="text-xs uppercase mb-3 text-sky-400/80 text-start">Tech Stack</h4>
-            <div className="flex flex-wrap gap-2">
+          <div className="mt-4 h-[150px]">
+            <h4 className="text-xs uppercase mb-3 text-sky-400/80 text-start">{service.techStackTitle}</h4>
+            <div className="flex flex-wrap gap-2    ">
               {service.techStack.map((tech, i) => (
                 <span
                   key={i}
-                  className="px-2 py-1 text-xs sm:text-sm bg-[#1a2338] rounded-full text-sky-300 border border-sky-500/20"
+                  className="px-2 py-1 text-xs sm:text-sm  bg-[#1a2338] rounded-full text-sky-300 border border-sky-500/20"
                 >
                   {tech}
                 </span>
@@ -53,7 +53,7 @@ export default function ServiceCards() {
           {/* Features */}
           <div className="mt-4 border-b border-gray-400/20 pb-4 ps-2 sm:ps-3">
             <h4 className="text-xs uppercase mb-3 text-sky-400/80 text-start">Key Features</h4>
-            <ul className="flex flex-wrap gap-4 sm:gap-8">
+            <ul className="flex flex-wrap gap-4 sm:gap-8 h-[100px] ">
               {service.KeyFeatures.map((feature, i) => (
                 <li key={i} className="text-xs sm:text-sm text-gray-400/80">
                   {feature}

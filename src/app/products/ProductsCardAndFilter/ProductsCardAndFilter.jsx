@@ -16,7 +16,7 @@ const productsData = [
     id: 1,
     category: "POS",
     title: "SUFRA POS",
-    description: "SUFRA is not just a recipe manager. It is the Smart Unified Food Retail Assistant that transforms your POS into a complete restaurant intelligence platform",
+    description: "Smart Unified Food Retail Assistant ",
     image: crm1,
     link:"/pos",
     demo: `https://wa.me/201555867970?text=${encodeURIComponent("Hi, I'd like to request a demo for SUFRA POS.")}`
@@ -25,7 +25,7 @@ const productsData = [
     id: 2,
     category: "CRM",
     title: "Propai CRM",
-    description: "Smart tutoring platform with automated attendance tracking.",
+    description: "AI-powered real estate CRM for smarter sales success ",
     image: crm2,
      link:"/propai",
      demo: `https://wa.me/201555867970?text=${encodeURIComponent("Hi, I'd like to request a demo for Propai CRM.")}`

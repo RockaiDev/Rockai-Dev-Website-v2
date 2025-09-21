@@ -4,6 +4,23 @@ Allow: /
 # Sitemap
 Sitemap: https://www.rockaidev.com/sitemap.xml
 
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Disallow admin or private areas (if any)
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+
+# Allow important pages
+Allow: /services/
+Allow: /products/
+Allow: /portfolio/
+Allow: /our-story/
+Allow: /Contactus/
+Allow: /join-us/
+Allow: /blog/
+
 # Crawl-delay
 Crawl-delay: 1
 

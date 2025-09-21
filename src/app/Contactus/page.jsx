@@ -1,3 +1,39 @@
+// SEO Metadata for Contact Page
+export const metadata = {
+  title: "Contact Us - Get in Touch with RockAI Dev | AI Software Solutions",
+  description: "Contact RockAI Dev for AI software solutions, custom development, and technical consulting. Located in Smouha, Alexandria, Egypt. Call +201555867970 or send us a message.",
+  keywords: "contact RockAI Dev, AI software consulting, custom development contact, software development Egypt, Alexandria tech company, Hassan Rageh contact",
+  authors: [{ name: "RockAI Dev Team" }],
+  robots: "index, follow",
+  openGraph: {
+    type: "website",
+    title: "Contact Us - Get in Touch with RockAI Dev",
+    description: "Contact RockAI Dev for AI software solutions, custom development, and technical consulting. Located in Smouha, Alexandria, Egypt.",
+    images: [
+      {
+        url: "/Logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Contact RockAI Dev - AI Software Solutions",
+      },
+    ],
+    url: "https://www.rockaidev.com/Contactus",
+    siteName: "RockAI Dev",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Us - Get in Touch with RockAI Dev",
+    description: "Contact RockAI Dev for AI software solutions, custom development, and technical consulting. Located in Smouha, Alexandria, Egypt.",
+    images: ["/Logo.png"],
+    site: "@rockaidev",
+    creator: "@rockaidev",
+  },
+  alternates: {
+    canonical: "https://www.rockaidev.com/Contactus",
+  },
+};
+
 import { CardWithAnimatedBorder } from "@/components/CardWithAnimatedBorder/CardWithAnimatedBorder";
 import { ArrowRight, Calendar } from "lucide-react";
 

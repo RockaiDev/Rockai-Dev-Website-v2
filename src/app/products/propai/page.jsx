@@ -1,3 +1,39 @@
+// SEO Metadata for PropAI CRM Page
+// export const metadata = {
+//   title: "PropAI CRM - AI-Powered Customer Relationship Management | RockAI Dev",
+//   description: "PropAI CRM revolutionizes customer relationship management with AI-powered automation, intelligent insights, and seamless integration. Boost your sales and customer satisfaction.",
+//   keywords: "PropAI CRM, customer relationship management, AI CRM, sales automation, customer management software, CRM software, business automation, AI-powered CRM",
+//   authors: [{ name: "RockAI Dev Team" }],
+//   robots: "index, follow",
+//   openGraph: {
+//     type: "website",
+//     title: "PropAI CRM - AI-Powered Customer Relationship Management",
+//     description: "PropAI CRM revolutionizes customer relationship management with AI-powered automation, intelligent insights, and seamless integration.",
+//     images: [
+//       {
+//         url: "/Assets/Images/propai.png",
+//         width: 1200,
+//         height: 630,
+//         alt: "PropAI CRM - AI-Powered Customer Relationship Management",
+//       },
+//     ],
+//     url: "https://www.rockaidev.com/products/propai",
+//     siteName: "RockAI Dev",
+//     locale: "en_US",
+//   },
+//   twitter: {
+//     card: "summary_large_image",
+//     title: "PropAI CRM - AI-Powered Customer Relationship Management",
+//     description: "PropAI CRM revolutionizes customer relationship management with AI-powered automation, intelligent insights, and seamless integration.",
+//     images: ["/Assets/Images/propai.png"],
+//     site: "@rockaidev",
+//     creator: "@rockaidev",
+//   },
+//   alternates: {
+//     canonical: "https://www.rockaidev.com/products/propai",
+//   },
+// };
+
 "use client"
 import HeroSection from "@/components/PagesHero/PagesHero";
 
@@ -78,7 +114,7 @@ export default function page() {
           buttonText="Enterprise Real Estate CRM"
           buttonIcon={charts}
           title="Propai CRM"
-          description="Advanced CRM solution designed specifically for real estate teams with role-based security, inventory-focused workflows, and real-time analytics that drive results."
+          description="Advanced CRM solution powered by AI for real estate teams with role-based security, automated operations, detailed insightful reports, real-time analytics, and predictive actions that drive conversions."
           imageSrc={crm1}
           imageAlt="Hero Image"
           imageAnimationClass=""
@@ -154,10 +190,12 @@ export default function page() {
           variants={headerVariants}
         >
           <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[62px] font-bold gradient-hero-text">
-            Ready to Transform Your Sales Operations?
+         
+Ready to Accelerate Your Team Growth?
+
           </h2>
           <p className="mt-2 text-sm sm:text-base md:text-lg lg:text-xl text-gray-400/80 max-w-4xl lg:mb-12 mb-6 sm:mb-8 mx-auto leading-relaxed">
-            Join thousands of businesses that have streamlined their operations with our intelligent POS system
+           Discover how real estate teams transform operations with Propai CRM. Experience the power of purpose-built software.
           </p>
 
           <motion.div 
@@ -178,7 +216,7 @@ export default function page() {
               className="flex cursor-pointer items-center justify-center gap-2 px-4 py-3 sm:px-6 sm:py-4 rounded-full font-semibold text-white text-sm sm:text-base bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 w-full sm:w-auto"
             >
               <Image src={key} alt="icon" width={16} height={16} className="sm:w-5 sm:h-5" />
-              Request Access
+             Request a Demo
             </motion.button>
 
             <motion.button
@@ -195,7 +233,7 @@ export default function page() {
               className="flex items-center justify-center gap-2 px-4 py-3 sm:px-6 sm:py-4 rounded-full font-semibold bg-blue-900/30 text-cyan-700/80 hover:bg-blue-900/50 hover:text-cyan-600 text-sm sm:text-base transition-all duration-300 w-full sm:w-auto"
             >
               <Image src={phone} alt="icon" width={16} height={16} className="sm:w-5 sm:h-5" />
-              Talk to Sales
+             Chat with Our Experts
             </motion.button>
           </motion.div>
         </motion.div>

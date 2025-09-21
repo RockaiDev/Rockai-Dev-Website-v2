@@ -1,4 +1,53 @@
-"use client"
+// Dynamic SEO Metadata for Service Pages
+export async function generateMetadata({ params }) {
+  const { slug } = params;
+  const { servicesData } = await import("../data/data");
+  const service = servicesData.find((s) => s.slug === slug);
+
+  if (!service) {
+    return {
+      title: "Service Not Found | RockAI Dev",
+      description: "The requested service page could not be found.",
+    };
+  }
+
+  return {
+    title: `${service.our} - ${service.service} | RockAI Dev`,
+    description: `${service.ourDesc} Professional ${service.service.toLowerCase()} services by RockAI Dev. Expert AI development and custom software solutions.`,
+    keywords: `${service.service}, ${service.our.toLowerCase()}, AI development, custom software, ${service.service.toLowerCase()} services, RockAI Dev, Egypt tech company`,
+    authors: [{ name: "RockAI Dev Team" }],
+    robots: "index, follow",
+    openGraph: {
+      type: "website",
+      title: `${service.our} - ${service.service} | RockAI Dev`,
+      description: `${service.ourDesc} Professional ${service.service.toLowerCase()} services by RockAI Dev.`,
+      images: [
+        {
+          url: "/Logo.png",
+          width: 1200,
+          height: 630,
+          alt: `${service.our} - ${service.service}`,
+        },
+      ],
+      url: `https://www.rockaidev.com/services/${slug}`,
+      siteName: "RockAI Dev",
+      locale: "en_US",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${service.our} - ${service.service} | RockAI Dev`,
+      description: `${service.ourDesc} Professional ${service.service.toLowerCase()} services by RockAI Dev.`,
+      images: ["/Logo.png"],
+      site: "@rockaidev",
+      creator: "@rockaidev",
+    },
+    alternates: {
+      canonical: `https://www.rockaidev.com/services/${slug}`,
+    },
+  };
+}
+
+// "use client"
 import Image from "next/image";
 import { servicesData } from "../data/data"
 import { notFound } from "next/navigation";

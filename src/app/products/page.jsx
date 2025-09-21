@@ -1,3 +1,39 @@
+// SEO Metadata for Products Page
+export const metadata = {
+  title: "AI Products - PropAI CRM, HodourAI, SUFRA POS | RockAI Dev",
+  description: "Discover our innovative AI products: PropAI CRM for customer management, HodourAI for teachers, and SUFRA POS for restaurants. Transform your business with our cutting-edge solutions.",
+  keywords: "PropAI CRM, HodourAI, SUFRA POS, AI products, customer relationship management, teacher assistant, restaurant management, AI solutions, business automation",
+  authors: [{ name: "RockAI Dev Team" }],
+  robots: "index, follow",
+  openGraph: {
+    type: "website",
+    title: "AI Products - PropAI CRM, HodourAI, SUFRA POS",
+    description: "Discover our innovative AI products: PropAI CRM for customer management, HodourAI for teachers, and SUFRA POS for restaurants.",
+    images: [
+      {
+        url: "/Logo.png",
+        width: 1200,
+        height: 630,
+        alt: "RockAI Dev AI Products - PropAI CRM, HodourAI, SUFRA POS",
+      },
+    ],
+    url: "https://www.rockaidev.com/products",
+    siteName: "RockAI Dev",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Products - PropAI CRM, HodourAI, SUFRA POS",
+    description: "Discover our innovative AI products: PropAI CRM for customer management, HodourAI for teachers, and SUFRA POS for restaurants.",
+    images: ["/Logo.png"],
+    site: "@rockaidev",
+    creator: "@rockaidev",
+  },
+  alternates: {
+    canonical: "https://www.rockaidev.com/products",
+  },
+};
+
 import Satellite from "@/Assets/Images/Satellite.svg"
 import HeroSection from "@/components/PagesHero/PagesHero";
 import cart from "@/Assets/Icons/cart.svg"  

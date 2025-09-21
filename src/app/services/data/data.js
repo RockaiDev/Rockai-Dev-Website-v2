@@ -18,7 +18,7 @@ export const servicesData = [
     category: "Development",
     title: "Custom Software Development",
     description: "Tailored enterprise solutions built with cutting-edge technologies",
-    timeline: "3–6 months",
+    timeline: "1–2 months",
     icon: bulbFill,
     service: "Software Development Service",
     our: "Our Custom Software Services",
@@ -27,15 +27,16 @@ export const servicesData = [
     lastTitle: "Let’s Build What’s Next",
     lastDesc: " Partner with Rockai to innovate, accelerate, and lead your industry forward. From first consultation to delivery, we commit to lasting value.",
     lastBtn: "Contact Us",
-    lastBtnMSG:"i'm interested in custom software development",
+    lastBtnMSG: "i'm interested in custom software development",
     requestBtnMSg: "Book A Meeting concerning about custom software development",
     lastBtnIcon: chart,
     requestBtn: "Book A Meeting",
     requestBtnIcon: settings,
+    techStackTitle: " Business Performance",
+    time:"1-2 months",
 
-
-    techStack: ["Next.js", "React", "Node.js"],
-    KeyFeatures: ["Scalable Architecture", "AI Integration"],
+    techStack: ["Enterprise Solutions ", "Scalable Architecture", "Modern Technologies"],
+    KeyFeatures: [" Enhance performance", "ensure security", "unlock lasting value"],
 
     cards: [
       {
@@ -165,9 +166,9 @@ export const servicesData = [
   {
     slug: "saas-product-engineering",
     category: "Development",
-    title: "saas-product-engineering",
+    title: "End-to-End SaaS Platforms ",
     description: "Tailored enterprise solutions built with cutting-edge technologies",
-    timeline: "3–6 months",
+    timeline: "7 → 15 days",
     icon: bulbFill,
     service: "SAAS Development Service",
     our: "Our SAAS Services",
@@ -179,12 +180,12 @@ export const servicesData = [
     lastBtnIcon: chart,
     requestBtn: "Book A Meeting",
     requestBtnIcon: settings,
-       lastBtnMSG:"i'm interested in saas product engineering",
+    lastBtnMSG: "i'm interested in saas product engineering",
     requestBtnMSg: "Book A Meeting concerning about saas product engineering",
+    techStackTitle: " Rapid Growth",
+ techStack: ["Concept to Scale", 'Secure & Resilient', 'Growth Ready'],
+    KeyFeatures: [" Evolve with users,","scale with vision"],
 
-
-    techStack: ["Next.js", "React", "Node.js"],
-    KeyFeatures: ["Scalable Architecture", "AI Integration"],
 
     cards: [
       {
@@ -314,9 +315,9 @@ export const servicesData = [
   {
     slug: "Testing",
     category: "Development",
-    title: "Testing & QA Services",
+    title: "Testing & QA Services ",
     description: " We ensure your product works reliably and delivers user trust.",
-    timeline: "3–6 months",
+    timeline: " 1 month",
     icon: bulbFill,
     service: "Testing & QA ",
     our: "Bulletproof Quality, Seamless Performance",
@@ -328,12 +329,12 @@ export const servicesData = [
     lastBtnIcon: chart,
     requestBtn: "Book A Meeting",
     requestBtnIcon: settings,
-       lastBtnMSG:"i'm interested in testing and QA",
+    lastBtnMSG: "i'm interested in testing and QA",
     requestBtnMSg: "Book A Meeting concerning about testing and QA",
+  techStackTitle: "Flawless Quality",
+ techStack: ["Testing Frameworks", 'Reliability Assurance', 'Performance Strength '],
+    KeyFeatures: ["  ReducRun flawlessly","guaranteed security","  bulletproof quality"],
 
-
-    techStack: ["Next.js", "React", "Node.js"],
-    KeyFeatures: ["Scalable Architecture", "AI Integration"],
 
     cards: [
       {
@@ -470,9 +471,9 @@ export const servicesData = [
   {
     slug: "AI",
     category: "Development",
-    title: " AI & LLM Services",
+    title: " AI + LLM Solutions ",
     description: " We transform data into smarter processes, decisions, and outcomes.",
-    timeline: "3–6 months",
+    timeline: "1–2 months",
     icon: bulbFill,
     service: " Intelligence that Drives Business",
     our: " Intelligence that Drives Business Services",
@@ -484,12 +485,11 @@ export const servicesData = [
     lastBtnIcon: chart,
     requestBtn: "Book A Meeting",
     requestBtnIcon: settings,
-       lastBtnMSG:"i'm interested in  AI and LLM",
+    lastBtnMSG: "i'm interested in  AI and LLM",
     requestBtnMSg: "Book A Meeting concerning about  AI and LLM",
-
-
-    techStack: ["Next.js", "React", "Node.js"],
-    KeyFeatures: ["Scalable Architecture", "AI Integration"],
+    techStackTitle: " Intelligent Decisions",
+ techStack: ["AI Integrations", 'Custom Models', 'Industry Tailored'],
+    KeyFeatures: [" Elevate decision-making", "automate complex processes", "create intelligent experiences"],
 
     cards: [
       {
@@ -629,9 +629,9 @@ export const servicesData = [
   {
     slug: "Automation",
     category: "Development",
-    title: "  Automation & Integrations",
+    title: "IIntegration & Automation",
     description: " We eliminate repetitive tasks and free your team for real growth.",
-    timeline: "3–6 months",
+    timeline: "15 days → 1 month",
     icon: bulbFill,
     service: " Automation Services",
     our: " Efficiency Reimagined",
@@ -643,11 +643,12 @@ export const servicesData = [
     lastBtnIcon: chart,
     requestBtn: "Book A Meeting",
     requestBtnIcon: settings,
-   lastBtnMSG:"i'm interested in Automation and Integrations",
+    lastBtnMSG: "i'm interested in Automation and Integrations",
     requestBtnMSg: "Book A Meeting concerning about Automation and Integrations",
+    techStackTitle: " Operational Efficiency",
+ techStack: ["Seamless Integration", 'Smart Automation', 'Performance Driven'],
+    KeyFeatures: ["  Reduce inefficiencies","boost agility"," measurable impact"],
 
-    techStack: ["Next.js", "React", "Node.js"],
-    KeyFeatures: ["Scalable Architecture", "AI Integration"],
 
     cards: [
       {
@@ -790,9 +791,9 @@ export const servicesData = [
   {
     slug: "Technical-Training",
     category: "Development",
-    title: "Technical Training",
+    title: "Developer Upskilling Programs ",
     description: " We equip teams with the skills to excel and innovate.",
-    timeline: "3–6 months",
+    timeline: "1week-1month",
     icon: bulbFill,
     service: "  Training Services",
     our: " Empowerment Through Knowledge",
@@ -804,12 +805,12 @@ export const servicesData = [
     lastBtnIcon: chart,
     requestBtn: "Book A Meeting",
     requestBtnIcon: settings,
-       lastBtnMSG:"i'm interested in  Technical Training",
+    lastBtnMSG: "i'm interested in  Technical Training",
     requestBtnMSg: "Book A Meeting concerning about  Technical Training",
 
-
-    techStack: ["Next.js", "React", "Node.js"],
-    KeyFeatures: ["Scalable Architecture", "AI Integration"],
+  techStackTitle: "Team Excellence",
+ techStack: ["Upskilling Programs", 'Practical Skills', 'Modern Frameworks'],
+    KeyFeatures: ["Higher quality","Faster delivery"," Performance boost"],
 
     cards: [
       {
@@ -952,9 +953,9 @@ export const servicesData = [
   {
     slug: "seo-marketing",
     category: "Development",
-    title: "seo-marketing ",
+    title: "SEO Services  ",
     description: "We build SEO into your code for speed, stability, and lasting visibility..",
-    timeline: "3–6 months",
+    timeline: " 1 week",
     icon: bulbFill,
     service: "   SEO & Marketing Services",
     our: " Visibility that Converts",
@@ -966,12 +967,12 @@ export const servicesData = [
     lastBtnIcon: chart,
     requestBtn: "Book A Meeting",
     requestBtnIcon: settings,
-       lastBtnMSG:"i'm interested in Seo and Marketing",
+    lastBtnMSG: "i'm interested in Seo and Marketing",
     requestBtnMSg: "Book A Meeting concerning about Seo and Marketing",
+techStackTitle: "Market Visibility",
+ techStack: [" Data Driven", 'Audience Targeted', 'Growth Focused '],
+    KeyFeatures: ["Boost visibility", "attract right audience"," fuel sustainable growth"],
 
-
-    techStack: ["Next.js", "React", "Node.js"],
-    KeyFeatures: ["Scalable Architecture", "AI Integration"],
 
     cards: [
       {

@@ -1,3 +1,4 @@
+
 "use client";
 
 import HeroSection from "@/components/PagesHero/PagesHero";
