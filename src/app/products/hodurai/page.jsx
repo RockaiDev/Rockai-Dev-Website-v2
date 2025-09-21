@@ -5,7 +5,7 @@ import BuildFeatures from "./buildWith/BuildWith";
 import Iframe from "./Iframe/Iframe";
 import Image from "next/image";
 import HeroSection from "@/components/PagesHero/PagesHero";
-import pos from "@/Assets/Images/attendai.svg"
+import pos from "@/Assets/Images/hodurai.png"
 import phone from "@/Assets/Icons/phone.svg";
 import key from "@/Assets/Icons/key.svg";
 import shopping from "@/Assets/Icons/smart.svg";
@@ -153,7 +153,7 @@ export default function Hodurai() {
         imageAlt="Hero Image"
         imageAnimationClass=""
         containerClass=" "
-        imageStyle="scale-100"
+        imageStyle="scale-100 rounded-xl shadow-xl shadow-sky-500/50 hover:shadow-sky-500/100 transition-all duration-300 border border-sky-500/50"
         buttonClass="w-fit "
         requestBtn="Request Access"
         requestBtnIcon={key}
@@ -161,9 +161,6 @@ export default function Hodurai() {
         talkToSalesBtnIcon={phone}
         btnMsg1="Hello, I would like to request access to hodurai."
         btnMsg2="Hello, I would like to talk to a sales representative about hodurai."
-
-
-
       />
       {/* security and scalability */}
 

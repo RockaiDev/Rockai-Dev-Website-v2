@@ -1,5 +1,5 @@
 "use client"
-import pos from "@/Assets/Images/pos.svg"
+import pos from "@/Assets/Images/pos.png"
 import HeroSection from "@/components/PagesHero/PagesHero";
 import sendplane from "@/Assets/Icons/send-plane.svg";
 import Image from "next/image";
@@ -148,7 +148,7 @@ export default function POSPage() {
         imageAlt="Hero Image"
         imageAnimationClass=""
         containerClass=" "
-        imageStyle="scale-100"
+        imageStyle="scale-100 rounded-xl shadow-xl shadow-sky-500/50 hover:shadow-sky-500/100 transition-all duration-300 border border-sky-500/50"
         buttonClass="w-fit "
         requestBtn="Request Access"
         requestBtnIcon={key}

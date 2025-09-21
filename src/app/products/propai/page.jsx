@@ -1,31 +1,14 @@
 "use client"
-import pos from "@/Assets/Images/pos.svg"
 import HeroSection from "@/components/PagesHero/PagesHero";
-import sendplane from "@/Assets/Icons/send-plane.svg";
+
 import Image from "next/image";
 import phone from "@/Assets/Icons/phone.svg";
 import key from "@/Assets/Icons/key.svg";
-import shopping from "@/Assets/Icons/shopping.svg";
-import { CardWithAnimatedBorder } from "@/components/CardWithAnimatedBorder/CardWithAnimatedBorder";
 import React from 'react'
-import tech from '@/Assets/Icons/shoppingCart.svg'
-import learn from "@/Assets/Icons/cube.svg"
-import reseller from "@/Assets/Icons/world.svg"
-import target from "@/Assets/Icons/person.svg"
+
 import charts from "@/Assets/Icons/charts.svg"
-import greenScr from "@/Assets/Icons/greenScr.svg"
-import cellphone from "@/Assets/Icons/cellphone.svg"
-import emergencyTr from "@/Assets/Icons/emergencyTr.svg"
-import directionss from "@/Assets/Icons/directionss.svg"
-import greenCube from "@/Assets/Icons/greenCube.svg"
-import analytics from "@/Assets/Icons/analytics.svg"
-import upward from "@/Assets/Icons/upward.svg"
-import docs from "@/Assets/Icons/docs.svg"
-import energy from "@/Assets/Icons/energy.svg"
-import credit from "@/Assets/Icons/credit.svg"
-import flowerUser from "@/Assets/Icons/flowerUser.svg"
-import monitorFill from "@/Assets/Icons/monitorFill.svg"
-import crm1 from "@/Assets/Images/crm1.png";
+
+import crm1 from "@/Assets/Images/propai.png";
 import AnimatedTitles from "./propaiComponents/AnimatedTitles";
 import SecureCards from "./SecureCards/SecureCards";
 import ComperhensiveCards from "./ComperhensiveCards/ComperhensiveCards";
@@ -100,7 +83,7 @@ export default function page() {
           imageAlt="Hero Image"
           imageAnimationClass=""
           containerClass=" "
-          imageStyle="scale-150"
+          imageStyle="scale-100 rounded-xl shadow-xl shadow-sky-500/50 hover:shadow-sky-500/100 transition-all duration-300 border border-sky-500/50"
           buttonClass="w-fit"
           requestBtn="Request Access"
           requestBtnIcon={key}
