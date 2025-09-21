@@ -1,14 +1,7 @@
 import Satellite from "@/Assets/Images/Satellite.svg"
 import HeroSection from "@/components/PagesHero/PagesHero";
-import cart from "@/Assets/Icons/cart.svg"
-
+import cart from "@/Assets/Icons/cart.svg"  
 import arrowRightFill from "@/Assets/Icons/arrowRightFill.svg"
-
-
-
-
-// Features.jsx
-
 import { CardWithAnimatedBorder } from "@/components/CardWithAnimatedBorder/CardWithAnimatedBorder";
 import storyRocket from "@/Assets/Icons/storyRocket.svg"
 import storymagic from "@/Assets/Icons/storymagic.svg"
