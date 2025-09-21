@@ -69,7 +69,7 @@ const LogosCarousel = () => {
             }}
           >
             {/* كونتينر ثابت الحجم + Responsive */}
-            <div className=" w-[100px] lg:mt-10 h-[100px] md:w-[100px] md:h-[100px] sm:w-[100px] sm:h-[100px] flex justify-center items-center border border-cyan-500/50 rounded-xl shadow-xl shadow-cyan-500/50 backdrop-blur-sm bg-sky-400/80">
+            <div className=" w-[100px] lg:mt-10 h-[100px] md:w-[100px] md:h-[100px] sm:w-[100px] sm:h-[100px] flex justify-center items-center border border-cyan-500/50 rounded-xl shadow-xl shadow-cyan-500/20 backdrop-blur-sm bg-cyan-500/10">
               <Image
                 src={logo.image}
                 alt={`logo-${index}`}
