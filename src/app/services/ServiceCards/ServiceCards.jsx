@@ -36,7 +36,7 @@ export default function ServiceCards() {
           </p>
 
           {/* Tech Stack */}
-          <div className="mt-4 h-[150px]">
+          <div className="mt-4 h-[100px]">
             <h4 className="text-xs uppercase mb-3 text-sky-400/80 text-start">{service.techStackTitle}</h4>
             <div className="flex flex-wrap gap-2    ">
               {service.techStack.map((tech, i) => (
@@ -52,8 +52,8 @@ export default function ServiceCards() {
 
           {/* Features */}
           <div className="mt-4 border-b border-gray-400/20 pb-4 ps-2 sm:ps-3">
-            <h4 className="text-xs uppercase mb-3 text-sky-400/80 text-start">Key Features</h4>
-            <ul className="flex flex-wrap gap-4 sm:gap-8 h-[100px] ">
+            <h4 className="text-xs uppercase mb-4 text-sky-400/80 text-start ">Key Features</h4>
+            <ul className="flex flex-col items-start mb-4 gap-4 sm:gap-8 list-disc justify-center h-[100px] ">
               {service.KeyFeatures.map((feature, i) => (
                 <li key={i} className="text-xs sm:text-sm text-gray-400/80">
                   {feature}

@@ -40,14 +40,8 @@ import tool from "@/Assets/Icons/tool.svg"
 import spaceShip from "@/Assets/Images/spaceShip.svg"
 import HeroSection from "@/components/PagesHero/PagesHero";
 import Image from "next/image"
-import bulbFill from "@/Assets/Icons/bulb_fill.svg"
 import settings from "@/Assets/Icons/settings.svg"
-import storyRocket from "@/Assets/Icons/storyRocket.svg"
-import brain from "@/Assets/Icons/brain.svg"
-import mindMap from "@/Assets/Icons/mindMap.svg"
-import certificate from "@/Assets/Icons/certificate.svg"
-import chart from "@/Assets/Icons/chart.svg"
-import graduate from "@/Assets/Icons/graduate.svg"
+
 import ServiceCards from "./ServiceCards/ServiceCards";
 
 

@@ -4,6 +4,7 @@ import Image from 'next/image';
 import verified from "@/Assets/Icons/verified.svg";
 import LogosCarousel from '../Swiper/Swiper';
 import { motion } from "framer-motion";
+import ClientTestimonials from '@/components/ClientTestimonials/ClientTestimonials';
 
 export default function Powered() {
     // Animation variants
@@ -88,6 +89,7 @@ export default function Powered() {
                     </motion.div>
                 </motion.div>
             </section>
+            <ClientTestimonials/>
         </>
     )
 }

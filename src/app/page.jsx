@@ -6,6 +6,7 @@ import VRAssistant from "./Home/VRAssistant/VRAssistant";
 import Tellus from "./Home/TellUs/TellUs";
 import OurPortfolio from "./Home/OurPortfolio/OurPortfolio";
 import Powered from "./Home/Powered/Powered";
+import RateUs from "./Home/RateUs/RateUs";
 
 // SEO Metadata for Homepage
 export const metadata = {
@@ -52,6 +53,7 @@ export default function Home() {
       <Tellus/>
       <OurPortfolio/>
       <Powered/>
+      <RateUs/>
     </>
   );
 }
