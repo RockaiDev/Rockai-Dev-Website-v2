@@ -235,13 +235,13 @@ export default function Iframe() {
                                 transition={{ duration: 0.2 }}
                             >
                                 <div className="aspect-video rounded-xl sm:rounded-2xl overflow-hidden bg-black shadow-2xl">
-                                    <iframe
-                                        className="w-full h-full"
-                                        src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0&controls=1&rel=0&showinfo=0&modestbranding=1"
-                                        title="YouTube video player"
-                                        frameBorder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        allowFullScreen
+                                     <video
+                                        src="/final.mp4"
+                                        autoPlay
+                                        loop
+                                        muted
+                                        playsInline
+                                        className="w-full h-auto rounded-lg shadow-lg"
                                     />
                                 </div>
                                 <div className="mt-4 text-center">

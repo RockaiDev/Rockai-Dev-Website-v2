@@ -97,7 +97,7 @@ export default function Iframe() {
                                 <div className="space-y-4 sm:space-y-6">
                                     <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                                         <h1 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-white bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                                          SUFRA POS 
+                                            SUFRA POS
                                         </h1>
                                         <div className="flex space-x-2">
                                             <motion.button
@@ -122,7 +122,7 @@ export default function Iframe() {
                                     </div>
 
                                     <p className="text-slate-300 text-sm sm:text-base lg:text-lg leading-relaxed">
- smart unified food retail assistant. 
+                                        smart unified food retail assistant.
 
                                     </p>
 
@@ -226,29 +226,28 @@ export default function Iframe() {
                         </motion.div>
 
                         {/* Right Panel - YouTube Iframe */}
-                        <motion.div 
+                        <motion.div
                             className="space-y-6"
                             variants={itemVariants}
                         >
-                            <motion.div 
+                            <motion.div
                                 className="bg-slate-800/40 backdrop-blur-lg border border-slate-700/50 rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-2xl"
                                 whileHover={{ scale: 1.01 }}
                                 transition={{ duration: 0.2 }}
                             >
                                 <div className="aspect-video rounded-xl sm:rounded-2xl overflow-hidden bg-black shadow-2xl">
-                                    <iframe
-                                        className="w-full h-full"
-                                        src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0&controls=1&rel=0&showinfo=0&modestbranding=1"
-                                        title="YouTube video player"
-                                        frameBorder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        allowFullScreen
+                                       <video
+                                        src="/final.mp4"
+                                        autoPlay
+                                        loop
+                                        playsInline
+                                        className="w-full h-auto rounded-lg shadow-lg"
                                     />
                                 </div>
                                 <div className="mt-4 text-center">
                                     <h3 className="text-base sm:text-lg font-semibold text-white mb-2">Smart POS Excellence</h3>
                                     <p className="text-slate-400 text-xs sm:text-sm">
- Run sales and recipes smoothly with intelligent, real-time control
+                                        Run sales and recipes smoothly with intelligent, real-time control
 
                                     </p>
                                 </div>
@@ -258,7 +257,7 @@ export default function Iframe() {
                 </div>
             </div>
 
-           
+
         </motion.div>
     );
 }

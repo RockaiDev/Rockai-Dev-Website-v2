@@ -1,38 +1,4 @@
-// SEO Metadata for PropAI CRM Page
-// export const metadata = {
-//   title: "PropAI CRM - AI-Powered Customer Relationship Management | RockAI Dev",
-//   description: "PropAI CRM revolutionizes customer relationship management with AI-powered automation, intelligent insights, and seamless integration. Boost your sales and customer satisfaction.",
-//   keywords: "PropAI CRM, customer relationship management, AI CRM, sales automation, customer management software, CRM software, business automation, AI-powered CRM",
-//   authors: [{ name: "RockAI Dev Team" }],
-//   robots: "index, follow",
-//   openGraph: {
-//     type: "website",
-//     title: "PropAI CRM - AI-Powered Customer Relationship Management",
-//     description: "PropAI CRM revolutionizes customer relationship management with AI-powered automation, intelligent insights, and seamless integration.",
-//     images: [
-//       {
-//         url: "/Assets/Images/propai.png",
-//         width: 1200,
-//         height: 630,
-//         alt: "PropAI CRM - AI-Powered Customer Relationship Management",
-//       },
-//     ],
-//     url: "https://www.rockaidev.com/products/propai",
-//     siteName: "RockAI Dev",
-//     locale: "en_US",
-//   },
-//   twitter: {
-//     card: "summary_large_image",
-//     title: "PropAI CRM - AI-Powered Customer Relationship Management",
-//     description: "PropAI CRM revolutionizes customer relationship management with AI-powered automation, intelligent insights, and seamless integration.",
-//     images: ["/Assets/Images/propai.png"],
-//     site: "@rockaidev",
-//     creator: "@rockaidev",
-//   },
-//   alternates: {
-//     canonical: "https://www.rockaidev.com/products/propai",
-//   },
-// };
+
 
 "use client"
 import HeroSection from "@/components/PagesHero/PagesHero";
