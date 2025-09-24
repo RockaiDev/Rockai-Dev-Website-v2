@@ -1,14 +1,22 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Play, ChevronLeft, ChevronRight, BarChart3, TrendingUp, Users, Activity } from 'lucide-react';
 import { CardWithAnimatedBorder } from '@/components/CardWithAnimatedBorder/CardWithAnimatedBorder';
 
 export default function Iframe() {
     const [currentSlide, setCurrentSlide] = useState(0);
+    const videoRef = useRef(null);
+    const [isMuted, setIsMuted] = useState(false);
 
     const nextSlide = () => {
         setCurrentSlide((prev) => (prev + 1) % 2);
+    };
+      const toggleMute = () => {
+        if (videoRef.current) {
+            videoRef.current.muted = !isMuted;
+            setIsMuted(!isMuted);
+        }
     };
 
     const prevSlide = () => {
@@ -235,14 +243,24 @@ export default function Iframe() {
                                 whileHover={{ scale: 1.01 }}
                                 transition={{ duration: 0.2 }}
                             >
-                                <div className="aspect-video rounded-xl sm:rounded-2xl overflow-hidden bg-black shadow-2xl">
-                                       <video
+                                <div className="aspect-video rounded-xl sm:rounded-2xl overflow-hidden bg-black shadow-2xl relative">
+                                    <video
+                                        ref={videoRef}
                                         src="/final.mp4"
                                         autoPlay
                                         loop
                                         playsInline
+                                        muted={isMuted}
                                         className="w-full h-auto rounded-lg shadow-lg"
                                     />
+                                    {/* زرار الميوت */}
+                                    <button
+                                        onClick={toggleMute}
+                                        className="absolute bottom-3 right-3 px-3 py-1.5 rounded-md bg-black/60 text-white text-xs sm:text-sm hover:bg-black/80 transition"
+                                    >
+                                        {isMuted ? " 🔇" : " 🔊"}
+                                    </button>
+
                                 </div>
                                 <div className="mt-4 text-center">
                                     <h3 className="text-base sm:text-lg font-semibold text-white mb-2">Smart POS Excellence</h3>
