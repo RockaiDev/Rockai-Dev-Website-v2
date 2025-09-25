@@ -7,7 +7,7 @@ import { CardWithAnimatedBorder } from '@/components/CardWithAnimatedBorder/Card
 export default function Iframe() {
     const [currentSlide, setCurrentSlide] = useState(0);
     const videoRef = useRef(null);
-    const [isMuted, setIsMuted] = useState(false);
+    const [isMuted, setIsMuted] = useState(true);
 
     const toggleMute = () => {
         if (videoRef.current) {
