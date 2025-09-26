@@ -2,9 +2,9 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { CardWithAnimatedBorder } from "@/components/CardWithAnimatedBorder/CardWithAnimatedBorder";
-import crm1 from "@/Assets/Images/crm1.svg";
-import crm2 from "@/Assets/Images/crm2.svg";
-import crm3 from "@/Assets/Images/crm3.svg";
+import crm1 from "@/Assets/Images/pos.png";
+import crm2 from "@/Assets/Images/propai.png";
+import crm3 from "@/Assets/Images/hodurai.png";
 import eye from "@/Assets/Icons/eye.svg";
 import arrowRight from "@/Assets/Icons/arrowRight.svg"
 
@@ -16,9 +16,8 @@ const productsData = [
     id: 1,
     category: "POS",
     title: "SUFRA POS",
-    description: "SUFRA is not just a recipe manager. It is the Smart Unified Food Retail Assistant that transforms your POS into a complete restaurant intelligence platform",
+    description: "Smart Unified Food Retail Assistant ",
     image: crm1,
-    technologies: ["Next.js", "OpenAI GPT-4", "React"],
     link:"/pos",
     demo: `https://wa.me/201555867970?text=${encodeURIComponent("Hi, I'd like to request a demo for SUFRA POS.")}`
   },
@@ -26,9 +25,8 @@ const productsData = [
     id: 2,
     category: "CRM",
     title: "Propai CRM",
-    description: "Smart tutoring platform with automated attendance tracking.",
+    description: "AI-powered real estate CRM for smarter sales success ",
     image: crm2,
-    technologies: ["Next.js", "OpenAI GPT-4", "React"],
      link:"/propai",
      demo: `https://wa.me/201555867970?text=${encodeURIComponent("Hi, I'd like to request a demo for Propai CRM.")}`
   },
@@ -38,7 +36,6 @@ const productsData = [
     title: "Hodurai System",
     description: "Smart tutoring platform with automated attendance tracking.",
     image: crm3,
-    technologies: ["Next.js", "OpenAI GPT-4", "React"],
     link:"/hodurai",
     demo: `https://wa.me/201555867970?text=${encodeURIComponent("Hi, I'd like to request a demo for Hodurai System.")}`
   },  
@@ -98,26 +95,15 @@ export default function ProductsCardAndFilter() {
               <Image
                 src={product.image}
                 alt={product.title}
-                width={600}
-                height={300}
-                className="rounded-lg"
+                width={1200}
+                height={1200}
+                className="rounded-lg w-full"
               />
               <span className="text-sky-400 text-sm font-medium">
                 {product.category}
               </span>
               <h2 className="text-xl font-semibold">{product.title}</h2>
               <p className="text-gray-400 text-sm">{product.description}</p>
-
-              <div className="flex flex-wrap gap-2">
-                {product.technologies.map((tech, idx) => (
-                  <span
-                    key={idx}
-                    className="bg-[#1b2233] px-3 py-1 rounded-full text-sm border border-gray-600"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
 
               <div className="flex sm:flex-row flex-col items-center justify-center lg:justify-between gap-6 pt-4 lg:w-full ">
                 <Link  href={product.link ? `/products/${product.link}` : "#"} className="px-6 lg:py-4  py-3 flex rounded-full justify-center lg:w-1/2 bg-sky-500 text-white text-md items-center  hover:bg-sky-600 transition cursor-pointer">

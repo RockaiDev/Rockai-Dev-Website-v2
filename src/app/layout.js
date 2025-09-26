@@ -78,35 +78,64 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              "name": "Rockai Dev",
-              "description": "AI-powered solutions and custom software development services",
+              "name": "RockAI Dev",
+              "alternateName": "RockAI Development",
+              "description": "Leading AI-powered software development company specializing in custom solutions, PropAI CRM, HodourAI, and SUFRA POS. Transform your business with cutting-edge technology.",
               "url": "https://www.rockaidev.com",
               "logo": "https://www.rockaidev.com/Logo.png",
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "contactType": "customer service",
-                "availableLanguage": "English"
+              "foundingDate": "2024",
+              "founder": {
+                "@type": "Person",
+                "name": "Hassan Rageh"
               },
-              "sameAs": [
-                "https://linkedin.com/company/rockaidev",
-                "https://twitter.com/rockaidev"
-              ],
               "address": {
                 "@type": "PostalAddress",
-                "addressCountry": "US"
+                "streetAddress": "Smouha",
+                "addressLocality": "Alexandria",
+                "addressCountry": "Egypt"
               },
-              "foundingDate": "2024",
-              "industry": "Software Development",
-              "services": [
-                "AI Solutions",
-                "Custom Software Development",
-                "Web Development",
-                "Mobile App Development",
-                "PropAI",
-                "AttendAI",
-                "POS Systems",
-                "Chatbot Development"
-              ]
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+201555867970",
+                "contactType": "customer service",
+                "availableLanguage": ["English", "Arabic"]
+              },
+              "sameAs": [
+                "https://www.facebook.com/profile.php?id=61564089689600",
+                "https://www.instagram.com/rockaidev/",
+                "https://www.linkedin.com/company/rockaidev/",
+                "https://www.tiktok.com/@rockaidev"
+              ],
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "AI Software Solutions",
+                "itemListElement": [
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "PropAI CRM",
+                      "description": "AI-powered customer relationship management system"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "HodourAI",
+                      "description": "AI assistant for teachers and educational management"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "SUFRA POS",
+                      "description": "Smart restaurant management system"
+                    }
+                  }
+                ]
+              }
             })
           }}
         />

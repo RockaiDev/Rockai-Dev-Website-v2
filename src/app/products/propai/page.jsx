@@ -1,31 +1,16 @@
+
+
 "use client"
-import pos from "@/Assets/Images/pos.svg"
 import HeroSection from "@/components/PagesHero/PagesHero";
-import sendplane from "@/Assets/Icons/send-plane.svg";
+
 import Image from "next/image";
 import phone from "@/Assets/Icons/phone.svg";
 import key from "@/Assets/Icons/key.svg";
-import shopping from "@/Assets/Icons/shopping.svg";
-import { CardWithAnimatedBorder } from "@/components/CardWithAnimatedBorder/CardWithAnimatedBorder";
 import React from 'react'
-import tech from '@/Assets/Icons/shoppingCart.svg'
-import learn from "@/Assets/Icons/cube.svg"
-import reseller from "@/Assets/Icons/world.svg"
-import target from "@/Assets/Icons/person.svg"
+
 import charts from "@/Assets/Icons/charts.svg"
-import greenScr from "@/Assets/Icons/greenScr.svg"
-import cellphone from "@/Assets/Icons/cellphone.svg"
-import emergencyTr from "@/Assets/Icons/emergencyTr.svg"
-import directionss from "@/Assets/Icons/directionss.svg"
-import greenCube from "@/Assets/Icons/greenCube.svg"
-import analytics from "@/Assets/Icons/analytics.svg"
-import upward from "@/Assets/Icons/upward.svg"
-import docs from "@/Assets/Icons/docs.svg"
-import energy from "@/Assets/Icons/energy.svg"
-import credit from "@/Assets/Icons/credit.svg"
-import flowerUser from "@/Assets/Icons/flowerUser.svg"
-import monitorFill from "@/Assets/Icons/monitorFill.svg"
-import crm1 from "@/Assets/Images/crm1.png";
+
+import crm1 from "@/Assets/Images/propai.png";
 import AnimatedTitles from "./propaiComponents/AnimatedTitles";
 import SecureCards from "./SecureCards/SecureCards";
 import ComperhensiveCards from "./ComperhensiveCards/ComperhensiveCards";
@@ -95,12 +80,12 @@ export default function page() {
           buttonText="Enterprise Real Estate CRM"
           buttonIcon={charts}
           title="Propai CRM"
-          description="Advanced CRM solution designed specifically for real estate teams with role-based security, inventory-focused workflows, and real-time analytics that drive results."
+          description="Advanced CRM solution powered by AI for real estate teams with role-based security, automated operations, detailed insightful reports, real-time analytics, and predictive actions that drive conversions."
           imageSrc={crm1}
           imageAlt="Hero Image"
           imageAnimationClass=""
           containerClass=" "
-          imageStyle="scale-150"
+          imageStyle="scale-100 rounded-xl shadow-xl shadow-sky-500/50 hover:shadow-sky-500/100 transition-all duration-300 border border-sky-500/50"
           buttonClass="w-fit"
           requestBtn="Request Access"
           requestBtnIcon={key}
@@ -171,10 +156,12 @@ export default function page() {
           variants={headerVariants}
         >
           <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[62px] font-bold gradient-hero-text">
-            Ready to Transform Your Sales Operations?
+         
+Ready to Accelerate Your Team Growth?
+
           </h2>
           <p className="mt-2 text-sm sm:text-base md:text-lg lg:text-xl text-gray-400/80 max-w-4xl lg:mb-12 mb-6 sm:mb-8 mx-auto leading-relaxed">
-            Join thousands of businesses that have streamlined their operations with our intelligent POS system
+           Discover how real estate teams transform operations with Propai CRM. Experience the power of purpose-built software.
           </p>
 
           <motion.div 
@@ -195,7 +182,7 @@ export default function page() {
               className="flex cursor-pointer items-center justify-center gap-2 px-4 py-3 sm:px-6 sm:py-4 rounded-full font-semibold text-white text-sm sm:text-base bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 w-full sm:w-auto"
             >
               <Image src={key} alt="icon" width={16} height={16} className="sm:w-5 sm:h-5" />
-              Request Access
+             Request a Demo
             </motion.button>
 
             <motion.button
@@ -212,7 +199,7 @@ export default function page() {
               className="flex items-center justify-center gap-2 px-4 py-3 sm:px-6 sm:py-4 rounded-full font-semibold bg-blue-900/30 text-cyan-700/80 hover:bg-blue-900/50 hover:text-cyan-600 text-sm sm:text-base transition-all duration-300 w-full sm:w-auto"
             >
               <Image src={phone} alt="icon" width={16} height={16} className="sm:w-5 sm:h-5" />
-              Talk to Sales
+             Chat with Our Experts
             </motion.button>
           </motion.div>
         </motion.div>

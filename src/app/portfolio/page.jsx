@@ -1,3 +1,39 @@
+// SEO Metadata for Portfolio Page
+// export const metadata = {
+//   title: "Portfolio - RockAI Dev's Success Stories & Client Projects",
+//   description: "Explore RockAI Dev's portfolio of successful projects including White Stone, Red Ocean, James Map, Pro Deal, Apex, AlexChem, and Hope Design. See our expertise in action.",
+//   keywords: "RockAI Dev portfolio, client projects, success stories, web development projects, software development portfolio, AI projects, Egypt software company",
+//   authors: [{ name: "RockAI Dev Team" }],
+//   robots: "index, follow",
+//   openGraph: {
+//     type: "website",
+//     title: "Portfolio - RockAI Dev's Success Stories & Client Projects",
+//     description: "Explore RockAI Dev's portfolio of successful projects including White Stone, Red Ocean, James Map, Pro Deal, Apex, AlexChem, and Hope Design.",
+//     images: [
+//       {
+//         url: "/Logo.png",
+//         width: 1200,
+//         height: 630,
+//         alt: "RockAI Dev Portfolio - Success Stories",
+//       },
+//     ],
+//     url: "https://www.rockaidev.com/portfolio",
+//     siteName: "RockAI Dev",
+//     locale: "en_US",
+//   },
+//   twitter: {
+//     card: "summary_large_image",
+//     title: "Portfolio - RockAI Dev's Success Stories & Client Projects",
+//     description: "Explore RockAI Dev's portfolio of successful projects including White Stone, Red Ocean, James Map, Pro Deal, Apex, AlexChem, and Hope Design.",
+//     images: ["/Logo.png"],
+//     site: "@rockaidev",
+//     creator: "@rockaidev",
+//   },
+//   alternates: {
+//     canonical: "https://www.rockaidev.com/portfolio",
+//   },
+// };
+
 "use client"
 import earth from "@/Assets/Images/earth.svg"
 import HeroSection from "@/components/PagesHero/PagesHero";
@@ -5,54 +41,74 @@ import HeroSection from "@/components/PagesHero/PagesHero";
 import { useState } from "react";
 import Image from "next/image";
 import mockup from "@/Assets/Images/mockup.svg";
+import hopedesign from "@/Assets/Images/hopedesign.png";
+import whitestone from "@/Assets/Images/white-stone.png";
+import waterfront from "@/Assets/Images/waterfront.png";
+import prodeal from "@/Assets/Images/prodeal.png";
+import jamesmap from "@/Assets/Images/jamesmap.png";
+import apex from "@/Assets/Images/apex.png";
+
 import rightArrow from "@/Assets/Icons/rightArrow.svg";
 import diary from "@/Assets/Icons/diary.svg";
 import folder from "@/Assets/Icons/folder.svg";
 import { CardWithAnimatedBorder } from "@/components/CardWithAnimatedBorder/CardWithAnimatedBorder";
+import Link from "next/link";
 
 export default function PortfolioPage() {
   const cards = [
     {
-      industry: "AI/ML",
+      industry: "Marketing & Advertising Agency",
       title: "Hope Design Agency",
-      description: "Creative agency project...",
-      technologies: ["Next.js", "OpenAI GPT-4", "React"],
-      link: "#",
+      image: hopedesign,
+      imageAlt: "Hope Design Agency",
+      description: "Hope Design Agency is a creative agency that specializes in branding, design, and marketing. We help businesses create a strong brand identity and connect with their target audience.",
+      technologies: ["Next.js", "React"],
+      link: "https://hope-design-marketing-website.vercel.app",
     },
     {
-      industry: "E-Commerce",
-      title: "Shopify Clone",
-      description: "Modern e-commerce platform...",
-      technologies: ["React", "Tailwind", "Node.js"],
-      link: "#",
+      industry: "Real Estate",
+      title: "White Stone Real Estate",
+      image: whitestone,
+      imageAlt: "White Stone Real Estate",
+      description: "White Stone Real Estate is a real estate agency that specializes in selling and renting properties. We help people find their dream home and sell their property.",
+      technologies: ["Next.js", "Node.js"],
+      link: "https://www.whstoneinv.com",
     },
     {
-      industry: "Fintech",
-      title: "Banking App",
-      description: "Secure banking solution...",
-      technologies: ["Next.js", "TypeScript", "GraphQL"],
-      link: "#",
+      industry: "Real Estate",
+      title: "Waterfront - Seif Group",
+      image: waterfront,
+      imageAlt: "Waterfront - Seif Group",
+      description: "Waterfront is a project of Seif Group, it is a project of a real estate development company in Egypt. VR experience for the project and units for the project.",
+      technologies: ["Next.js", "GraphQL"],
+      link: "https://www.waterfronteg.com",
     },
     {
-      industry: "Healthcare",
-      title: "Medical Dashboard",
-      description: "Healthcare data insights...",
-      technologies: ["React", "D3.js", "Firebase"],
-      link: "#",
+      industry: "Real Estate",
+      title: "Pro Deal Real Estate",
+      image: prodeal,
+      imageAlt: "Pro Deal Real Estate",
+      description: "Pro Deal Real Estate is a real estate agency that specializes in selling and renting properties. We help people find their dream home and sell their property.",
+      technologies: ["Next.js", "Node.js"],
+      link: "https://www.prodealeg.com",
     },
     {
-      industry: "Education",
-      title: "Learning Platform",
-      description: "Personalized learning system...",
-      technologies: ["Next.js", "MongoDB", "Tailwind"],
-      link: "#",
+      industry: "Real Estate Investment",
+      title: "James Map Real Estate Investment",
+      image: jamesmap,
+      imageAlt: "James Map Real Estate Investment",
+      description: "James Map Real Estate Investment is a real estate investment company that specializes in buying and selling properties. We help people invest in real estate and sell their property.",
+      technologies: ["Next.js", "Node.js"],
+      link: "https://www.jamesmap.com",
     },
     {
-      industry: "AI/ML",
-      title: "AI Chatbot",
-      description: "Custom chatbot with GPT-4...",
-      technologies: ["OpenAI GPT-4", "Next.js", "Supabase"],
-      link: "#",
+      industry: "Real Estate",
+      title: "APEX Real Estate",
+      image: apex,
+      imageAlt: "APEX Real Estate",
+      description: "APEX Real Estate is a real estate agency that specializes in selling and renting properties. We help people find their dream home and sell their property.",
+      technologies: ["Next.js", "Node.js"],
+      link: "https://www.apexreal.estate",
     },
   ];
 
@@ -107,7 +163,7 @@ tailored to the unique needs of our esteemed clients"
 
 
       {/* 🔹 Filters */}
-      <div className="flex flex-col sm:flex-row gap-4  w-full  m-auto sm:justify-center lg:justify-start   items-center mb-10">
+      <div className="flex flex-col sm:flex-row gap-4  w-full  m-auto sm:justify-center lg:justify-start   items-center mb-32">
         {/* Industry Filter */}
         <select
           value={industry}
@@ -140,11 +196,13 @@ tailored to the unique needs of our esteemed clients"
         {filteredCards.map((card, i) => (
           <div key={i} className="relative flex justify-center group my-14">
             {/* الصورة فوق الكارد */}
-            <div className="absolute -top-20 z-20">
+            <div className="absolute -top-36 z-20">
               <Image
-                src={mockup}
-                alt="mockup"
-                className="w-80 rotate-[-8deg] transition-transform duration-500 group-hover:scale-110 group-hover:rotate-[-4deg]"
+                src={card.image || mockup}
+                alt={card.imageAlt}
+                width={1000}
+                height={1000}
+                className="w-[420px] rotate-[-8deg] transition-transform duration-500 group-hover:scale-110 group-hover:rotate-[-4deg]"
               />
             </div>
 
@@ -181,10 +239,15 @@ tailored to the unique needs of our esteemed clients"
 
               {/* زرار Visit */}
               <div className="mt-6">
-                <button className="w-full py-3 rounded-full form-btn text-white cursor-pointer font-medium flex items-center justify-center gap-2 transition-transform hover:scale-105">
+                <Link
+                  href={card.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-3 rounded-full form-btn text-white cursor-pointer font-medium flex items-center justify-center gap-2 transition-transform hover:scale-105"
+                >
                   Visit
                   <Image src={rightArrow} alt="rightArrow" width={18} height={18} />
-                </button>
+                </Link>
               </div>
             </CardWithAnimatedBorder>
           </div>

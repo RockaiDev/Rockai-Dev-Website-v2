@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image";
 import { servicesData } from "../data/data"
 import { notFound } from "next/navigation";
@@ -5,7 +7,7 @@ import { CardWithAnimatedBorder } from "@/components/CardWithAnimatedBorder/Card
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 
 export default function ServicePage({ params }) {
-    const { slug } = params;
+    const { slug } =  params;
     const service = servicesData.find((s) => s.slug === slug);
 
     if (!service) {
@@ -16,7 +18,7 @@ export default function ServicePage({ params }) {
         <div className=" mx-auto py-12  sm:mt-24">
             <div className="secHeader mb-1  mx-auto text-center pt-10 px-6">
                 <button
-                    className={`flex items-center gap-2 cursor-pointer px-4 py-2 rounded-full bg-blue-900/30  font-bold text-cyan-700   text-md  m-auto`}
+                    className={`flex items-center gap-2  px-4 py-2 rounded-full bg-blue-900/30  font-bold text-cyan-700   text-md  m-auto`}
                 >
                     <Image src={service.icon} alt="bulbFill icon " width={20} height={20} />
                     {service.service}
@@ -30,7 +32,7 @@ export default function ServicePage({ params }) {
             </div>
 
             {/* cards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-10 p-6 w-fit m-auto mt-10 ">
+            <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-10 p-6 w-fit m-auto mt-10 ">
                 {service.cards.map((card, index) => (
                     <CardWithAnimatedBorder key={index}>
                         <div className="p-6 w-fit m-auto space-y-4 bg-[#0F0229] border border-gray-400/20 rounded-2xl">
@@ -76,7 +78,7 @@ export default function ServicePage({ params }) {
 
             {/* title and desc section features  */}
             <h2 className="mt-8 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[62px] font-bold gradient-hero-text text-center">{service.featuresTitle}</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-4xl mx-auto py-12 ">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-4xl mx-auto py-12 ">
                 {service.features.map((item, index) => (
                     <CardWithAnimatedBorder
                         key={index}
@@ -91,9 +93,9 @@ export default function ServicePage({ params }) {
 
 
             {/* Technology Stack */}
-            <h2 className="mt-8 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[62px] font-bold gradient-hero-text text-center">{service.techTitle}</h2>
+            <h2 className="mt-8 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[62px] pb-4 font-bold gradient-hero-text text-center">{service.techTitle}</h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-4  gap-4 mx-auto py-12 ">
+            <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 mx-auto py-12  ">
 
                 {service.techs.map((item, index) => (
                     <CardWithAnimatedBorder
@@ -101,7 +103,7 @@ export default function ServicePage({ params }) {
                         className="pb-4 pt-4 px-4 rounded-4xl border border-[#00c6ff]/20 card-gradient text-white text-start"
                     >
                         <p className="ps-3 "> {item.title}</p>
-                        <ul className="flex justify-between items-center mt-4 text-cyan-400/80   ">
+                        <ul className="flex justify-between items-center mt-4 text-cyan-400/80 text-xs  ">
                             <li className=" card-gradient rounded-full px-6 text-center bg-sky-500 ">{item.one}</li>
                             <li className=" card-gradient rounded-full px-6 text-center bg-sky-500">{item.two}</li>
                             <li className=" card-gradient rounded-full px-6 text-center bg-sky-500" >{item.three}</li>
@@ -136,7 +138,7 @@ export default function ServicePage({ params }) {
 
 
                                 {index !== service.items.length - 1 && (
-                                    <div className="hidden xl:block absolute top-1/2 left-[140px] w-[200px] h-[3px] bg-gray-600/40 z-10"></div>
+                                    <div className="hidden 2xl:block absolute top-1/2 left-[140px] w-[200px] h-[3px] bg-gray-600/40 z-10"></div>
                                 )}
                             </div>
 
@@ -173,12 +175,33 @@ export default function ServicePage({ params }) {
 
 
                 <div className="flex items-center justify-center gap-6 pt-4 lg:w-full ">
-                    <button className="px-8 lg:py-4  py-3 flex rounded-full justify-center  bg-sky-500 text-white text-md items-center  hover:bg-sky-600 transition cursor-pointer">
+                    <button className="px-8 lg:py-4  py-3 flex rounded-full justify-center  bg-sky-500 text-white text-md items-center  hover:bg-sky-600 transition cursor-pointer"
+                        onClick={() =>
+                            window.open(
+                                `https://wa.me/201555867970?text=${encodeURIComponent(
+                                   `${service.lastBtnMSG}`
+                                )}`,
+                                "_blank"
+                            )
+                        }
+
+
+
+
+                    >
                         <Image src={service.lastBtnIcon} alt="arrow" className="w-5 h-5 me-2" />
                         {service.lastBtn}
                     </button>
-                    <HoverBorderGradient>
-                        <div className="flex gap-3 py-2 lg:px-6 lg:w-[250px] justify-center items-center">
+                    <HoverBorderGradient 
+                         onClick={() =>
+                            window.open(
+                                `https://wa.me/201555867970?text=${encodeURIComponent(
+                                   `${service.requestBtnMSg}`
+                                )}`,
+                                "_blank"
+                            )
+                        }>
+                        <div className="flex gap-3 py-2 lg:px-6 lg:w-[250px] justify-center items-center cursor-pointer">
                             <Image src={service.requestBtnIcon} alt="eye" width={20} height={20} />
                             <span className="text-cyan-600">{service.requestBtn}</span>
                         </div>

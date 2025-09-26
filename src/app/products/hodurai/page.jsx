@@ -1,11 +1,47 @@
+
+// export const metadata = {
+//   title: "HodourAI - AI Assistant for Teachers & Educational Management | RockAI Dev",
+//   description: "HodourAI is the ultimate AI assistant for teachers, featuring automated attendance tracking, smart scheduling, parent notifications, and financial analytics. Streamline your teaching business.",
+//   keywords: "HodourAI, teacher assistant, educational management, attendance tracking, parent notifications, teacher scheduling, educational software, AI for teachers, teaching automation",
+//   authors: [{ name: "RockAI Dev Team" }],
+//   robots: "index, follow",
+//   openGraph: {
+//     type: "website",
+//     title: "HodourAI - AI Assistant for Teachers & Educational Management",
+//     description: "HodourAI is the ultimate AI assistant for teachers, featuring automated attendance tracking, smart scheduling, parent notifications, and financial analytics.",
+//     images: [
+//       {
+//         url: "/Assets/Images/hodurai.png",
+//         width: 1200,
+//         height: 630,
+//         alt: "HodourAI - AI Assistant for Teachers",
+//       },
+//     ],
+//     url: "https://www.rockaidev.com/products/hodurai",
+//     siteName: "RockAI Dev",
+//     locale: "en_US",
+//   },
+//   twitter: {
+//     card: "summary_large_image",
+//     title: "HodourAI - AI Assistant for Teachers & Educational Management",
+//     description: "HodourAI is the ultimate AI assistant for teachers, featuring automated attendance tracking, smart scheduling, parent notifications, and financial analytics.",
+//     images: ["/Assets/Images/hodurai.png"],
+//     site: "@rockaidev",
+//     creator: "@rockaidev",
+//   },
+//   alternates: {
+//     canonical: "https://www.rockaidev.com/products/hodurai",
+//   },
+// };
 "use client"
+
 import React from 'react'
 import { CardWithAnimatedBorder } from "@/components/CardWithAnimatedBorder/CardWithAnimatedBorder";
 import BuildFeatures from "./buildWith/BuildWith";
 import Iframe from "./Iframe/Iframe";
 import Image from "next/image";
 import HeroSection from "@/components/PagesHero/PagesHero";
-import pos from "@/Assets/Images/attendai.svg"
+import pos from "@/Assets/Images/hodurai.png"
 import phone from "@/Assets/Icons/phone.svg";
 import key from "@/Assets/Icons/key.svg";
 import shopping from "@/Assets/Icons/smart.svg";
@@ -148,12 +184,12 @@ export default function Hodurai() {
         buttonText="Smart Tutoring Platform "
         buttonIcon={shopping}
         title="Hodurai "
-        description="Transform your private tutoring business with automated attendance tracking, smart scheduling, and real-time performance analytics. AttendAI eliminates administrative overhead so you can focus on teaching."
+        description="Transform your private tutoring business with automated attendance tracking, smart scheduling, and real-time performance analytics. HodurAI eliminates administrative overhead so you can focus on teaching."
         imageSrc={pos}
         imageAlt="Hero Image"
         imageAnimationClass=""
         containerClass=" "
-        imageStyle="scale-100"
+        imageStyle="scale-100 rounded-xl shadow-xl shadow-sky-500/50 hover:shadow-sky-500/100 transition-all duration-300 border border-sky-500/50"
         buttonClass="w-fit "
         requestBtn="Request Access"
         requestBtnIcon={key}
@@ -161,15 +197,12 @@ export default function Hodurai() {
         talkToSalesBtnIcon={phone}
         btnMsg1="Hello, I would like to request access to hodurai."
         btnMsg2="Hello, I would like to talk to a sales representative about hodurai."
-
-
-
       />
       {/* security and scalability */}
 
       <div className="secHeader mb-1 mx-auto text-center pt-24 px-6">
         <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[62px] font-bold gradient-hero-text">
-          What Sets AttendAI Apart
+          What Sets HodurAI Apart
         </h2>
 
       </div>
@@ -291,7 +324,7 @@ export default function Hodurai() {
             Ready to Simplify Your Tutoring Business?
           </h2>
           <p className="mt-2 text-xl text-gray-400/80 max-w-4xl lg:mb-12 mb-8 mx-auto">
-            Join hundreds of tutors who have transformed their operations with AttendAI. Start your free trial today and experience the difference.
+            Join hundreds of tutors who have transformed their operations with HodurAI. Start your free trial today and experience the difference.
           </p>
 
 

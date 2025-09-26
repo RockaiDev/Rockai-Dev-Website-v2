@@ -5,6 +5,12 @@ import { ArrowRight } from "lucide-react";
 import Rocket from "@/Assets/Icons/Rocket.svg";
 import container from "@/Assets/Icons/container.png";
 import roFill from "@/Assets/Icons/roFill.svg";
+import brain from "@/Assets/Icons/brain.svg";
+import setting from "@/Assets/Icons/setting.svg";
+import koromo from "@/Assets/Icons/koromo.svg";
+import right from "@/Assets/Icons/right.svg";
+import graduation from "@/Assets/Icons/graduation.svg";
+
 
 import Image from "next/image";
 import Link from "next/link";
@@ -19,27 +25,27 @@ const expertiseData = [
     description: "Scalable software-as-a-service solutions",
   },
   {
-    icon: roFill,
+    icon: brain,
     title: "AI & LLM Integration",
     description: "Advanced AI and language model implementations",
   },
   {
-    icon: roFill,
+    icon: setting,
     title: "Custom Software",
     description: "Tailored enterprise software solutions",
   },
   {
-    icon: roFill,
+    icon: koromo,
     title: "Automation",
     description: "Streamline workflows with seamless connectivity",
   },
   {
-    icon: roFill,
+    icon: right,
     title: "Testing",
     description: "Reliable quality assurance for robust platforms",
   },
   {
-    icon: roFill,
+    icon: graduation,
     title: "Team Training",
     description: "Upskill your teams with expert-led programs",
   },

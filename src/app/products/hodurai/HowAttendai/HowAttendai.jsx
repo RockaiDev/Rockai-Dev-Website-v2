@@ -33,7 +33,7 @@ export default function HowAttendai() {
   return (
     <div className="w-full text-center pt-24 px-6">
       <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[62px] font-bold gradient-hero-text">
-        How AttendAI Works
+        How HodurAI Works
       </h2>
 
       <div className="mt-16 flex flex-col xl:flex-row justify-center xl:items-start gap-12 md:gap-0 relative">

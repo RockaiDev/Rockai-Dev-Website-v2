@@ -252,13 +252,13 @@ export default function CareersOppotunity() {
             </button>
 
             {/* Form */}
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[62px] font-bold mb-4 pr-8">
+            <h2 className="text-2xl xl:text-[32px] font-bold mb-4 pr-8">
               {selectedJob?.title}
             </h2>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <form onSubmit={handleSubmit} className="space-y-2  ">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
-                  <label className="block mb-1 text-sm text-gray-300">
+                  <label className="block mb-1 text-sm ms-2 text-gray-300">
                     Full Name *
                   </label>
                   <input
@@ -272,7 +272,7 @@ export default function CareersOppotunity() {
                   />
                 </div>
                 <div>
-                  <label className="block mb-1 text-sm text-gray-300">
+                  <label className="block mb-1 text-sm ms-2 text-gray-300">
                     Email *
                   </label>
                   <input
@@ -289,7 +289,7 @@ export default function CareersOppotunity() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block mb-1 text-sm text-gray-300">
+                  <label className="block mb-1  ms-2 text-sm text-gray-300">
                     Phone Number *
                   </label>
                   <input
@@ -303,7 +303,7 @@ export default function CareersOppotunity() {
                   />
                 </div>
                 <div>
-                  <label className="block mb-1 text-sm text-gray-300">
+                  <label className="block mb-1  ms-2 text-sm text-gray-300">
                     Years of Experience
                   </label>
                   <select 
@@ -321,7 +321,7 @@ export default function CareersOppotunity() {
               </div>
 
               <div>
-                <label className="block mb-1 text-sm text-gray-300">
+                <label className="block mb-1 ms-2 text-sm text-gray-300">
                   Portfolio / LinkedIn URL
                 </label>
                 <input
@@ -335,7 +335,7 @@ export default function CareersOppotunity() {
               </div>
 
               <div>
-                <label className="block mb-1 text-sm text-gray-300">
+                <label className="block mb-1 ms-2 text-sm text-gray-300">
                   Cover Letter
                 </label>
                 <textarea
@@ -349,10 +349,10 @@ export default function CareersOppotunity() {
               </div>
 
               <div>
-                <label className="block mb-2 text-sm text-gray-300">
+                <label className="block mb-2  ms-2 text-sm text-gray-300">
                   Upload CV / Resume
                 </label>
-                <div className="border-2 border-dashed border-gray-700 rounded-lg p-4 sm:p-6 text-center cursor-pointer hover:border-sky-500 transition-colors">
+                <div className="border-2 border-dashed border-gray-700 rounded-lg p-4 sm:p-6 text-center mb-4 cursor-pointer hover:border-sky-500 transition-colors">
                   <input 
                     type="file" 
                     name="resume"
@@ -362,7 +362,7 @@ export default function CareersOppotunity() {
                     accept=".pdf,.doc,.docx" 
                   />
                   <label htmlFor="resume" className="cursor-pointer block">
-                    <div className="text-gray-300 mb-2">
+                    <div className="text-gray-300 mb-">
                       📄 {formData.resume ? (
                         <div>
                           <div className="font-medium">{formData.resume.name}</div>

@@ -1,17 +1,29 @@
-import React, { useState } from 'react';
+"use client"
+
+import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { Play, ChevronLeft, ChevronRight, BarChart3, TrendingUp, Users, Activity } from 'lucide-react';
+import { Play, ChevronLeft, ChevronRight, BarChart3, TrendingUp, Users, Activity, VolumeX, Volume2 } from 'lucide-react';
 import { CardWithAnimatedBorder } from '@/components/CardWithAnimatedBorder/CardWithAnimatedBorder';
 
 export default function Iframe() {
     const [currentSlide, setCurrentSlide] = useState(0);
+    const [isMuted, setIsMuted] = useState(true);
+    const videoRef = useRef(null);
 
     const nextSlide = () => {
         setCurrentSlide((prev) => (prev + 1) % 2);
     };
 
+
     const prevSlide = () => {
         setCurrentSlide((prev) => (prev - 1 + 2) % 2);
+    };
+
+    const toggleMute = () => {
+        if (videoRef.current) {
+            videoRef.current.muted = !isMuted;
+            setIsMuted(!isMuted);
+        }
     };
 
     // Animation variants
@@ -139,7 +151,7 @@ export default function Iframe() {
                                                     transition={{ duration: 0.2 }}
                                                 >
                                                     <BarChart3 className="w-4 h-4 sm:w-5 sm:h-5 text-blue-400 flex-shrink-0" />
-                                                    <span className="text-slate-200 text-xs sm:text-sm">Scalable Architecture</span>
+                                                    <span className="text-slate-200 text-xs sm:text-sm">Performance Analytics</span>
                                                 </motion.div>
                                                 <motion.div
                                                     className="flex items-center space-x-2 sm:space-x-3 p-2 sm:p-3 rounded-lg bg-slate-700/30"
@@ -147,7 +159,7 @@ export default function Iframe() {
                                                     transition={{ duration: 0.2 }}
                                                 >
                                                     <Activity className="w-4 h-4 sm:w-5 sm:h-5 text-green-400 flex-shrink-0" />
-                                                    <span className="text-slate-200 text-xs sm:text-sm">API Integration</span>
+                                                    <span className="text-slate-200 text-xs sm:text-sm">Lead Tracking</span>
                                                 </motion.div>
                                                 <motion.div
                                                     className="flex items-center space-x-2 sm:space-x-3 p-2 sm:p-3 rounded-lg bg-slate-700/30"
@@ -155,7 +167,7 @@ export default function Iframe() {
                                                     transition={{ duration: 0.2 }}
                                                 >
                                                     <TrendingUp className="w-4 h-4 sm:w-5 sm:h-5 text-purple-400 flex-shrink-0" />
-                                                    <span className="text-slate-200 text-xs sm:text-sm">Real-time Features</span>
+                                                    <span className="text-slate-200 text-xs sm:text-sm">Recent Activity</span>
                                                 </motion.div>
                                                 <motion.div
                                                     className="flex items-center space-x-2 sm:space-x-3 p-2 sm:p-3 rounded-lg bg-slate-700/30"
@@ -163,7 +175,7 @@ export default function Iframe() {
                                                     transition={{ duration: 0.2 }}
                                                 >
                                                     <Users className="w-4 h-4 sm:w-5 sm:h-5 text-orange-400 flex-shrink-0" />
-                                                    <span className="text-slate-200 text-xs sm:text-sm">Security First</span>
+                                                    <span className="text-slate-200 text-xs sm:text-sm">Agent Leaderboard</span>
                                                 </motion.div>
                                                 <motion.div
                                                     className="flex items-center space-x-2 sm:space-x-3 p-2 sm:p-3 rounded-lg bg-slate-700/30"
@@ -171,7 +183,7 @@ export default function Iframe() {
                                                     transition={{ duration: 0.2 }}
                                                 >
                                                     <Play className="w-4 h-4 sm:w-5 sm:h-5 text-red-400 flex-shrink-0" />
-                                                    <span className="text-slate-200 text-xs sm:text-sm">Live data streaming</span>
+                                                    <span className="text-slate-200 text-xs sm:text-sm">Task Management</span>
                                                 </motion.div>
                                                 <motion.div
                                                     className="flex items-center space-x-2 sm:space-x-3 p-2 sm:p-3 rounded-lg bg-slate-700/30"
@@ -179,7 +191,7 @@ export default function Iframe() {
                                                     transition={{ duration: 0.2 }}
                                                 >
                                                     <BarChart3 className="w-4 h-4 sm:w-5 sm:h-5 text-cyan-400 flex-shrink-0" />
-                                                    <span className="text-slate-200 text-xs sm:text-sm">Custom widgets</span>
+                                                    <span className="text-slate-200 text-xs sm:text-sm">Data Visuals</span>
                                                 </motion.div>
                                             </div>
                                         </motion.div>
@@ -197,24 +209,24 @@ export default function Iframe() {
                                                     whileHover={{ scale: 1.05 }}
                                                     transition={{ duration: 0.2 }}
                                                 >
-                                                    <div className="text-xl sm:text-2xl font-bold text-blue-400">99.9%</div>
-                                                    <div className="text-xs sm:text-sm text-slate-300">Uptime</div>
+                                                    <div className="text-xl sm:text-2xl font-bold text-blue-400">96%</div>
+                                                    <div className="text-xs sm:text-sm text-slate-300">AI Accuracy</div>
                                                 </motion.div>
                                                 <motion.div
                                                     className="text-center p-3 sm:p-4 rounded-xl bg-gradient-to-br from-green-500/20 to-blue-500/20"
                                                     whileHover={{ scale: 1.05 }}
                                                     transition={{ duration: 0.2 }}
                                                 >
-                                                    <div className="text-xl sm:text-2xl font-bold text-green-400">2.1ms</div>
-                                                    <div className="text-xs sm:text-sm text-slate-300">Response Time</div>
+                                                    <div className="text-xl sm:text-2xl font-bold text-green-400">95%</div>
+                                                    <div className="text-xs sm:text-sm text-slate-300">Client Satisfaction</div>
                                                 </motion.div>
                                                 <motion.div
                                                     className="text-center p-3 sm:p-4 rounded-xl bg-gradient-to-br from-purple-500/20 to-pink-500/20"
                                                     whileHover={{ scale: 1.05 }}
                                                     transition={{ duration: 0.2 }}
                                                 >
-                                                    <div className="text-xl sm:text-2xl font-bold text-purple-400">1M+</div>
-                                                    <div className="text-xs sm:text-sm text-slate-300">Data Points</div>
+                                                    <div className="text-xl sm:text-2xl font-bold text-purple-400">+65%</div>
+                                                    <div className="text-xs sm:text-sm text-slate-300">Performance Growth</div>
                                                 </motion.div>
                                             </div>
                                         </motion.div>
@@ -223,7 +235,7 @@ export default function Iframe() {
                             </motion.div>
                         </motion.div>
 
-                        {/* Right Panel - YouTube Iframe */}
+                        {/* Right Panel - Video */}
                         <motion.div 
                             className="space-y-6"
                             variants={itemVariants}
@@ -233,28 +245,36 @@ export default function Iframe() {
                                 whileHover={{ scale: 1.01 }}
                                 transition={{ duration: 0.2 }}
                             >
-                                <div className="aspect-video rounded-xl sm:rounded-2xl overflow-hidden bg-black shadow-2xl">
-                                    <iframe
-                                        className="w-full h-full"
-                                        src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0&controls=1&rel=0&showinfo=0&modestbranding=1"
-                                        title="YouTube video player"
-                                        frameBorder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        allowFullScreen
+                                <div className="aspect-video rounded-xl sm:rounded-2xl overflow-hidden bg-black shadow-2xl relative">
+                                    <video
+                                        ref={videoRef}
+                                        src="/final.mp4"
+                                        autoPlay
+                                        loop
+                                        playsInline
+                                        muted={isMuted}
+                                        className="w-full h-auto rounded-lg shadow-lg"
                                     />
+                                    {/* زرار الميوت */}
+                                     <button
+                                        onClick={toggleMute}
+                                        className="absolute bottom-3 right-3 px-3 py-1.5 rounded-md bg-black/60 text-white text-xs sm:text-sm hover:bg-black/80 transition"
+                                    >
+                                        {isMuted ? " 🔇" : " 🔊"}
+                                    </button>
+                                    
                                 </div>
                                 <div className="mt-4 text-center">
-                                    <h3 className="text-base sm:text-lg font-semibold text-white mb-2">Dashboard Tutorial</h3>
-                                    <p className="text-slate-400 text-xs sm:text-sm">Learn how to use the analytics dashboard effectively</p>
+                                    <h3 className="text-base sm:text-lg font-semibold text-white mb-2">Real Estate Power</h3>
+                                    <p className="text-slate-400 text-xs sm:text-sm"> 
+                                        Manage leads and properties efficiently with Propai’s smart CRM
+                                    </p>
                                 </div>
                             </motion.div>
                         </motion.div>
                     </div>
                 </div>
             </div>
-
-            {/* Stats Section */}
-        
         </motion.div>
     );
 }

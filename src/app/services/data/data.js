@@ -18,22 +18,25 @@ export const servicesData = [
     category: "Development",
     title: "Custom Software Development",
     description: "Tailored enterprise solutions built with cutting-edge technologies",
-    timeline: "3–6 months",
+    timeline: "1–2 months",
     icon: bulbFill,
     service: "Software Development Service",
     our: "Our Custom Software Services",
     ourDesc:
       " We build software aligned to your business goals and future vision.",
-    lastTitle: "Ready to Dominate Search Results?",
-    lastDesc: "Transform your search visibility and drive sustainable organic growth with data-driven SEO strategies.",
-    lastBtn: "Get SEO Audit",
+    lastTitle: "Let’s Build What’s Next",
+    lastDesc: " Partner with Rockai to innovate, accelerate, and lead your industry forward. From first consultation to delivery, we commit to lasting value.",
+    lastBtn: "Contact Us",
+    lastBtnMSG: "i'm interested in custom software development",
+    requestBtnMSg: "Book A Meeting concerning about custom software development",
     lastBtnIcon: chart,
-    requestBtn: "Request SEO Quote",
+    requestBtn: "Book A Meeting",
     requestBtnIcon: settings,
+    techStackTitle: " Business Performance",
+    time:"1-2 months",
 
-
-    techStack: ["Next.js", "React", "Node.js"],
-    KeyFeatures: ["Scalable Architecture", "AI Integration"],
+    techStack: ["Enterprise Solutions ", "Scalable Architecture", "Modern Technologies"],
+    KeyFeatures: [" Enhance performance", "ensure security", "unlock lasting value"],
 
     cards: [
       {
@@ -70,7 +73,7 @@ export const servicesData = [
         ],
       },
     ],
-    featuresTitle: "Industry-Focused SEO ",
+    featuresTitle: "Security & Compliance Features",
     features: [
 
       {
@@ -100,7 +103,7 @@ export const servicesData = [
 
     ]
 
-    , techTitle: "SEO Tools & Technologies",
+    , techTitle: "Software Development Technologies",
     techs: [
       {
 
@@ -133,7 +136,7 @@ export const servicesData = [
 
 
     ],
-    stepsTitle: "Our SEO Process",
+    stepsTitle: "Our Development Process",
     items: [
       {
         icon: one,
@@ -163,144 +166,146 @@ export const servicesData = [
   {
     slug: "saas-product-engineering",
     category: "Development",
-    title: "saas-product-engineering",
+    title: "End-to-End SaaS Platforms ",
     description: "Tailored enterprise solutions built with cutting-edge technologies",
-    timeline: "3–6 months",
+    timeline: "7 → 15 days",
     icon: bulbFill,
     service: "SAAS Development Service",
-    our: "Our Custom Software Services",
+    our: "Our SAAS Services",
     ourDesc:
-      "Drive organic growth and visibility with comprehensive SEO strategies that combine technical optimization and content excellence",
+      " We design subscription-based platforms that drive recurring value.",
     lastTitle: "Ready to Dominate Search Results?",
     lastDesc: "Transform your search visibility and drive sustainable organic growth with data-driven SEO strategies.",
-    lastBtn: "Get SEO Audit",
+    lastBtn: "Contact Us",
     lastBtnIcon: chart,
-    requestBtn: "Request SEO Quote",
+    requestBtn: "Book A Meeting",
     requestBtnIcon: settings,
+    lastBtnMSG: "i'm interested in saas product engineering",
+    requestBtnMSg: "Book A Meeting concerning about saas product engineering",
+    techStackTitle: " Rapid Growth",
+ techStack: ["Concept to Scale", 'Secure & Resilient', 'Growth Ready'],
+    KeyFeatures: [" Evolve with users,","scale with vision"],
 
-
-    techStack: ["Next.js", "React", "Node.js"],
-    KeyFeatures: ["Scalable Architecture", "AI Integration"],
 
     cards: [
       {
         icon: storyRocket,
-        title: "SEO Audits",
+        title: "  Rapid MVP Launch",
         description:
-          "Comprehensive technical and content audits to identify optimization opportunities and performance gaps",
+          "MVP to market strategies prioritize core value and validate demand quickly.",
         deliverables: [
-          "Technical SEO Analysis",
-          "Content Gap Analysis",
-          "Competitor Research",
+          "Fast Market Validation",
+          "Customer Focused Features",
+          "Lean Product Roadmap",
         ],
       },
       {
         icon: storyRocket,
-        title: "SEO Strategy",
+        title: "Growth-Driven Conversions",
         description:
-          "SEO strategies powered by data insights, customized to align with your unique business goals and target audience.",
+          "Subscription and onboarding flows optimized for conversion and long term retention.  ",
         deliverables: [
-          "Keyword Strategy",
-          "Content Roadmap",
-          "Link Building Plan",
+          "Simplified User Onboarding ",
+          "Recurring Revenue Design ",
+          "Retention Driven Metrics",
         ],
       },
       {
         icon: storyRocket,
-        title: "SEO Execution",
+        title: "Scalable Platform Reliability",
         description:
-          "Full implementation of SEO strategies including technical fixes, content optimization, and link building.",
+          "Scalable operations and monitoring ensure platform reliability during growth phases.",
         deliverables: [
-          "On-page Optimization",
-          "Technical Implementation",
-          "Content Creation",
+          "Scalable Infrastructure Patterns",
+          "Proactive Monitoring Alerts",
+          "Continuous Performance Tuning",
         ],
       },
     ],
-    featuresTitle: "Industry-Focused SEO ",
+    featuresTitle: "What You Gain ",
     features: [
 
       {
-        title: "Data Encryption",
-        description: "End-to-end encryption for all transactions"
+        title: "Speed",
+        description: "Faster time to market with SaaS"
       },
       {
-        title: "PCI Compliance",
-        description: "Fully compliant with payment industry standards"
+        title: "Profitability ",
+        description: "Recurring revenue streams boosting business value"
       },
       {
-        title: "Role-Based Access",
-        description: "Granular permissions for different user roles"
+        title: "Scale ",
+        description: "Seamless scalability for expanding global reach"
       },
       {
-        title: "Real-Time Monitoring",
-        description: "24/7 system monitoring and threat detection"
+        title: "Engagement",
+        description: "Engaged users through intuitive product design"
       },
       {
-        title: "Real-Time Monitoring",
-        description: "24/7 system monitoring and threat detection"
+        title: "Security ",
+        description: "Secure platforms protecting customer business data"
       },
       {
-        title: "Real-Time Monitoring",
-        description: "24/7 system monitoring and threat detection"
+        title: "Innovation ",
+        description: "Continuous innovation ensuring lasting SaaS advantage"
       },
 
     ]
 
-    , techTitle: "SEO Tools & Technologies",
+    , techTitle: "Saas Technologies",
     techs: [
       {
 
-        title: "Automation",
-        one: "Selenium",
-        two: "Cypress",
-        three: "Jest",
+        title: "Rapid Launch",
+        one: " Speed to Market ",
+        two: "Quick Setup",
+        three: "Early Revenue",
 
 
       },
       {
-        title: "Performance",
-        one: "Selenium",
-        two: "Cypress",
-        three: "Jest",
+        title: "Scalable Growth",
+        one: " Elastic Systems ",
+        two: "Global Reach",
+        three: "Future Expansion",
 
       },
       {
-        title: "Security",
-        one: "Selenium",
-        two: "Cypress",
-        three: "Jest",
+        title: "User Simplicity ",
+        one: "Easy Adoption",
+        two: "Intuitive Design",
+        three: "Smooth Experience",
       },
       {
-        title: "Mobile",
-        one: "Selenium",
-        two: "Cypress",
-        three: "Jest",
+        title: "Secure Platform",
+        one: "Data Safety",
+        two: "Trusted Access ",
+        three: "Risk Control",
       },
 
 
     ],
-    stepsTitle: "Our SEO Process",
+    stepsTitle: "Our Saas Process",
     items: [
       {
         icon: one,
-        title: "SEO Audit",
-        desc: "Comprehensive site analysis and opportunity identification",
+        title: "Validate ",
+        desc: "Validate problems and product fit",
       },
       {
         icon: two,
-        title: "Strategy Development",
-        desc: "SEO strategy and implementation roadmap",
+        title: "Design ",
+        desc: "Design user journeys and interfaces",
       },
       {
         icon: three,
-        title: "Implementation",
-        desc: "Technical fixes and content optimization",
+        title: "Engineer ",
+        desc: "Develop resilient core and integrations",
       },
       {
         icon: four,
-        title: "Monitoring & Optimization",
-        desc: "Performance tracking and continuous improvement",
+        title: "Scale ",
+        desc: " Scale, support, and expand features",
       },
     ]
 
@@ -310,24 +315,26 @@ export const servicesData = [
   {
     slug: "Testing",
     category: "Development",
-    title: "Testing & QA Services",
+    title: "Testing & QA Services ",
     description: " We ensure your product works reliably and delivers user trust.",
-    timeline: "3–6 months",
+    timeline: " 1 month",
     icon: bulbFill,
     service: "Testing & QA ",
-    our: "Testing & QA Services",
+    our: "Bulletproof Quality, Seamless Performance",
     ourDesc:
-      "  We ensure your product works reliably and delivers user trust.",
+      " We ensure your product works reliably and delivers user trust.",
     lastTitle: " Let’s Build What’s Next",
     lastDesc: " Partner with Rockai to innovate, accelerate, and lead your industry forward. Subheadline: From first consultation to delivery, we commit to lasting value.",
     lastBtn: "Contact Us",
     lastBtnIcon: chart,
     requestBtn: "Book A Meeting",
     requestBtnIcon: settings,
+    lastBtnMSG: "i'm interested in testing and QA",
+    requestBtnMSg: "Book A Meeting concerning about testing and QA",
+  techStackTitle: "Flawless Quality",
+ techStack: ["Testing Frameworks", 'Reliability Assurance', 'Performance Strength '],
+    KeyFeatures: ["  ReducRun flawlessly","guaranteed security","  bulletproof quality"],
 
-
-    techStack: ["Next.js", "React", "Node.js"],
-    KeyFeatures: ["Scalable Architecture", "AI Integration"],
 
     cards: [
       {
@@ -434,7 +441,7 @@ export const servicesData = [
 
 
     ],
-    stepsTitle: "Our SEO Process",
+    stepsTitle: "Our Testing Process",
     items: [
       {
         icon: one,
@@ -464,9 +471,9 @@ export const servicesData = [
   {
     slug: "AI",
     category: "Development",
-    title: " Intelligence that Drives BusinessServices",
+    title: " AI + LLM Solutions ",
     description: " We transform data into smarter processes, decisions, and outcomes.",
-    timeline: "3–6 months",
+    timeline: "1–2 months",
     icon: bulbFill,
     service: " Intelligence that Drives Business",
     our: " Intelligence that Drives Business Services",
@@ -478,10 +485,11 @@ export const servicesData = [
     lastBtnIcon: chart,
     requestBtn: "Book A Meeting",
     requestBtnIcon: settings,
-
-
-    techStack: ["Next.js", "React", "Node.js"],
-    KeyFeatures: ["Scalable Architecture", "AI Integration"],
+    lastBtnMSG: "i'm interested in  AI and LLM",
+    requestBtnMSg: "Book A Meeting concerning about  AI and LLM",
+    techStackTitle: " Intelligent Decisions",
+ techStack: ["AI Integrations", 'Custom Models', 'Industry Tailored'],
+    KeyFeatures: [" Elevate decision-making", "automate complex processes", "create intelligent experiences"],
 
     cards: [
       {
@@ -621,24 +629,26 @@ export const servicesData = [
   {
     slug: "Automation",
     category: "Development",
-    title: "  Efficiency Reimagined",
+    title: "IIntegration & Automation",
     description: " We eliminate repetitive tasks and free your team for real growth.",
-    timeline: "3–6 months",
+    timeline: "15 days → 1 month",
     icon: bulbFill,
     service: " Automation Services",
-    our: " Automation Services ",
+    our: " Efficiency Reimagined",
     ourDesc:
-      "  We transform data into smarter processes, decisions, and outcomes.",
+      " We eliminate repetitive tasks and free your team for real growth.",
     lastTitle: " Let’s Build What’s Next",
     lastDesc: " Partner with Rockai to innovate, accelerate, and lead your industry forward. Subheadline: From first consultation to delivery, we commit to lasting value."
     , lastBtn: "Contact Us",
     lastBtnIcon: chart,
     requestBtn: "Book A Meeting",
     requestBtnIcon: settings,
+    lastBtnMSG: "i'm interested in Automation and Integrations",
+    requestBtnMSg: "Book A Meeting concerning about Automation and Integrations",
+    techStackTitle: " Operational Efficiency",
+ techStack: ["Seamless Integration", 'Smart Automation', 'Performance Driven'],
+    KeyFeatures: ["  Reduce inefficiencies","boost agility"," measurable impact"],
 
-
-    techStack: ["Next.js", "React", "Node.js"],
-    KeyFeatures: ["Scalable Architecture", "AI Integration"],
 
     cards: [
       {
@@ -747,7 +757,7 @@ export const servicesData = [
 
 
     ],
-    stepsTitle: "Our SEO Process",
+    stepsTitle: "Our Automation Process",
     items: [
       {
 
@@ -779,26 +789,28 @@ export const servicesData = [
 
 
   {
-    slug: "Training",
+    slug: "Technical-Training",
     category: "Development",
-    title: "Training Services",
+    title: "Developer Upskilling Programs ",
     description: " We equip teams with the skills to excel and innovate.",
-    timeline: "3–6 months",
+    timeline: "1week-1month",
     icon: bulbFill,
     service: "  Training Services",
     our: " Empowerment Through Knowledge",
     ourDesc:
       " We equip teams with the skills to excel and innovate.",
     lastTitle: " Let’s Build What’s Next",
-    lastDesc: " Partner with Rockai to innovate, accelerate, and lead your industry forward. Subheadline: From first consultation to delivery, we commit to lasting value."
+    lastDesc: "We equip teams with the skills to excel and innovate."
     , lastBtn: "Contact Us",
     lastBtnIcon: chart,
     requestBtn: "Book A Meeting",
     requestBtnIcon: settings,
+    lastBtnMSG: "i'm interested in  Technical Training",
+    requestBtnMSg: "Book A Meeting concerning about  Technical Training",
 
-
-    techStack: ["Next.js", "React", "Node.js"],
-    KeyFeatures: ["Scalable Architecture", "AI Integration"],
+  techStackTitle: "Team Excellence",
+ techStack: ["Upskilling Programs", 'Practical Skills', 'Modern Frameworks'],
+    KeyFeatures: ["Higher quality","Faster delivery"," Performance boost"],
 
     cards: [
       {
@@ -835,39 +847,39 @@ export const servicesData = [
         ],
       },
 
-  
+
 
     ],
     featuresTitle: "What You Gain",
     features: [
 
       {
-        title: "real projects  ",
+        title: "Applied Learning  ",
         description: "Practical skills applied to real projects"
       },
       {
 
-        title: "knowledge ",
+        title: "Expert Guidance ",
         description: "Expert mentorship delivering industry standard knowledge"
       },
 
       {
-        title: " competitive advantage",
+        title: "Future-Ready Training",
         description: "Future focused training for competitive advantage"
       },
 
       {
-        title: "innovation and growth ",
+        title: "Team Empowerment ",
         description: "Empowered teams driving innovation and growth"
       },
       {
 
-        title: "Learning",
+        title: "Hands-On Experience",
         description: " Hands on learning with measurable gains"
       },
       {
 
-        title: "Upskilling ",
+        title: "Ongoing Upskilling ",
         description: " Continuous upskilling to match market needs"
       },
 
@@ -878,7 +890,7 @@ export const servicesData = [
 
       {
 
-        title: "   Clear Learning ",
+        title: "Clear Learning",
         one: "  Structured Programs   ",
         two: "Easy Steps  ",
         three: "Focused Path",
@@ -886,8 +898,8 @@ export const servicesData = [
 
       },
       {
-   
-        title: " Expert Guidance",
+
+        title: "Expert Guidance",
         one: "Skilled Coaches",
         two: "Proven Methods",
         three: "Industry Insight",
@@ -895,13 +907,13 @@ export const servicesData = [
       },
       {
 
-        title: " Future Skills   ",
+        title: "Future Skills",
         one: "Modern Tools ",
         two: " Trend Ready ",
         three: "Competitive Edge",
       },
       {
-        title: "   Applied Knowledge ",
+        title: "Applied Knowledge ",
         one: "Work Ready",
         two: " Job Fit  ",
         three: "Practical Use",
@@ -941,9 +953,9 @@ export const servicesData = [
   {
     slug: "seo-marketing",
     category: "Development",
-    title: " SEO & Marketing Services",
-    description: "  We build SEO into your code for speed, stability, and lasting visibility..",
-    timeline: "3–6 months",
+    title: "SEO Services  ",
+    description: "We build SEO into your code for speed, stability, and lasting visibility..",
+    timeline: " 1 week",
     icon: bulbFill,
     service: "   SEO & Marketing Services",
     our: " Visibility that Converts",
@@ -955,10 +967,12 @@ export const servicesData = [
     lastBtnIcon: chart,
     requestBtn: "Book A Meeting",
     requestBtnIcon: settings,
+    lastBtnMSG: "i'm interested in Seo and Marketing",
+    requestBtnMSg: "Book A Meeting concerning about Seo and Marketing",
+techStackTitle: "Market Visibility",
+ techStack: [" Data Driven", 'Audience Targeted', 'Growth Focused '],
+    KeyFeatures: ["Boost visibility", "attract right audience"," fuel sustainable growth"],
 
-
-    techStack: ["Next.js", "React", "Node.js"],
-    KeyFeatures: ["Scalable Architecture", "AI Integration"],
 
     cards: [
       {
@@ -995,7 +1009,7 @@ export const servicesData = [
         ],
       },
 
-  
+
 
     ],
     featuresTitle: "What You Gain",
@@ -1006,7 +1020,7 @@ export const servicesData = [
         description: " Higher rankings through technical SEO design"
       },
       {
-          
+
         title: "Speed ",
         description: "Faster websites with measurable load improvements"
       },
@@ -1026,9 +1040,9 @@ export const servicesData = [
         title: "Visibility",
         description: "Lasting visibility baked into digital foundations"
       },
-    
 
-       
+
+
 
     ]
 
@@ -1045,7 +1059,7 @@ export const servicesData = [
 
       },
       {
-   
+
         title: "Reliable",
         one: "SEO baked in code",
         two: "Standards compliance strong",
@@ -1053,7 +1067,7 @@ export const servicesData = [
 
       },
       {
-   
+
         title: "scalable",
         one: "Growth-ready frameworks",
         two: "Traffic surges handled",
@@ -1061,7 +1075,7 @@ export const servicesData = [
 
       },
       {
-   
+
         title: "secure",
         one: "HTTPS-first standard",
         two: "Safe coding practices",
@@ -1084,21 +1098,21 @@ export const servicesData = [
         desc: " Analyze site performance needs",
       },
       {
- 
+
         icon: three,
         title: " Optimize",
         desc: " Refine code and framework layers",
       },
       {
         icon: four,
-         
+
         title: "Grow",
         desc: "Scale visibility with strong architecture",
       },
     ]
 
 
-  },
+  },]
 
 
 
@@ -1108,89 +1122,3 @@ export const servicesData = [
 
 
 
-
-  //   {
-  //     slug: "saas-product-engineering",
-  //     category: "Development",
-  //     title: "SaaS Product Engineering",
-  //     description: "End-to-End SaaS platform development from concept to scale",
-  //     techStack: ["Next.js", "OpenAI GPT-4", "React", "Node.js"],
-  //     features: ["Scalable Architecture", "AI Integration", "Payment Integration", "Security First"],
-  //     timeline: "3–6 months",
-  //     icon: settings,
-  //     service:"saas service",
-  //     our:"Our SEO Services",
-  //     ourDesc:"Drive organic growth and visibility with comprehensive SEO strategies that combine technical optimization and content excellence"
-
-  //   },
-  //   {
-  //     slug: "ai-llm-solutions",
-  //     category: "AI/ML",
-  //     title: "AI & LLM Solutions",
-  //     description: "Advanced AI integration and custom Language Model implementations",
-  //     techStack: ["Next.js", "OpenAI GPT-4", "React", "Node.js"],
-  //     features: ["Scalable Architecture", "AI Integration", "Payment Integration", "Security First"],
-  //     timeline: "3–6 months",
-  //     icon: brain,
-  //      service:"saas service",
-  //     our:"Our saas Services",
-  //     ourDesc:"Drive organic growth and visibility with comprehensive SEO strategies that combine technical optimization and content excellence"
-
-  //   },
-  //   {
-  //     slug: "automation-integrations",
-  //     category: "Integration",
-  //     title: "Automation & Integrations",
-  //     description: "Streamlined workflows and system integrations to boost efficiency",
-  //     techStack: ["Next.js", "OpenAI GPT-4", "React", "Node.js"],
-  //     features: ["Scalable Architecture", "AI Integration", "Payment Integration", "Security First"],
-  //     timeline: "3–6 months",
-  //     icon: mindMap,
-  //      service:"saas service",
-  //     our:"Our saas Services",
-  //     ourDesc:"Drive organic growth and visibility with comprehensive SEO strategies that combine technical optimization and content excellence"
-
-  //   },
-  //   {
-  //     slug: "testing-qa-services",
-  //     category: "Quality Assurance",
-  //     title: "Testing & QA Services",
-  //     description: "Comprehensive testing solutions ensuring bulletproof software quality",
-  //     techStack: ["Next.js", "OpenAI GPT-4", "React", "Node.js"],
-  //     features: ["Scalable Architecture", "AI Integration", "Payment Integration", "Security First"],
-  //     timeline: "3–6 months",
-  //     icon: certificate,
-  //      service:"saas service",
-  //     our:"Our saas Services",
-  //     ourDesc:"Drive organic growth and visibility with comprehensive SEO strategies that combine technical optimization and content excellence"
-
-  //   },
-  //   {
-  //     slug: "seo-services",
-  //     category: "Marketing",
-  //     title: "SEO Services",
-  //     description: "Data-driven SEO strategies that drive organic growth and visibility",
-  //     techStack: ["Next.js", "OpenAI GPT-4", "React", "Node.js"],
-  //     features: ["Scalable Architecture", "AI Integration", "Payment Integration", "Security First"],
-  //     timeline: "3–6 months",
-  //     icon: chart,
-  //      service:"saas service",
-  //     our:"Our saas Services",
-  //     ourDesc:"Drive organic growth and visibility with comprehensive SEO strategies that combine technical optimization and content excellence"
-
-  //   },
-  //   {
-  //     slug: "technical-training",
-  //     category: "Development",
-  //     title: "Technical Training for Dev Teams",
-  //     description: "Upskill your development team with expert-led training programs",
-  //     techStack: ["Next.js", "OpenAI GPT-4", "React", "Node.js"],
-  //     features: ["Scalable Architecture", "AI Integration", "Payment Integration", "Security First"],
-  //     timeline: "3–6 months",
-  //     icon: graduate,
-  //      service:"saas service",
-  //     our:"Our saas Services",
-  //     ourDesc:"Drive organic growth and visibility with comprehensive SEO strategies that combine technical optimization and content excellence"
-
-  //   },
-];
