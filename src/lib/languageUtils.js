@@ -51,6 +51,14 @@ export function getSystemPrompt(language) {
 
 هذه الروابط ستكون قابلة للنقر تلقائياً في واجهة المحادثة.
 
+تنسيق الردود:
+- استخدم ## للعناوين الرئيسية
+- استخدم ### للعناوين الفرعية  
+- استخدم 1. 2. 3. للقوائم المرقمة
+- استخدم - أو * للقوائم النقطية
+- استخدم أسطر فارغة لفصل الأقسام
+- الكلمات المهمة ستظهر بخط أثقل تلقائياً
+
 سياق الشركة:
 - نبني حلول مدعومة بالذكاء الاصطناعي
 - نقدم خدمات تطوير الويب والتطبيقات المحمولة
@@ -136,6 +144,14 @@ export function getSystemPrompt(language) {
     - For HodourAI (teacher assistant): /products/hodurai
     
     These links will automatically become clickable in the chat interface.
+
+    Response Formatting:
+    - Use ## for main headings
+    - Use ### for subheadings
+    - Use 1. 2. 3. for numbered lists
+    - Use - or * for bullet points
+    - Use empty lines to separate sections
+    - Important keywords will automatically appear with heavier font weight
     
     Company context (if they ask about our company):
     - We build AI-powered solutions

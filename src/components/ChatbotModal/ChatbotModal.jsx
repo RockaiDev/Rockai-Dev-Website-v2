@@ -21,7 +21,7 @@ export default function ChatbotModal({ onClose }) {
   // Function to scroll to bottom
   const scrollToBottom = () => {
     setTimeout(() => {
-      messagesEndRef.current?.scrollIntoView({ 
+      messagesEndRef.current?.scrollIntoView({
         behavior: "smooth",
         block: "end",
         inline: "nearest"
@@ -43,23 +43,23 @@ export default function ChatbotModal({ onClose }) {
 
   // Animation variants
   const modalVariants = {
-    hidden: { 
-      opacity: 0, 
-      scale: 0.8, 
-      y: 50 
+    hidden: {
+      opacity: 0,
+      scale: 0.8,
+      y: 50
     },
-    visible: { 
-      opacity: 1, 
-      scale: 1, 
+    visible: {
+      opacity: 1,
+      scale: 1,
       y: 0,
       transition: {
         duration: 0.3,
         ease: "easeOut"
       }
     },
-    exit: { 
-      opacity: 0, 
-      scale: 0.8, 
+    exit: {
+      opacity: 0,
+      scale: 0.8,
       y: 50,
       transition: {
         duration: 0.2,
@@ -76,9 +76,9 @@ export default function ChatbotModal({ onClose }) {
 
   const messageVariants = {
     hidden: { opacity: 0, y: 20, scale: 0.9 },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
+    visible: {
+      opacity: 1,
+      y: 0,
       scale: 1,
       transition: {
         duration: 0.3,
@@ -87,36 +87,89 @@ export default function ChatbotModal({ onClose }) {
     }
   };
 
-  // Component to render message text with clickable links
+  // Function to clean text from markdown formatting
+  const cleanText = (text) => {
+    return text.replace(/\*\*(.*?)\*\*/g, '$1');
+  };
+
+  // Component to render message text with clickable links and formatting
   const MessageText = ({ text, sender }) => {
     const segments = parseTextWithLinks(text);
-    
+
     return (
-      <p className="text-sm leading-relaxed">
+      <div className="text-sm leading-relaxed space-y-2">
         {segments.map((segment, index) => {
-          if (segment.type === 'link') {
-            return (
-              <Link
-                key={index}
-                href={segment.content}
-                className="inline-flex items-center gap-1 text-cyan-400 hover:text-cyan-300 underline decoration-cyan-400/50 hover:decoration-cyan-300 transition-colors duration-200 font-medium"
-                onClick={() => {
-                  // Close the modal when a link is clicked
-                  if (onClose) {
-                    onClose();
-                  }
-                }}
-              >
-                {segment.displayText}
-                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-              </Link>
-            );
+          switch (segment.type) {
+            case 'link':
+              return (
+                <Link
+                  key={index}
+                  href={segment.content}
+                  className="inline-flex items-center gap-1 text-cyan-400 hover:text-cyan-300 underline decoration-cyan-400/50 hover:decoration-cyan-300 transition-colors duration-200 font-medium"
+                  onClick={() => {
+                    // Close the modal when a link is clicked
+                    if (onClose) {
+                      onClose();
+                    }
+                  }}
+                >
+                  {segment.displayText}
+                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </Link>
+              );
+
+            case 'header':
+              const HeaderTag = segment.level === 2 ? 'h2' : 'h3';
+              return (
+                <HeaderTag
+                  key={index}
+                  className={`font-bold text-white mb-2 ${segment.level === 2 ? 'text-base' : 'text-sm'
+                    }`}
+                >
+                  {cleanText(segment.content)}
+                </HeaderTag>
+              );
+
+            case 'emphasized':
+              return (
+                <p key={index} className="text-white/90 font-semibold">
+                  {cleanText(segment.content)}
+                </p>
+              );
+
+            case 'numbered-item':
+              return (
+                <div key={index} className="flex items-start gap-2 ml-2">
+                  <span className="text-cyan-400 font-semibold text-xs mt-0.5 min-w-[20px]">
+                    {segment.number}.
+                  </span>
+                  <span className="text-white/90">{cleanText(segment.content)}</span>
+                </div>
+              );
+
+            case 'bullet-item':
+              return (
+                <div key={index} className="flex items-start gap-2 ml-2">
+                  <span className="text-cyan-400 text-xs mt-1.5">•</span>
+                  <span className="text-white/90">{cleanText(segment.content)}</span>
+                </div>
+              );
+
+            case 'linebreak':
+              return <br key={index} />;
+
+            case 'text':
+            default:
+              return (
+                <p key={index} className="text-white/90">
+                  {cleanText(segment.content)}
+                </p>
+              );
           }
-          return segment.content;
         })}
-      </p>
+      </div>
     );
   };
 
@@ -167,11 +220,11 @@ export default function ChatbotModal({ onClose }) {
     } catch (error) {
       console.error('Chat error:', error);
       setError(error.message);
-      
+
       // Add error message
-      const errorMsg = { 
-        sender: "bot", 
-        text: "I'm sorry, I'm having trouble connecting right now. Please try again in a moment." 
+      const errorMsg = {
+        sender: "bot",
+        text: "I'm sorry, I'm having trouble connecting right now. Please try again in a moment."
       };
       const finalMessages = chatStorage.addMessage(updatedMessages, errorMsg);
       setMessages(finalMessages);
@@ -204,7 +257,7 @@ export default function ChatbotModal({ onClose }) {
 
   return (
     <AnimatePresence>
-      <motion.div 
+      <motion.div
         className="fixed inset-0 z-[100] flex items-center justify-center p-4"
         initial="hidden"
         animate="visible"
@@ -219,7 +272,7 @@ export default function ChatbotModal({ onClose }) {
         />
 
         {/* Modal panel */}
-        <motion.div 
+        <motion.div
           className="relative w-full max-w-3xl h-[85vh] sm:h-[85vh] bg-[#0e112d]/75 backdrop-blur-sm text-white rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-gray-700/50"
           variants={modalVariants}
         >
@@ -227,7 +280,7 @@ export default function ChatbotModal({ onClose }) {
           <div className="flex items-center justify-between p-4 border-b border-gray-600/30 bg-gray-900/50">
             <div className="flex items-center gap-3">
               <Image src={ROKAIBOT} alt="Rockai Bot" width={24} height={24} className="drop-shadow-lg" />
-            <div>
+              <div>
                 <h2 className="font-bold text-white text-base">Rockai Bot</h2>
                 <span className="text-sm text-green-400/80">Online</span>
               </div>
@@ -282,11 +335,10 @@ export default function ChatbotModal({ onClose }) {
                     </motion.div>
                   )}
                   <motion.div
-                    className={`px-4 py-3 rounded-2xl max-w-xs sm:max-w-sm ${
-                      msg.sender === "user"
-                        ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg"
-                        : "bg-white/10 backdrop-blur-sm text-white border border-white/20"
-                    }`}
+                    className={`px-4 py-3 rounded-2xl ${msg.sender === "user"
+                      ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg max-w-xs sm:max-w-sm"
+                      : "bg-white/10 backdrop-blur-sm text-white border border-white/20 max-w-sm sm:max-w-md lg:max-w-lg"
+                      }`}
                     whileHover={{ scale: 1.02 }}
                   >
                     {msg.sender === "bot" ? (
@@ -363,7 +415,7 @@ export default function ChatbotModal({ onClose }) {
 
             {/* Error Message */}
             {error && (
-              <motion.div 
+              <motion.div
                 className="bg-red-500/10 border border-red-500/20 rounded-xl p-3 text-red-400 text-sm"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -380,7 +432,7 @@ export default function ChatbotModal({ onClose }) {
 
             {/* Typing indicator */}
             {typing && (
-              <motion.div 
+              <motion.div
                 className="flex items-center gap-3"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -388,17 +440,17 @@ export default function ChatbotModal({ onClose }) {
               >
                 <Image src={ROKAIBOT} alt="bot" width={32} height={32} className="mr-1" />
                 <div className="flex gap-1 bg-white/10 backdrop-blur-sm px-4 py-3 rounded-2xl border border-white/20">
-                  <motion.span 
+                  <motion.span
                     className="w-2 h-2 bg-cyan-400 rounded-full"
                     animate={{ scale: [1, 1.2, 1] }}
                     transition={{ duration: 0.6, repeat: Infinity, delay: 0 }}
                   />
-                  <motion.span 
+                  <motion.span
                     className="w-2 h-2 bg-cyan-400 rounded-full"
                     animate={{ scale: [1, 1.2, 1] }}
                     transition={{ duration: 0.6, repeat: Infinity, delay: 0.2 }}
                   />
-                  <motion.span 
+                  <motion.span
                     className="w-2 h-2 bg-cyan-400 rounded-full"
                     animate={{ scale: [1, 1.2, 1] }}
                     transition={{ duration: 0.6, repeat: Infinity, delay: 0.4 }}

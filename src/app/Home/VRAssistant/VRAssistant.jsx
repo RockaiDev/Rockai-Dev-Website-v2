@@ -107,7 +107,7 @@ export default function VRAssistant() {
                     className="mt-2 text-sm sm:text-base md:text-lg lg:text-xl text-gray-400/80 max-w-3xl mx-auto px-2 sm:px-4"
                     variants={itemVariants}
                 >
-                    Experience seamless support, project insights, and expert guidance through our conversational AI—built to empower your journey.
+                    Experience seamless support, project insights, and expert guidance through our conversational AI-built to empower your journey.
                 </motion.p>
             </motion.div>
 

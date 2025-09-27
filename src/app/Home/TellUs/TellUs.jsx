@@ -135,7 +135,7 @@ export default function Tellus() {
   };
 
   return (
-    <div className="flex items-center justify-center px-4 sm:px-6 lg:px-8">
+    <div className="flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20 lg:py-40" id="freeconsultation">
       <div className="flex flex-col lg:flex-row items-center gap-8 sm:gap-10 lg:gap-16 xl:gap-20 w-full justify-between mb-10 max-w-7xl">
         {/* Left Section */}
         <motion.div
@@ -161,8 +161,8 @@ export default function Tellus() {
           </motion.button>
 
           <motion.div className="content" variants={itemVariants}>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[50px] font-bold gradient-hero-text text-white mb-3 sm:mb-4 leading-tight">
-              Share Your Vision with Us
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[40px] font-bold gradient-hero-text text-white mb-3 sm:mb-4 leading-tight">
+              Book Your Free Consultation
             </h1>
             <p className="text-gray-400/80 text-base sm:text-lg lg:text-xl max-w-lg leading-relaxed">
               Your goals drive innovation. Tell us what you're aiming for, and
@@ -351,7 +351,7 @@ export default function Tellus() {
                 >
                   <Send size={20} />
                   <span>
-                    {isSubmitting ? "Sending..." : "Start Building My Solution"}
+                    {isSubmitting ? "Sending..." : "Book Your Free Consultation"}
                   </span>
                 </motion.button>
               </motion.form>
